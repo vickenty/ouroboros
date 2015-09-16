@@ -98,3 +98,8 @@ void ouroboros_call_sv(pTHX_ SV* sv, I32 flags)
 
         call_sv(sv, flags);
 }
+
+void ouroboros_newxs(pTHX_ const char *name, void *fn, const char *file)
+{
+	newXS(name, fn, file);
+}
