@@ -1,0 +1,17 @@
+[package]
+name    = "rusty"
+version = "0.1.0"
+authors = [ "Vickenty Fesunov <cpan-ouroboros@setattr.net>" ]
+
+description = "Example Perl extension written in Rust"
+license = "BSD-3-Clause"
+build = "build.rs"
+
+[dependencies]
+libc = "*"
+
+[lib]
+name = "rusty"
+path = "src/lib.rs"
+crate-type = [ "dylib" ]
+
