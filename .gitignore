@@ -1,0 +1,6 @@
+MYMETA.*
+Makefile
+*.o
+Ouroboros.c
+blib
+pm_to_blib
