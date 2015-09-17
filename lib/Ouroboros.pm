@@ -52,9 +52,9 @@ Ouroboros - expose bits of Perl API as pointers to functions
 =head1 LIBOUROBOROS
 
 Perl XS API makes heavy use of C preprocessor to generate code, which makes it
-very hard to build XS modules in anything but C language. libouroboros wraps
-Perl XS macros in regular functions with some minor magic tricks - enabling
-non-C languages to use XS API directly.
+hard to write XS modules in anything but C. libouroboros wraps Perl XS macros
+in regular functions with some minor magic tricks - enabling non-C languages to
+use XS API directly.
 
 =head1 THIS PACKAGE
 
