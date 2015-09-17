@@ -20,7 +20,7 @@ A working C compiler.
 
 ## Building
 
-  perl Makefile.PL
-  make
-  make install
+    perl Makefile.PL
+    make
+    make install
 
