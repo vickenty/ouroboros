@@ -38,7 +38,8 @@ void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t stack)
                 op(value);                                              \
         }
 
-WRAP(mXPUSHs, sv, SV*);
+WRAP(XPUSHs, sv, SV*);
+WRAP(mXPUSHs, sv_mortal, SV*);
 WRAP(mXPUSHi, iv, IV);
 WRAP(mXPUSHu, uv, UV);
 WRAP(mXPUSHn, nv, NV);

@@ -41,6 +41,13 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_stack_xpush_sv_mortal_ptr()
+CODE:
+	RETVAL = ouroboros_stack_xpush_sv_mortal;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_stack_xpush_iv_ptr()
 CODE:
 	RETVAL = ouroboros_stack_xpush_iv;

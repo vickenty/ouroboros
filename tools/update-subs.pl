@@ -16,6 +16,7 @@ my @shims = map "$prefix$_", qw/
     stack_store
 
     stack_xpush_sv
+    stack_xpush_sv_mortal
     stack_xpush_iv
     stack_xpush_uv
     stack_xpush_nv
