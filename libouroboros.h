@@ -38,6 +38,8 @@ HV* ouroboros_sv_hv(pTHX_ SV *sv);
 int ouroboros_sv_rok(pTHX_ SV *sv);
 svtype ouroboros_sv_type(pTHX_ SV *sv);
 
+void ouroboros_sv_set_nv(pTHX_ SV *sv, NV nv);
+
 void ouroboros_call_sv(pTHX_ SV* sv, I32 flags);
 
 void ouroboros_newxs(pTHX_ const char *name, void *fn, const char *file);

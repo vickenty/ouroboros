@@ -30,6 +30,8 @@ my @shims = map "$prefix$_", qw/
     sv_rok
     sv_type
 
+    sv_set_nv
+
     call_sv
 /;
 

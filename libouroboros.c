@@ -91,6 +91,11 @@ svtype ouroboros_sv_type(pTHX_ SV *sv)
 	return SvTYPE(SvRV(sv));
 }
 
+void ouroboros_sv_set_nv(pTHX_ SV* sv, NV nv)
+{
+	sv_setnv(sv, nv);
+}
+
 void ouroboros_call_sv(pTHX_ SV* sv, I32 flags)
 {
         if (flags == -1) {

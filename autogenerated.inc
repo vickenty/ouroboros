@@ -125,6 +125,13 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_set_nv_ptr()
+CODE:
+	RETVAL = ouroboros_sv_set_nv;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_call_sv_ptr()
 CODE:
 	RETVAL = ouroboros_call_sv;
