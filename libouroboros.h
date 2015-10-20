@@ -21,6 +21,8 @@ void ouroboros_stack_putback(pTHX_ ouroboros_stack_t stack);
 
 SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t stack, unsigned int item);
 void ouroboros_stack_store(pTHX_ ouroboros_stack_t stack, unsigned int item, SV* value);
+SV* ouroboros_stack_unshift(pTHX_ ouroboros_stack_t stack);
+SV* ouroboros_stack_pop(pTHX_ ouroboros_stack_t stack);
 
 void ouroboros_stack_xpush_sv(pTHX_ ouroboros_stack_t stack, SV* value);
 void ouroboros_stack_xpush_sv_mortal(pTHX_ ouroboros_stack_t stack, SV *value);
