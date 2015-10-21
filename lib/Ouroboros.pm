@@ -16,8 +16,6 @@ our @EXPORT_OK = qw(
     ouroboros_stack_putback_ptr
     ouroboros_stack_fetch_ptr
     ouroboros_stack_store_ptr
-    ouroboros_stack_shift_ptr
-    ouroboros_stack_pop_ptr
     ouroboros_stack_xpush_sv_ptr
     ouroboros_stack_xpush_sv_mortal_ptr
     ouroboros_stack_xpush_iv_ptr

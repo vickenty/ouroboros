@@ -24,25 +24,6 @@ void ouroboros_stack_store(pTHX_ ouroboros_stack_t stack, unsigned int item, SV*
         ST(item) = value;
 }
 
-SV* ouroboros_stack_shift(pTHX_ ouroboros_stack_t stack)
-{
-	if (items > 0) {
-		items--;
-		return SP++;
-	} else {
-		return &PL_sv_undef;
-	}
-}
-
-SV* ouroboros_stack_pop(pTHX_ ouroboros_stack_t stack)
-{
-	if (items > 0) {
-		return ST(--items);
-	} else {
-		return &PL_sv_undef;
-	}
-}
-
 void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t stack)
 {
         XSprePUSH;
