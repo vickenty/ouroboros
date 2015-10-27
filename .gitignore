@@ -1,5 +1,6 @@
 MYMETA.*
 Makefile
+!demo/**/Makefile
 *.o
 *.bs
 Ouroboros.c
