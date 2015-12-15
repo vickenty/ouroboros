@@ -86,9 +86,14 @@ int ouroboros_sv_rok(pTHX_ SV *sv)
 	return SvROK(sv);
 }
 
+SV* ouroboros_sv_rv(pTHX_ SV *sv)
+{
+	return SvRV(sv);
+}
+
 svtype ouroboros_sv_type(pTHX_ SV *sv)
 {
-	return SvTYPE(SvRV(sv));
+	return SvTYPE(sv);
 }
 
 void ouroboros_sv_set_nv(pTHX_ SV* sv, NV nv)

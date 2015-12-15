@@ -28,6 +28,7 @@ my @shims = map "$prefix$_", qw/
     sv_av
     sv_hv
     sv_rok
+    sv_rv
     sv_type
 
     sv_set_nv
