@@ -1,6 +1,9 @@
 .PHONY: all lib clean
 
-ARCHLIBEXP=$(shell perl -MConfig -E 'say $$Config{archlibexp}')
+PERL?=perl
+export PERL
+
+ARCHLIBEXP=$(shell $(PERL) -MConfig -E 'say $$Config{archlibexp}')
 CFLAGS=-I$(ARCHLIBEXP)/CORE -I../.. -fPIC
 
 all:
@@ -8,7 +11,7 @@ all:
 	mkdir -p blib/arch/auto/Rusty blib/lib
 	cp target/debug/librusty.so blib/arch/auto/Rusty/Rusty.so
 	cp lib/Rusty.pm blib/lib/Rusty.pm
-	perl -Iblib/arch -Iblib/lib -MRusty -E 'say Rusty::hello'
+	$(PERL) -Iblib/arch -Iblib/lib -MRusty -E 'say Rusty::hello'
 
 lib: libouroboros.a
 
