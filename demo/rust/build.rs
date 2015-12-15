@@ -1,8 +1,6 @@
 use std::process::Command;
 
 fn main() {
-	Command::new("make").arg("lib").status().unwrap();
-
 	let perl = std::env::var("PERL").unwrap();
 
 	let multi_check = Command::new(perl)

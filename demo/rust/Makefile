@@ -6,7 +6,7 @@ export PERL
 ARCHLIBEXP=$(shell $(PERL) -MConfig -E 'say $$Config{archlibexp}')
 CFLAGS=-I$(ARCHLIBEXP)/CORE -I../.. -fPIC
 
-all:
+all: lib
 	cargo build
 	mkdir -p blib/arch/auto/Rusty blib/lib
 	cp target/debug/librusty.so blib/arch/auto/Rusty/Rusty.so
