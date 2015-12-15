@@ -84,10 +84,10 @@ impl<'a> XS<'a> {
 		}
 	}
 
-	pub fn new_xs(&mut self, name: &str, xs: extern fn (&mut Interp, &CV), file: &'static [c_char]) {
+	pub fn new_xs(&mut self, name: &str, xs: extern fn (&mut Interp, &CV), file: &'static [u8]) {
 		let cname = CString::new(name).unwrap();
 		unsafe {
-			ouroboros_newxs(self.perl, cname.as_ptr(), xs, file.as_ptr());
+			ouroboros_newxs(self.perl, cname.as_ptr(), xs, file.as_ptr() as *mut c_char);
 		}
 	}
 }
