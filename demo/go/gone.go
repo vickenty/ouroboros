@@ -31,8 +31,8 @@ func boot_Gone(perl *C.PerlInterpreter, cv *C.CV) {
 	C.ouroboros_stack_init(perl, &stack)
 
 	var hello = C.CString("Gone::hello")
-	C.ouroboros_newxs(perl, hello,
-		unsafe.Pointer(C.gone_hello),
+	C.Perl_newXS(perl, hello,
+		(*[0]byte)(unsafe.Pointer(C.gone_hello)),
 		(*C.char)(unsafe.Pointer(&file[0])))
 	C.free(unsafe.Pointer(hello))
 

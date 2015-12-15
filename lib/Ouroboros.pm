@@ -30,8 +30,6 @@ our @EXPORT_OK = qw(
     ouroboros_sv_rok_ptr
     ouroboros_sv_rv_ptr
     ouroboros_sv_type_ptr
-    ouroboros_sv_set_nv_ptr
-    ouroboros_call_sv_ptr
 );
 
 our %EXPORT_TAGS = (

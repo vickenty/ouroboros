@@ -35,7 +35,7 @@ extern {
 	fn ouroboros_stack_putback(perl: *mut Interp, stack: *mut Stack);
 	fn ouroboros_stack_xpush_iv(perl: *mut Interp, stack: *mut Stack, iv: c_long);
 	fn ouroboros_stack_xpush_pv(perl: *mut Interp, stack: *mut Stack, str: *const c_char, len: c_long);
-	fn ouroboros_newxs(perl: *mut Interp, name: *const i8, xs: FunXS, file: *const c_char);
+	fn Perl_newXS(perl: *mut Interp, name: *const i8, xs: FunXS, file: *const c_char);
 }
 
 #[cfg(not(perl_multiplicity))]
@@ -45,7 +45,7 @@ extern {
 	fn ouroboros_stack_putback(stack: *mut Stack);
 	fn ouroboros_stack_xpush_iv(stack: *mut Stack, iv: c_long);
 	fn ouroboros_stack_xpush_pv(stack: *mut Stack, str: *const c_char, len: c_long);
-	fn ouroboros_newxs(name: *const i8, xs: FunXS, file: *const c_char);
+	fn Perl_newXS(name: *const i8, xs: FunXS, file: *const c_char);
 }
 
 #[cfg(perl_multiplicity)]
@@ -132,7 +132,7 @@ impl<'a> XS<'a> {
 	pub fn new_xs(&mut self, name: &str, xs: FunXS, file: &'static [u8]) {
 		let cname = CString::new(name).unwrap();
 		unsafe {
-			call!(ouroboros_newxs, self, cname.as_ptr(), xs, file.as_ptr() as *const c_char);
+			call!(Perl_newXS, self, cname.as_ptr(), xs, file.as_ptr() as *const c_char);
 		}
 	}
 }
