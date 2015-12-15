@@ -1,3 +1,4 @@
+#[cfg(perl_multiplicity)]
 macro_rules! xs_proc {
 	($name:ident, $xs:ident, $body:block) => {
 		#[allow(dead_code)]
@@ -5,6 +6,19 @@ macro_rules! xs_proc {
 		#[no_mangle]
 		pub extern "C" fn $name(perl: &mut $crate::xs::Interp, cv: &$crate::xs::CV) {
 			let mut $xs = $crate::xs::XS::init(perl, cv);
+			$body
+		}
+	}
+}
+
+#[cfg(not(perl_multiplicity))]
+macro_rules! xs_proc {
+	($name:ident, $xs:ident, $body:block) => {
+		#[allow(dead_code)]
+		#[allow(non_snake_case)]
+		#[no_mangle]
+		pub extern "C" fn $name(cv: &$crate::xs::CV) {
+			let mut $xs = $crate::xs::XS::init(cv);
 			$body
 		}
 	}
