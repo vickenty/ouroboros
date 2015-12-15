@@ -2,11 +2,9 @@ use libc::{ c_void, c_char, c_int, c_long };
 use std::ptr;
 use std::ffi::{ CString };
 
-#[repr(C)]
-pub struct Interp;
+pub enum Interp {}
 
-#[repr(C)]
-pub struct CV;
+pub enum CV {}
 
 #[repr(C)]
 pub struct Stack {
