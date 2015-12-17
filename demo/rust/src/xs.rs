@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 
-use libc::{ c_void, c_char, c_int, c_long };
+use std::os::raw::{ c_void, c_char, c_int, c_long };
 use std::ptr;
 use std::ffi::{ CString };
 

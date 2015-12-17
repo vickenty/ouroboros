@@ -1,5 +1,3 @@
-extern crate libc;
-
 mod xs;
 #[macro_use]
 mod macros;

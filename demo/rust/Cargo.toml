@@ -7,9 +7,6 @@ description = "Example Perl extension written in Rust"
 license = "BSD-2-Clause"
 build = "build.rs"
 
-[dependencies]
-libc = "*"
-
 [lib]
 name = "rusty"
 path = "src/lib.rs"
