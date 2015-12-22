@@ -81,7 +81,7 @@ HV* ouroboros_sv_hv(pTHX_ SV *sv)
 	return (HV*) SvRV(sv);
 }
 
-int ouroboros_sv_rok(pTHX_ SV *sv)
+U32 ouroboros_sv_rok(pTHX_ SV *sv)
 {
 	return SvROK(sv);
 }
@@ -91,7 +91,7 @@ SV* ouroboros_sv_rv(pTHX_ SV *sv)
 	return SvRV(sv);
 }
 
-svtype ouroboros_sv_type(pTHX_ SV *sv)
+IV ouroboros_sv_type(pTHX_ SV *sv)
 {
 	return SvTYPE(sv);
 }
