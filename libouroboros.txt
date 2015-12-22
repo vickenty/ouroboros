@@ -1,0 +1,23 @@
+fn	void	ouroboros_stack_init	ouroboros_stack_t
+fn	void	ouroboros_stack_prepush	ouroboros_stack_t
+fn	void	ouroboros_stack_putback	ouroboros_stack_t
+fn	SV*	ouroboros_stack_fetch	ouroboros_stack_t	unsigned int
+fn	void	ouroboros_stack_store	ouroboros_stack_t	unsigned int	SV*
+
+fn	void	ouroboros_stack_xpush_sv	ouroboros_stack_t	SV*
+fn	void	ouroboros_stack_xpush_sv_mortal	ouroboros_stack_t	SV*
+fn	void	ouroboros_stack_xpush_iv	ouroboros_stack_t	IV
+fn	void	ouroboros_stack_xpush_uv	ouroboros_stack_t	UV
+fn	void	ouroboros_stack_xpush_nv	ouroboros_stack_t	NV
+fn	void	ouroboros_stack_xpush_pv	ouroboros_stack_t	char*	size_t
+
+fn	IV	ouroboros_sv_iv	SV*
+fn	UV	ouroboros_sv_uv	SV*
+fn	NV	ouroboros_sv_nv	SV*
+fn	AV*	ouroboros_sv_av	SV*
+fn	HV*	ouroboros_sv_hv	SV*
+fn	U32	ouroboros_sv_rok	SV*
+fn	SV*	ouroboros_sv_rv	SV*
+fn	IV	ouroboros_sv_type	SV*
+
+# vim: set ts=12 noet
