@@ -20,4 +20,22 @@ fn	U32	ouroboros_sv_rok	SV*
 fn	SV*	ouroboros_sv_rv	SV*
 fn	IV	ouroboros_sv_type	SV*
 
+# The only set of essential magic numbers missing from B package
+const	SVt_NULL
+const	SVt_IV
+const	SVt_NV
+const	SVt_PV
+const	SVt_PVIV
+const	SVt_PVNV
+const	SVt_PVMG
+const	SVt_REGEXP
+const	SVt_PVGV
+const	SVt_PVLV
+const	SVt_PVAV
+const	SVt_PVHV
+const	SVt_PVCV
+const	SVt_PVFM
+const	SVt_PVIO
+const	SVt_LAST
+
 # vim: set ts=12 noet
