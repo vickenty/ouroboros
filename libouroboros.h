@@ -15,28 +15,26 @@ struct ouroboros_stack {
 
 typedef struct ouroboros_stack* ouroboros_stack_t;
 
-void ouroboros_stack_init(pTHX_ ouroboros_stack_t stack);
-void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t stack);
-void ouroboros_stack_putback(pTHX_ ouroboros_stack_t stack);
-
-SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t stack, unsigned int item);
-void ouroboros_stack_store(pTHX_ ouroboros_stack_t stack, unsigned int item, SV* value);
-
-void ouroboros_stack_xpush_sv(pTHX_ ouroboros_stack_t stack, SV* value);
-void ouroboros_stack_xpush_sv_mortal(pTHX_ ouroboros_stack_t stack, SV *value);
-
-void ouroboros_stack_xpush_iv(pTHX_ ouroboros_stack_t stack, IV value);
-void ouroboros_stack_xpush_uv(pTHX_ ouroboros_stack_t stack, UV value);
-void ouroboros_stack_xpush_nv(pTHX_ ouroboros_stack_t stack, NV value);
-void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t stack, char* str, size_t len);
-
-IV ouroboros_sv_iv(pTHX_ SV *sv);
-UV ouroboros_sv_uv(pTHX_ SV *sv);
-NV ouroboros_sv_nv(pTHX_ SV *sv);
-AV* ouroboros_sv_av(pTHX_ SV *sv);
-HV* ouroboros_sv_hv(pTHX_ SV *sv);
-U32 ouroboros_sv_rok(pTHX_ SV *sv);
-SV* ouroboros_sv_rv(pTHX_ SV *sv);
-IV ouroboros_sv_type(pTHX_ SV *sv);
+/* functions { */
+void ouroboros_stack_init(pTHX_ ouroboros_stack_t);
+void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t);
+void ouroboros_stack_putback(pTHX_ ouroboros_stack_t);
+SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t, unsigned int);
+void ouroboros_stack_store(pTHX_ ouroboros_stack_t, unsigned int, SV*);
+void ouroboros_stack_xpush_sv(pTHX_ ouroboros_stack_t, SV*);
+void ouroboros_stack_xpush_sv_mortal(pTHX_ ouroboros_stack_t, SV*);
+void ouroboros_stack_xpush_iv(pTHX_ ouroboros_stack_t, IV);
+void ouroboros_stack_xpush_uv(pTHX_ ouroboros_stack_t, UV);
+void ouroboros_stack_xpush_nv(pTHX_ ouroboros_stack_t, NV);
+void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t, char*, size_t);
+IV ouroboros_sv_iv(pTHX_ SV*);
+UV ouroboros_sv_uv(pTHX_ SV*);
+NV ouroboros_sv_nv(pTHX_ SV*);
+AV* ouroboros_sv_av(pTHX_ SV*);
+HV* ouroboros_sv_hv(pTHX_ SV*);
+U32 ouroboros_sv_rok(pTHX_ SV*);
+SV* ouroboros_sv_rv(pTHX_ SV*);
+IV ouroboros_sv_type(pTHX_ SV*);
+/* } */
 
 #endif
