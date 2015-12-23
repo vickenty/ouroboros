@@ -30,6 +30,12 @@ our @EXPORT_OK = qw(
     ouroboros_sv_rok_ptr
     ouroboros_sv_rv_ptr
     ouroboros_sv_type_ptr
+    ouroboros_sv_refcnt_inc_ptr
+    ouroboros_sv_refcnt_inc_nn_ptr
+    ouroboros_sv_refcnt_inc_void_ptr
+    ouroboros_sv_refcnt_inc_void_nn_ptr
+    ouroboros_sv_refcnt_dec_ptr
+    ouroboros_sv_refcnt_dec_nn_ptr
 );
 
 our @SV_TYPES;

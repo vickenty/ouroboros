@@ -35,6 +35,12 @@ HV* ouroboros_sv_hv(pTHX_ SV*);
 U32 ouroboros_sv_rok(pTHX_ SV*);
 SV* ouroboros_sv_rv(pTHX_ SV*);
 IV ouroboros_sv_type(pTHX_ SV*);
+SV* ouroboros_sv_refcnt_inc(pTHX_ SV*);
+SV* ouroboros_sv_refcnt_inc_nn(pTHX_ SV*);
+void ouroboros_sv_refcnt_inc_void(pTHX_ SV*);
+void ouroboros_sv_refcnt_inc_void_nn(pTHX_ SV*);
+void ouroboros_sv_refcnt_dec(pTHX_ SV*);
+void ouroboros_sv_refcnt_dec_nn(pTHX_ SV*);
 /* } */
 
 #endif

@@ -95,3 +95,38 @@ IV ouroboros_sv_type(pTHX_ SV *sv)
 {
 	return SvTYPE(sv);
 }
+
+U32 ouroboros_sv_refcnt(pTHX_ SV* sv)
+{
+        return SvREFCNT(sv);
+}
+
+SV* ouroboros_sv_refcnt_inc(pTHX_ SV* sv)
+{
+        return SvREFCNT_inc_simple(sv);
+}
+
+SV* ouroboros_sv_refcnt_inc_nn(pTHX_ SV* sv)
+{
+        return SvREFCNT_inc_simple_NN(sv);
+}
+
+void ouroboros_sv_refcnt_inc_void(pTHX_ SV* sv)
+{
+        SvREFCNT_inc_simple_void(sv);
+}
+
+void ouroboros_sv_refcnt_inc_void_nn(pTHX_ SV* sv)
+{
+        SvREFCNT_inc_simple_void_NN(sv);
+}
+
+void ouroboros_sv_refcnt_dec(pTHX_ SV* sv)
+{
+        SvREFCNT_dec(sv);
+}
+
+void ouroboros_sv_refcnt_dec_nn(pTHX_ SV* sv)
+{
+        SvREFCNT_dec_NN(sv);
+}

@@ -131,3 +131,45 @@ CODE:
 OUTPUT:
 	RETVAL
 
+void*
+ouroboros_sv_refcnt_inc_ptr()
+CODE:
+	RETVAL = ouroboros_sv_refcnt_inc;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_refcnt_inc_nn_ptr()
+CODE:
+	RETVAL = ouroboros_sv_refcnt_inc_nn;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_refcnt_inc_void_ptr()
+CODE:
+	RETVAL = ouroboros_sv_refcnt_inc_void;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_refcnt_inc_void_nn_ptr()
+CODE:
+	RETVAL = ouroboros_sv_refcnt_inc_void_nn;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_refcnt_dec_ptr()
+CODE:
+	RETVAL = ouroboros_sv_refcnt_dec;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_refcnt_dec_nn_ptr()
+CODE:
+	RETVAL = ouroboros_sv_refcnt_dec_nn;
+OUTPUT:
+	RETVAL
+

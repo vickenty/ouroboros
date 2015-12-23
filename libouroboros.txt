@@ -20,6 +20,20 @@ fn	U32	ouroboros_sv_rok	SV*
 fn	SV*	ouroboros_sv_rv	SV*
 fn	IV	ouroboros_sv_type	SV*
 
+# The next four functions actually wrap SvREFCNT_inc_simple_* macros.
+# SvREFCNT_inc(_void)?(_nn)? are implemented as static functions to force
+# one-time evaluation of their argument - we have it for free because
+# we are wrapping it. These wrappers are necessary because SvREFCNT_*
+# functions are declared as static and their symbols are not exported by Perl
+# executable.
+fn	SV*	ouroboros_sv_refcnt_inc	SV*
+fn	SV*	ouroboros_sv_refcnt_inc_nn	SV*
+fn	void	ouroboros_sv_refcnt_inc_void	SV*
+fn	void	ouroboros_sv_refcnt_inc_void_nn	SV*
+
+fn	void	ouroboros_sv_refcnt_dec	SV*
+fn	void	ouroboros_sv_refcnt_dec_nn	SV*
+
 # The only set of essential magic numbers missing from B package
 const	SVt_NULL
 const	SVt_IV
