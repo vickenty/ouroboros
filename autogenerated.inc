@@ -132,6 +132,13 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_refcnt_ptr()
+CODE:
+	RETVAL = ouroboros_sv_refcnt;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_sv_refcnt_inc_ptr()
 CODE:
 	RETVAL = ouroboros_sv_refcnt_inc;

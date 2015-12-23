@@ -20,6 +20,8 @@ fn	U32	ouroboros_sv_rok	SV*
 fn	SV*	ouroboros_sv_rv	SV*
 fn	IV	ouroboros_sv_type	SV*
 
+fn	U32	ouroboros_sv_refcnt	SV*
+
 # The next four functions actually wrap SvREFCNT_inc_simple_* macros.
 # SvREFCNT_inc(_void)?(_nn)? are implemented as static functions to force
 # one-time evaluation of their argument - we have it for free because
