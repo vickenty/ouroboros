@@ -4,8 +4,8 @@ typedef	struct ouroboros_stack*	ouroboros_stack_t
 fn	void	ouroboros_stack_init	ouroboros_stack_t
 fn	void	ouroboros_stack_prepush	ouroboros_stack_t
 fn	void	ouroboros_stack_putback	ouroboros_stack_t
-fn	SV*	ouroboros_stack_fetch	ouroboros_stack_t	unsigned int
-fn	void	ouroboros_stack_store	ouroboros_stack_t	unsigned int	SV*
+fn	SV*	ouroboros_stack_fetch	ouroboros_stack_t	SSize_t
+fn	void	ouroboros_stack_store	ouroboros_stack_t	SSize_t	SV*
 
 fn	void	ouroboros_stack_xpush_sv	ouroboros_stack_t	SV*
 fn	void	ouroboros_stack_xpush_sv_mortal	ouroboros_stack_t	SV*

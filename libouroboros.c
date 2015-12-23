@@ -14,12 +14,12 @@ void ouroboros_stack_init(pTHX_ ouroboros_stack_t stack)
 #define ax (stack->ax)
 #define items (stack->items)
 
-SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t stack, unsigned int item)
+SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t stack, SSize_t item)
 {
         return ST(item);
 }
 
-void ouroboros_stack_store(pTHX_ ouroboros_stack_t stack, unsigned int item, SV* value)
+void ouroboros_stack_store(pTHX_ ouroboros_stack_t stack, SSize_t item, SV* value)
 {
         ST(item) = value;
 }
