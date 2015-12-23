@@ -46,7 +46,7 @@ WRAP(mXPUSHn, nv, NV);
 
 #undef WRAP
 
-void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t stack, char *s, size_t len)
+void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t stack, char *s, STRLEN len)
 {
 	mXPUSHp(s, len);
 }

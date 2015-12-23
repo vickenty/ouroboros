@@ -9,7 +9,7 @@ fn	void	ouroboros_stack_xpush_sv_mortal	ouroboros_stack_t	SV*
 fn	void	ouroboros_stack_xpush_iv	ouroboros_stack_t	IV
 fn	void	ouroboros_stack_xpush_uv	ouroboros_stack_t	UV
 fn	void	ouroboros_stack_xpush_nv	ouroboros_stack_t	NV
-fn	void	ouroboros_stack_xpush_pv	ouroboros_stack_t	char*	size_t
+fn	void	ouroboros_stack_xpush_pv	ouroboros_stack_t	char*	STRLEN
 
 fn	IV	ouroboros_sv_iv	SV*
 fn	UV	ouroboros_sv_uv	SV*
