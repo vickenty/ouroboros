@@ -54,4 +54,4 @@ const	SVt_PVFM
 const	SVt_PVIO
 const	SVt_LAST
 
-# vim: set ts=12 noet
+# vim: set ts=12 tw=0 noet
