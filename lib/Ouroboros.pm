@@ -50,11 +50,14 @@ our @EXPORT = qw();
 
 our $VERSION = '0.01';
 
+our %Size;
+
 require XSLoader;
 XSLoader::load('Ouroboros', $VERSION);
 
 # XS bootstrap pushes to @SV_TYPES, this must come after XSLoader::load().
 push @EXPORT_OK, @SV_TYPES;
+
 
 1;
 __END__
