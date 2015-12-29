@@ -26,7 +26,7 @@ void ouroboros_stack_xpush_sv_mortal(pTHX_ ouroboros_stack_t, SV*);
 void ouroboros_stack_xpush_iv(pTHX_ ouroboros_stack_t, IV);
 void ouroboros_stack_xpush_uv(pTHX_ ouroboros_stack_t, UV);
 void ouroboros_stack_xpush_nv(pTHX_ ouroboros_stack_t, NV);
-void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t, char*, STRLEN);
+void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t, const char*, STRLEN);
 IV ouroboros_sv_iv(pTHX_ SV*);
 UV ouroboros_sv_uv(pTHX_ SV*);
 NV ouroboros_sv_nv(pTHX_ SV*);
