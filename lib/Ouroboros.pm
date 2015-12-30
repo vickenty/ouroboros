@@ -39,11 +39,11 @@ our @EXPORT_OK = qw(
     ouroboros_sv_refcnt_dec_nn_ptr
 );
 
-our @SV_TYPES;
+our @CONSTS;
 
 our %EXPORT_TAGS = (
     all => \@EXPORT_OK,
-    svt => \@SV_TYPES,
+    const => \@CONSTS,
 );
 
 our @EXPORT = qw();
@@ -55,9 +55,8 @@ our %Size;
 require XSLoader;
 XSLoader::load('Ouroboros', $VERSION);
 
-# XS bootstrap pushes to @SV_TYPES, this must come after XSLoader::load().
-push @EXPORT_OK, @SV_TYPES;
-
+# XS bootstrap pushes to @CONSTS, this must come after XSLoader::load().
+push @EXPORT_OK, @CONSTS;
 
 1;
 __END__
