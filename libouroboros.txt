@@ -1,6 +1,3 @@
-struct	ouroboros_stack	void*	void*	int	int
-typedef	struct ouroboros_stack*	ouroboros_stack_t
-
 fn	void	ouroboros_stack_init	ouroboros_stack_t
 fn	void	ouroboros_stack_prepush	ouroboros_stack_t
 fn	void	ouroboros_stack_putback	ouroboros_stack_t
