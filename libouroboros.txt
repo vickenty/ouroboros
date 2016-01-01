@@ -37,22 +37,22 @@ fn	void	ouroboros_sv_refcnt_dec	SV*
 fn	void	ouroboros_sv_refcnt_dec_nn	SV*
 
 # Elements of svtype
-const	SVt_NULL
-const	SVt_IV
-const	SVt_NV
-const	SVt_PV
-const	SVt_PVIV
-const	SVt_PVNV
-const	SVt_PVMG
-const	SVt_REGEXP
-const	SVt_PVGV
-const	SVt_PVLV
-const	SVt_PVAV
-const	SVt_PVHV
-const	SVt_PVCV
-const	SVt_PVFM
-const	SVt_PVIO
-const	SVt_LAST
+enum	SVt_NULL
+enum	SVt_IV
+enum	SVt_NV
+enum	SVt_PV
+enum	SVt_PVIV
+enum	SVt_PVNV
+enum	SVt_PVMG
+enum	SVt_REGEXP
+enum	SVt_PVGV
+enum	SVt_PVLV
+enum	SVt_PVAV
+enum	SVt_PVHV
+enum	SVt_PVCV
+enum	SVt_PVFM
+enum	SVt_PVIO
+enum	SVt_LAST
 
 # Assorted SV related flags and constants. SV_CONST is not a const, but all SV_CONST_* are.
 # r !awk '/\#define SV_/ && \!/SV_CHECK_/ && \!/SV_CONST[^_]/ { print("const\t" $2) }' sv.h

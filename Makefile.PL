@@ -17,7 +17,7 @@ WriteMakefile(
     realclean         => { FILES => "const-c.inc const-xs.inc" },
 );
 
-my @constants = qw(
+my @enums = qw(
     SVt_NULL
     SVt_IV
     SVt_NV
@@ -34,6 +34,9 @@ my @constants = qw(
     SVt_PVFM
     SVt_PVIO
     SVt_LAST
+);
+
+my @consts = qw(
     SV_IMMEDIATE_UNREF
     SV_GMAGIC
     SV_COW_DROP_PV
@@ -89,6 +92,9 @@ my @constants = qw(
 
 WriteConstants(
     NAME => "Ouroboros",
-    NAMES => [ map +{ name => $_, macro => 1, type => "IV" }, @constants ],
+    NAMES => [
+        map({ name => $_, macro => 1, type => "IV" }, @enums),
+        map({ name => $_, type => "IV" }, @consts),
+    ],
     PROXYSUBS => { push => "CONSTS" },
 );

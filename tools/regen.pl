@@ -19,6 +19,7 @@ my @spec = map { !$_ || /^#/ ? () : [ split /\t/ ] }
 my @funcs = grep $_->[KIND] eq "fn", @spec;
 my @shims = map $_->[NAME], @funcs;
 
+my @enums = map $_->[CONST], grep $_->[KIND] eq "enum", @spec;
 my @consts = map $_->[CONST], grep $_->[KIND] eq "const", @spec;
 
 my @names;
@@ -53,9 +54,12 @@ my @names;
 }
 
 {
+    my $enums = join "", map "    $_\n", @enums;
     my $consts = join "", map "    $_\n", @consts;
+
     my $makefile = "Makefile.PL";
     my $mf = read_file($makefile);
-    $mf =~ s/(my\s+\@constants\s*=\s*qw\()[^\)]*(\);)/$1\n$consts$2/m;
+    $mf =~ s/(my\s+\@enums\s*=\s*qw\()[^\)]*(\);)/$1\n$enums$2/m;
+    $mf =~ s/(my\s+\@consts\s*=\s*qw\()[^\)]*(\);)/$1\n$consts$2/m;
     write_file($makefile, $mf);
 }
