@@ -55,7 +55,12 @@ our %Size;
 require XSLoader;
 XSLoader::load('Ouroboros', $VERSION);
 
-# XS bootstrap pushes to @CONSTS, this must come after XSLoader::load().
+# XS bootstrap pushes to @CONSTS, this must come after XSLoader::load().  While
+# ExtUtils::Constant generates code to check if constant exists or not at
+# compile time, it still pushes them into the array for some reason.
+# Here, we only need constants that are actually available.
+@CONSTS = grep defined eval "$_", @CONSTS;
+
 push @EXPORT_OK, @CONSTS;
 
 1;
