@@ -25,8 +25,6 @@ our @EXPORT_OK = qw(
     ouroboros_sv_iv_ptr
     ouroboros_sv_uv_ptr
     ouroboros_sv_nv_ptr
-    ouroboros_sv_av_ptr
-    ouroboros_sv_hv_ptr
     ouroboros_sv_rok_ptr
     ouroboros_sv_rv_ptr
     ouroboros_sv_type_ptr

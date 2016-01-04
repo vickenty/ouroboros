@@ -14,8 +14,6 @@ fn	void	ouroboros_stack_xpush_pv	ouroboros_stack_t	const char*	STRLEN
 fn	IV	ouroboros_sv_iv	SV*
 fn	UV	ouroboros_sv_uv	SV*
 fn	NV	ouroboros_sv_nv	SV*
-fn	AV*	ouroboros_sv_av	SV*
-fn	HV*	ouroboros_sv_hv	SV*
 fn	U32	ouroboros_sv_rok	SV*
 fn	SV*	ouroboros_sv_rv	SV*
 fn	IV	ouroboros_sv_type	SV*

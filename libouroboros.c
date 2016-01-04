@@ -71,16 +71,6 @@ NV ouroboros_sv_nv(pTHX_ SV *sv)
 	return SvNV(sv);
 }
 
-AV* ouroboros_sv_av(pTHX_ SV *sv)
-{
-	return (AV*) SvRV(sv);
-}
-
-HV* ouroboros_sv_hv(pTHX_ SV *sv)
-{
-	return (HV*) SvRV(sv);
-}
-
 U32 ouroboros_sv_rok(pTHX_ SV *sv)
 {
 	return SvROK(sv);

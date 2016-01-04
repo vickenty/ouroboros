@@ -97,20 +97,6 @@ OUTPUT:
 	RETVAL
 
 void*
-ouroboros_sv_av_ptr()
-CODE:
-	RETVAL = ouroboros_sv_av;
-OUTPUT:
-	RETVAL
-
-void*
-ouroboros_sv_hv_ptr()
-CODE:
-	RETVAL = ouroboros_sv_hv;
-OUTPUT:
-	RETVAL
-
-void*
 ouroboros_sv_rok_ptr()
 CODE:
 	RETVAL = ouroboros_sv_rok;
