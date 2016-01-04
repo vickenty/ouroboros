@@ -21,6 +21,8 @@ void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t);
 void ouroboros_stack_putback(pTHX_ ouroboros_stack_t);
 SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t, SSize_t);
 void ouroboros_stack_store(pTHX_ ouroboros_stack_t, SSize_t, SV*);
+void ouroboros_stack_extend(pTHX_ ouroboros_stack_t, SSize_t);
+void ouroboros_stack_pushmark(pTHX_ ouroboros_stack_t);
 void ouroboros_stack_xpush_sv(pTHX_ ouroboros_stack_t, SV*);
 void ouroboros_stack_xpush_sv_mortal(pTHX_ ouroboros_stack_t, SV*);
 void ouroboros_stack_xpush_iv(pTHX_ ouroboros_stack_t, IV);

@@ -34,6 +34,20 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_stack_extend_ptr()
+CODE:
+	RETVAL = ouroboros_stack_extend;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_stack_pushmark_ptr()
+CODE:
+	RETVAL = ouroboros_stack_pushmark;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_stack_xpush_sv_ptr()
 CODE:
 	RETVAL = ouroboros_stack_xpush_sv;
