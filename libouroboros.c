@@ -24,31 +24,10 @@ void ouroboros_stack_store(pTHX_ ouroboros_stack_t stack, SSize_t item, SV* valu
         ST(item) = value;
 }
 
+/* functions { */
 void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t stack)
 {
         XSprePUSH;
-}
-
-#define WRAP(op, suffix, type)                                          \
-        void ouroboros_stack_xpush_##suffix (                           \
-                pTHX_                                                   \
-                ouroboros_stack_t stack,                                \
-                type value)                                             \
-        {                                                               \
-                op(value);                                              \
-        }
-
-WRAP(XPUSHs, sv, SV*);
-WRAP(mXPUSHs, sv_mortal, SV*);
-WRAP(mXPUSHi, iv, IV);
-WRAP(mXPUSHu, uv, UV);
-WRAP(mXPUSHn, nv, NV);
-
-#undef WRAP
-
-void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t stack, const char *s, STRLEN len)
-{
-	mXPUSHp(s, len);
 }
 
 void ouroboros_stack_putback(pTHX_ ouroboros_stack_t stack)
@@ -56,34 +35,64 @@ void ouroboros_stack_putback(pTHX_ ouroboros_stack_t stack)
         PUTBACK;
 }
 
-IV ouroboros_sv_iv(pTHX_ SV *sv)
+void ouroboros_stack_xpush_sv(pTHX_ ouroboros_stack_t stack, SV* sv)
+{
+        XPUSHs(sv);
+}
+
+void ouroboros_stack_xpush_sv_mortal(pTHX_ ouroboros_stack_t stack, SV* sv)
+{
+        mXPUSHs(sv);
+}
+
+void ouroboros_stack_xpush_iv(pTHX_ ouroboros_stack_t stack, IV a)
+{
+        mXPUSHi(a);
+}
+
+void ouroboros_stack_xpush_uv(pTHX_ ouroboros_stack_t stack, UV a)
+{
+        mXPUSHu(a);
+}
+
+void ouroboros_stack_xpush_nv(pTHX_ ouroboros_stack_t stack, NV a)
+{
+        mXPUSHn(a);
+}
+
+void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t stack, const char* a, STRLEN b)
+{
+        mXPUSHp(a, b);
+}
+
+IV ouroboros_sv_iv(pTHX_ SV* sv)
 {
         return SvIV(sv);
 }
 
-UV ouroboros_sv_uv(pTHX_ SV *sv)
+UV ouroboros_sv_uv(pTHX_ SV* sv)
 {
         return SvUV(sv);
 }
 
-NV ouroboros_sv_nv(pTHX_ SV *sv)
+NV ouroboros_sv_nv(pTHX_ SV* sv)
 {
-	return SvNV(sv);
+        return SvNV(sv);
 }
 
-U32 ouroboros_sv_rok(pTHX_ SV *sv)
+U32 ouroboros_sv_rok(pTHX_ SV* sv)
 {
-	return SvROK(sv);
+        return SvROK(sv);
 }
 
-SV* ouroboros_sv_rv(pTHX_ SV *sv)
+SV* ouroboros_sv_rv(pTHX_ SV* sv)
 {
-	return SvRV(sv);
+        return SvRV(sv);
 }
 
-IV ouroboros_sv_type(pTHX_ SV *sv)
+IV ouroboros_sv_type(pTHX_ SV* sv)
 {
-	return SvTYPE(sv);
+        return SvTYPE(sv);
 }
 
 U32 ouroboros_sv_refcnt(pTHX_ SV* sv)
@@ -120,3 +129,4 @@ void ouroboros_sv_refcnt_dec_nn(pTHX_ SV* sv)
 {
         SvREFCNT_dec_NN(sv);
 }
+/* } */

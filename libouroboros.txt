@@ -1,23 +1,39 @@
 fn	void	ouroboros_stack_init	ouroboros_stack_t
+#: XSprePUSH
 fn	void	ouroboros_stack_prepush	ouroboros_stack_t
+#: PUTBACK
 fn	void	ouroboros_stack_putback	ouroboros_stack_t
 fn	SV*	ouroboros_stack_fetch	ouroboros_stack_t	SSize_t
 fn	void	ouroboros_stack_store	ouroboros_stack_t	SSize_t	SV*
 
+
+#: XPUSHs
 fn	void	ouroboros_stack_xpush_sv	ouroboros_stack_t	SV*
+#: mXPUSHs
 fn	void	ouroboros_stack_xpush_sv_mortal	ouroboros_stack_t	SV*
+#: mXPUSHi
 fn	void	ouroboros_stack_xpush_iv	ouroboros_stack_t	IV
+#: mXPUSHu
 fn	void	ouroboros_stack_xpush_uv	ouroboros_stack_t	UV
+#: mXPUSHn
 fn	void	ouroboros_stack_xpush_nv	ouroboros_stack_t	NV
+#: mXPUSHp
 fn	void	ouroboros_stack_xpush_pv	ouroboros_stack_t	const char*	STRLEN
 
+#: SvIV
 fn	IV	ouroboros_sv_iv	SV*
+#: SvUV
 fn	UV	ouroboros_sv_uv	SV*
+#: SvNV
 fn	NV	ouroboros_sv_nv	SV*
+#: SvROK
 fn	U32	ouroboros_sv_rok	SV*
+#: SvRV
 fn	SV*	ouroboros_sv_rv	SV*
+#: SvTYPE
 fn	IV	ouroboros_sv_type	SV*
 
+#: SvREFCNT
 fn	U32	ouroboros_sv_refcnt	SV*
 
 # The next four functions actually wrap SvREFCNT_inc_simple_* macros.
@@ -26,12 +42,19 @@ fn	U32	ouroboros_sv_refcnt	SV*
 # we are wrapping it. These wrappers are necessary because SvREFCNT_*
 # functions are declared as static and their symbols are not exported by Perl
 # executable.
+
+#: SvREFCNT_inc_simple
 fn	SV*	ouroboros_sv_refcnt_inc	SV*
+#: SvREFCNT_inc_simple_NN
 fn	SV*	ouroboros_sv_refcnt_inc_nn	SV*
+#: SvREFCNT_inc_simple_void
 fn	void	ouroboros_sv_refcnt_inc_void	SV*
+#: SvREFCNT_inc_simple_void_NN
 fn	void	ouroboros_sv_refcnt_inc_void_nn	SV*
 
+#: SvREFCNT_dec
 fn	void	ouroboros_sv_refcnt_dec	SV*
+#: SvREFCNT_dec_NN
 fn	void	ouroboros_sv_refcnt_dec_nn	SV*
 
 # Elements of svtype
