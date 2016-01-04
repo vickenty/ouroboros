@@ -33,7 +33,7 @@ my @names;
 {
     my $decls = do {
         local $" = ", ";
-        join "", map sprintf("%s %s(pTHX_ %s);\n", $_->{type}, $_->{name}, "@{$_->{params}}"), @{$spec->{fn}}
+        join "", map sprintf("%s %s(%s%s);\n", $_->{type}, $_->{name}, @{$_->{params}} ? "pTHX_ ": "pTHX", "@{$_->{params}}"), @{$spec->{fn}}
     };
 
     my $header = "libouroboros.h";

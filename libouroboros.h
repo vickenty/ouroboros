@@ -40,6 +40,10 @@ void ouroboros_sv_refcnt_inc_void(pTHX_ SV*);
 void ouroboros_sv_refcnt_inc_void_nn(pTHX_ SV*);
 void ouroboros_sv_refcnt_dec(pTHX_ SV*);
 void ouroboros_sv_refcnt_dec_nn(pTHX_ SV*);
+void ouroboros_enter(pTHX);
+void ouroboros_leave(pTHX);
+void ouroboros_savetmps(pTHX);
+void ouroboros_freetmps(pTHX);
 /* } */
 
 #endif

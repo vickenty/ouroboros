@@ -57,6 +57,15 @@ fn	void	ouroboros_sv_refcnt_dec	SV*
 #: SvREFCNT_dec_NN
 fn	void	ouroboros_sv_refcnt_dec_nn	SV*
 
+#: ENTER
+fn	void	ouroboros_enter
+#: LEAVE
+fn	void	ouroboros_leave
+#: SAVETMPS
+fn	void	ouroboros_savetmps
+#: FREETMPS
+fn	void	ouroboros_freetmps
+
 # Elements of svtype
 enum	SVt_NULL
 enum	SVt_IV

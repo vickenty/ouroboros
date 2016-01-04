@@ -166,3 +166,31 @@ CODE:
 OUTPUT:
 	RETVAL
 
+void*
+ouroboros_enter_ptr()
+CODE:
+	RETVAL = ouroboros_enter;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_leave_ptr()
+CODE:
+	RETVAL = ouroboros_leave;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_savetmps_ptr()
+CODE:
+	RETVAL = ouroboros_savetmps;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_freetmps_ptr()
+CODE:
+	RETVAL = ouroboros_freetmps;
+OUTPUT:
+	RETVAL
+

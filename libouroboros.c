@@ -129,4 +129,24 @@ void ouroboros_sv_refcnt_dec_nn(pTHX_ SV* sv)
 {
         SvREFCNT_dec_NN(sv);
 }
+
+void ouroboros_enter(pTHX)
+{
+        ENTER;
+}
+
+void ouroboros_leave(pTHX)
+{
+        LEAVE;
+}
+
+void ouroboros_savetmps(pTHX)
+{
+        SAVETMPS;
+}
+
+void ouroboros_freetmps(pTHX)
+{
+        FREETMPS;
+}
 /* } */
