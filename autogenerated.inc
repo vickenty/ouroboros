@@ -90,6 +90,48 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_stack_push_sv_ptr()
+CODE:
+	RETVAL = ouroboros_stack_push_sv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_stack_push_sv_mortal_ptr()
+CODE:
+	RETVAL = ouroboros_stack_push_sv_mortal;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_stack_push_iv_ptr()
+CODE:
+	RETVAL = ouroboros_stack_push_iv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_stack_push_uv_ptr()
+CODE:
+	RETVAL = ouroboros_stack_push_uv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_stack_push_nv_ptr()
+CODE:
+	RETVAL = ouroboros_stack_push_nv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_stack_push_pv_ptr()
+CODE:
+	RETVAL = ouroboros_stack_push_pv;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_sv_iv_ptr()
 CODE:
 	RETVAL = ouroboros_sv_iv;

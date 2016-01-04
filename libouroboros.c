@@ -75,6 +75,36 @@ void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t stack, const char* a, STRL
         mXPUSHp(a, b);
 }
 
+void ouroboros_stack_push_sv(pTHX_ ouroboros_stack_t stack, SV* sv)
+{
+        PUSHs(sv);
+}
+
+void ouroboros_stack_push_sv_mortal(pTHX_ ouroboros_stack_t stack, SV* sv)
+{
+        mPUSHs(sv);
+}
+
+void ouroboros_stack_push_iv(pTHX_ ouroboros_stack_t stack, IV a)
+{
+        mPUSHi(a);
+}
+
+void ouroboros_stack_push_uv(pTHX_ ouroboros_stack_t stack, UV a)
+{
+        mPUSHu(a);
+}
+
+void ouroboros_stack_push_nv(pTHX_ ouroboros_stack_t stack, NV a)
+{
+        mPUSHn(a);
+}
+
+void ouroboros_stack_push_pv(pTHX_ ouroboros_stack_t stack, const char* a, STRLEN b)
+{
+        mPUSHp(a, b);
+}
+
 IV ouroboros_sv_iv(pTHX_ SV* sv)
 {
         return SvIV(sv);
