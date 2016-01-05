@@ -48,8 +48,11 @@ sub mk_impl {
     my $pname = "a";
     my $svn = "";
 
+    my ($macro_name, @hints) = @{$fn->{tags}{autoimpl}};
+
     my (@decl, @impl);
     foreach my $ptype (@{$fn->{params}}) {
+        my $hint = shift @hints // "";
         my $name =
             $ptype eq "ouroboros_stack_t"
             ? "stack"
@@ -57,7 +60,7 @@ sub mk_impl {
             ? "sv" . $svn++
             : $pname++;
         push @decl, "$ptype $name";
-        push @impl, $name if $ptype ne "ouroboros_stack_t";
+        push @impl, "$hint$name" if $ptype ne "ouroboros_stack_t";
     }
 
     my $pthx = @decl ? "pTHX_ " : "pTHX";
@@ -66,7 +69,7 @@ sub mk_impl {
         $fn->{type}, $fn->{name}, $pthx,
         join(", ", @decl),
         $fn->{type} eq "void" ? "" : "return ",
-        $fn->{tags}{autoimpl},
+        $macro_name,
         @impl ? map("($_)", join ", ", @impl) : "",
     );
 }
