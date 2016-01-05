@@ -120,6 +120,16 @@ NV ouroboros_sv_nv(pTHX_ SV* sv)
         return SvNV(sv);
 }
 
+const char* ouroboros_sv_pv(pTHX_ SV* sv, STRLEN* a)
+{
+        return SvPV(sv, *a);
+}
+
+const char* ouroboros_sv_pv_nolen(pTHX_ SV* sv)
+{
+        return SvPV_nolen(sv);
+}
+
 U32 ouroboros_sv_rok(pTHX_ SV* sv)
 {
         return SvROK(sv);

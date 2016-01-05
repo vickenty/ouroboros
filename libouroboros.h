@@ -38,6 +38,8 @@ void ouroboros_stack_push_pv(pTHX_ ouroboros_stack_t, const char*, STRLEN);
 IV ouroboros_sv_iv(pTHX_ SV*);
 UV ouroboros_sv_uv(pTHX_ SV*);
 NV ouroboros_sv_nv(pTHX_ SV*);
+const char* ouroboros_sv_pv(pTHX_ SV*, STRLEN*);
+const char* ouroboros_sv_pv_nolen(pTHX_ SV*);
 U32 ouroboros_sv_rok(pTHX_ SV*);
 SV* ouroboros_sv_rv(pTHX_ SV*);
 IV ouroboros_sv_type(pTHX_ SV*);

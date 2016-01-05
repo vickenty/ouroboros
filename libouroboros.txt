@@ -41,6 +41,10 @@ fn	IV	ouroboros_sv_iv	SV*
 fn	UV	ouroboros_sv_uv	SV*
 #: SvNV
 fn	NV	ouroboros_sv_nv	SV*
+#: SvPV(,*)
+fn	const char*	ouroboros_sv_pv	SV*	STRLEN*
+#: SvPV_nolen
+fn	const char*	ouroboros_sv_pv_nolen	SV*
 #: SvROK
 fn	U32	ouroboros_sv_rok	SV*
 #: SvRV

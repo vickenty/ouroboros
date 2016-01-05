@@ -153,6 +153,20 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_pv_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_pv_nolen_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pv_nolen;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_sv_rok_ptr()
 CODE:
 	RETVAL = ouroboros_sv_rok;
