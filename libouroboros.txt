@@ -1,4 +1,5 @@
 fn	void	ouroboros_stack_init	ouroboros_stack_t
+fn	int	ouroboros_stack_items	ouroboros_stack_t
 #: XSprePUSH
 fn	void	ouroboros_stack_prepush	ouroboros_stack_t
 #: PUTBACK

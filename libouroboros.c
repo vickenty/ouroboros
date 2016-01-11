@@ -9,6 +9,11 @@ void ouroboros_stack_init(pTHX_ ouroboros_stack_t stack)
         stack->items = items;
 }
 
+int ouroboros_stack_items(pTHX_ ouroboros_stack_t stack)
+{
+	return stack->items;
+}
+
 #define sp (stack->sp)
 #define mark (stack->mark)
 #define ax (stack->ax)

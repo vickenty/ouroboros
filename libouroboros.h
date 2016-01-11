@@ -17,6 +17,7 @@ typedef struct ouroboros_stack* ouroboros_stack_t;
 
 /* functions { */
 void ouroboros_stack_init(pTHX_ ouroboros_stack_t);
+int ouroboros_stack_items(pTHX_ ouroboros_stack_t);
 void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t);
 void ouroboros_stack_putback(pTHX_ ouroboros_stack_t);
 SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t, SSize_t);

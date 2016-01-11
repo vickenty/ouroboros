@@ -12,6 +12,7 @@ our @ISA = qw(Exporter);
 
 our @EXPORT_OK = qw(
     ouroboros_stack_init_ptr
+    ouroboros_stack_items_ptr
     ouroboros_stack_prepush_ptr
     ouroboros_stack_putback_ptr
     ouroboros_stack_fetch_ptr

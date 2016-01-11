@@ -6,6 +6,13 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_stack_items_ptr()
+CODE:
+	RETVAL = ouroboros_stack_items;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_stack_prepush_ptr()
 CODE:
 	RETVAL = ouroboros_stack_prepush;
