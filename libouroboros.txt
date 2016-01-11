@@ -9,6 +9,8 @@ fn	void	ouroboros_stack_store	ouroboros_stack_t	SSize_t	SV*
 fn	void	ouroboros_stack_extend	ouroboros_stack_t	SSize_t
 
 fn	void	ouroboros_stack_pushmark	ouroboros_stack_t
+#: SPAGAIN
+fn	void	ouroboros_stack_spagain	ouroboros_stack_t
 
 #: XPUSHs
 fn	void	ouroboros_stack_xpush_sv	ouroboros_stack_t	SV*
