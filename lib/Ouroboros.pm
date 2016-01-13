@@ -19,6 +19,7 @@ our @EXPORT_OK = qw(
     ouroboros_stack_store_ptr
     ouroboros_stack_extend_ptr
     ouroboros_stack_pushmark_ptr
+    ouroboros_stack_spagain_ptr
     ouroboros_stack_xpush_sv_ptr
     ouroboros_stack_xpush_sv_mortal_ptr
     ouroboros_stack_xpush_iv_ptr

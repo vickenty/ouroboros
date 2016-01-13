@@ -50,6 +50,11 @@ void ouroboros_stack_putback(pTHX_ ouroboros_stack_t stack)
         PUTBACK;
 }
 
+void ouroboros_stack_spagain(pTHX_ ouroboros_stack_t stack)
+{
+        SPAGAIN;
+}
+
 void ouroboros_stack_xpush_sv(pTHX_ ouroboros_stack_t stack, SV* sv)
 {
         XPUSHs(sv);
