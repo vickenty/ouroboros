@@ -202,6 +202,34 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_gv_sv_ptr()
+CODE:
+	RETVAL = ouroboros_gv_sv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_gv_av_ptr()
+CODE:
+	RETVAL = ouroboros_gv_av;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_gv_hv_ptr()
+CODE:
+	RETVAL = ouroboros_gv_hv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_gv_cv_ptr()
+CODE:
+	RETVAL = ouroboros_gv_cv;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_sv_refcnt_ptr()
 CODE:
 	RETVAL = ouroboros_sv_refcnt;

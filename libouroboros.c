@@ -155,6 +155,26 @@ IV ouroboros_sv_type(pTHX_ SV* sv)
         return SvTYPE(sv);
 }
 
+SV* ouroboros_gv_sv(pTHX_ GV* a)
+{
+        return GvSV(a);
+}
+
+AV* ouroboros_gv_av(pTHX_ GV* a)
+{
+        return GvAV(a);
+}
+
+HV* ouroboros_gv_hv(pTHX_ GV* a)
+{
+        return GvHV(a);
+}
+
+CV* ouroboros_gv_cv(pTHX_ CV* a)
+{
+        return GvCV(a);
+}
+
 U32 ouroboros_sv_refcnt(pTHX_ SV* sv)
 {
         return SvREFCNT(sv);

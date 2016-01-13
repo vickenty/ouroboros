@@ -55,6 +55,15 @@ fn	SV*	ouroboros_sv_rv	SV*
 #: SvTYPE
 fn	IV	ouroboros_sv_type	SV*
 
+#: GvSV
+fn	SV*	ouroboros_gv_sv	GV*
+#: GvAV
+fn	AV*	ouroboros_gv_av	GV*
+#: GvHV
+fn	HV*	ouroboros_gv_hv	GV*
+#: GvCV
+fn	CV*	ouroboros_gv_cv	CV*
+
 #: SvREFCNT
 fn	U32	ouroboros_sv_refcnt	SV*
 
