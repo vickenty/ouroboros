@@ -19,7 +19,7 @@ func gone_hello(perl *C.PerlInterpreter, cv *C.CV) {
 	var hello = "Hello from Go"
 	var hello_c = C.CString(hello)
 	C.ouroboros_stack_prepush(perl, &stack)
-	C.ouroboros_stack_xpush_pv(perl, &stack, hello_c, C.size_t(len(hello)))
+	C.ouroboros_stack_xpush_pv(perl, &stack, hello_c, C.STRLEN(len(hello)))
 	C.ouroboros_stack_putback(perl, &stack)
 
 	C.free(unsafe.Pointer(hello_c))
