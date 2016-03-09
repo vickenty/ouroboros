@@ -1,0 +1,11 @@
+^\.
+^MANIFEST\.
+^blib/
+^Makefile(\.old)?$
+^demo/
+~$
+^Ouroboros.c$
+\.o$
+^MYMETA\.
+^pm_to_blib$
+^const-(c|xs)\.inc$
