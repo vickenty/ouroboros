@@ -15,6 +15,18 @@ WriteMakefile(
     INC               => '-I.',
     depend            => { "Ouroboros.xs" => "const-c.inc const-xs.inc" },
     realclean         => { FILES => "const-c.inc const-xs.inc" },
+    MERGE_META        => {
+        resources => {
+            repository => {
+                type => "git",
+                url => "https://github.com/vickenty/ouroboros",
+                web => "https://github.com/vickenty/ouroboros",
+            },
+            bugtracker => {
+                web => "https://github.com/vickenty/ouroboros/issues",
+            },
+        },
+    },
 );
 
 my @enums = qw(
