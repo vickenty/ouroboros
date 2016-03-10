@@ -39,11 +39,6 @@ void ouroboros_stack_extend(pTHX_ ouroboros_stack_t stack, SSize_t size)
 	EXTEND(SP, size);
 }
 
-void ouroboros_sys_term(pTHX)
-{
-	PERL_SYS_TERM();
-}
-
 /* functions { */
 void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t stack)
 {
@@ -233,10 +228,5 @@ void ouroboros_savetmps(pTHX)
 void ouroboros_freetmps(pTHX)
 {
         FREETMPS;
-}
-
-void ouroboros_sys_init(pTHX_ int* a, char*** b, char*** c)
-{
-        PERL_SYS_INIT3(a, b, c);
 }
 /* } */
