@@ -97,6 +97,10 @@ fn	void	ouroboros_savetmps
 #: FREETMPS
 fn	void	ouroboros_freetmps
 
+#: PERL_SYS_INIT3
+fn	void	ouroboros_sys_init	int*	char***	char***
+fn	void	ouroboros_sys_term
+
 # Elements of svtype
 enum	SVt_NULL
 enum	SVt_IV

@@ -306,3 +306,17 @@ CODE:
 OUTPUT:
 	RETVAL
 
+void*
+ouroboros_sys_init_ptr()
+CODE:
+	RETVAL = ouroboros_sys_init;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sys_term_ptr()
+CODE:
+	RETVAL = ouroboros_sys_term;
+OUTPUT:
+	RETVAL
+
