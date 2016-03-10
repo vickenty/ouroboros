@@ -15,7 +15,8 @@ WriteMakefile(
     INC               => '-I.',
     depend            => { "Ouroboros.xs" => "const-c.inc const-xs.inc" },
     realclean         => { FILES => "const-c.inc const-xs.inc" },
-    MERGE_META        => {
+    META_MERGE        => {
+        "meta-spec" => { version => 2 },
         resources => {
             repository => {
                 type => "git",
