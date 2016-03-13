@@ -8,6 +8,15 @@ use File::Slurp;
 use lib "lib";
 use Ouroboros::Spec;
 
+sub pthx {
+    my $fn = shift;
+    if ($fn->{tags}{context}) {
+        @{$_->{params}} ? "pTHX_ ": "pTHX"
+    } else {
+        ""
+    }
+}
+
 open my $spec_fh, "<", "libouroboros.txt";
 my $spec = Ouroboros::Spec::parse_fh($spec_fh);
 
@@ -33,7 +42,7 @@ my @names;
 {
     my $decls = do {
         local $" = ", ";
-        join "", map sprintf("%s %s(%s%s);\n", $_->{type}, $_->{name}, @{$_->{params}} ? "pTHX_ ": "pTHX", "@{$_->{params}}"), @{$spec->{fn}}
+        join "", map sprintf("%s %s(%s%s);\n", $_->{type}, $_->{name}, pthx($_), "@{$_->{params}}"), @{$spec->{fn}}
     };
 
     my $header = "libouroboros.h";
@@ -63,10 +72,8 @@ sub mk_impl {
         push @impl, "$hint$name" if $ptype ne "ouroboros_stack_t";
     }
 
-    my $pthx = @decl ? "pTHX_ " : "pTHX";
-
     return sprintf("%s %s(%s%s)\n{\n        %s%s%s;\n}\n",
-        $fn->{type}, $fn->{name}, $pthx,
+        $fn->{type}, $fn->{name}, pthx($fn),
         join(", ", @decl),
         $fn->{type} eq "void" ? "" : "return ",
         $macro_name,
