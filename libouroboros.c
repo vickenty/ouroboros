@@ -229,4 +229,14 @@ void ouroboros_freetmps(pTHX)
 {
         FREETMPS;
 }
+
+void ouroboros_sys_init3(int* a, char*** b, char*** c)
+{
+        PERL_SYS_INIT3(a, b, c);
+}
+
+void ouroboros_sys_term()
+{
+        PERL_SYS_TERM;
+}
 /* } */

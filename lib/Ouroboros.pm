@@ -55,6 +55,8 @@ our @EXPORT_OK = qw(
     ouroboros_leave_ptr
     ouroboros_savetmps_ptr
     ouroboros_freetmps_ptr
+    ouroboros_sys_init3_ptr
+    ouroboros_sys_term_ptr
 );
 
 our @CONSTS;

@@ -60,6 +60,8 @@ void ouroboros_enter(pTHX);
 void ouroboros_leave(pTHX);
 void ouroboros_savetmps(pTHX);
 void ouroboros_freetmps(pTHX);
+void ouroboros_sys_init3(int*, char***, char***);
+void ouroboros_sys_term();
 /* } */
 
 #endif
