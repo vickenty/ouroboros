@@ -102,6 +102,7 @@ fn	void	ouroboros_freetmps
 fn	void	ouroboros_sys_init3	int*	char***	char***
 #: PERL_SYS_TERM
 #- context
+#+ parens
 fn	void	ouroboros_sys_term
 
 # Elements of svtype

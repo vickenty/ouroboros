@@ -237,6 +237,6 @@ void ouroboros_sys_init3(int* a, char*** b, char*** c)
 
 void ouroboros_sys_term()
 {
-        PERL_SYS_TERM;
+        PERL_SYS_TERM();
 }
 /* } */

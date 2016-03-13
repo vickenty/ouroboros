@@ -77,7 +77,7 @@ sub mk_impl {
         join(", ", @decl),
         $fn->{type} eq "void" ? "" : "return ",
         $macro_name,
-        @impl ? map("($_)", join ", ", @impl) : "",
+        @impl ? map("($_)", join ", ", @impl) : $fn->{tags}{parens} ? "()" : ""
     );
 }
 
