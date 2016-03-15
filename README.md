@@ -1,21 +1,33 @@
 # Ouroboros
 
-Perl XS API wrapped in C functions.
+Perl XS macros re-exported as C functions.
 
-Perl XS API makes heavy use of C preprocessor to generate inline code, which
-makes it difficult to write XS modules in anything but C. This library tries to
-help.
+## Why
 
-libouroboros wraps macros provided by Perl inside plain C functions. These
-functions can be used to create Perl-compatible native code in any language
-that supports linking with C. (See `demo/rust` for one example).
+* Write Perl extensions in any language that can produce and link shared
+libraries.
 
-Additionally, a Perl package is provided that exports pointers to these
-functions back to Perl, to be called from dynamically assembled code.
+* Generate native Perl subs at run-time using a just-in-time compiler.
 
-## Requirements.
+## Contents
+
+* `libouroboros.c`
+* `libouroboros.h` - a library of wrappers around various XS macros.
+
+* `libouroboros.txt` - main source file for the entire thing, lists
+  all supported functions, their signatures, and constants. Can be
+  used to automatically generate bindings in other languages.
+
+* `Ouroboros` - Perl package that exports pointers to libouroboros
+  functions as well as many necessary constants needed to call them
+  correctly (like values of `svtype` enumeration and flags).
+
+* `Ouroboros::Spec` - parser for `libouroboros.txt`.
+
+## Requirements
 
 Perl 5.20 or later.
+
 A working C compiler.
 
 ## Building
@@ -23,4 +35,3 @@ A working C compiler.
     perl Makefile.PL
     make
     make install
-
