@@ -88,23 +88,67 @@ __END__
 
 =head1 NAME
 
-Ouroboros - expose bits of Perl API as pointers to functions
+Ouroboros - Perl XS macros re-exported as C functions
 
-=head1 LIBOUROBOROS
+=head1 DESCRIPTION
 
-Perl XS API makes heavy use of C preprocessor to generate code, which makes it
-hard to write XS modules in anything but C. libouroboros wraps Perl XS macros
-in regular functions with some minor magic tricks - enabling non-C languages to
-use XS API directly.
+libouroboros is a library of C functions wrapping XS macros. This package
+provides pointers to these functions, so Perl programs can have access to
+internal Perl methods (e.g. SvIV) at run-time. In combination with a JIT-
+compiler it allows Perl programs to build XS-like subroutines completely at
+run-time, without the need for a C compiler or a build environment.
 
-=head1 THIS PACKAGE
+=head2 Thread context
 
-This package provides pointers to functions in libouroboros, so these can be
-called from run-time generated machine code.
+All wrappers accept thread context as a first argument, as defined by pTHX XS
+macro, even if pTHX is not part of the wrapped macro definition.
+
+Two exceptions to this are C<ouroboros_sys_init3> and C<ouroboros_sys_term>,
+since they are called in embedded Perl scenario at times when Perl interpreter
+object does not exist.
+
+=head2 The stack
+
+C<libouroboros> encapsulates local stack state kept by XS inside the stack
+object: C<ouroboros_stack_t> type and a number of method functions. Storage
+can be allocated on caller's stack or in heap, and should be initialized first
+by calling C<ouroboros_stack_init()>.
+
+Minimum storage size for C<ouroboros_stack_t> is available as
+C<Ouroboros::Size{struct ouroboros_stack}>. Exact layout is intentionally
+unspecified, user program should treat this type as an opaque object and only
+use provided methods to manipulate it.
+
+=head2 Type sizes
+
+Sizes for most primitive data types used by Perl are available via L<Config>
+and supplemented by C<%Ouroboros::Size> hash.
+
+=head1 METHODS
+
+=over
+
+=back
+
+=head1 CONSTANTS
+
+Some constants are already available from L<B>, the rest can be found here.
+
+=over
+
+=back
+
+=head1 THE REST
+
+Most of the XS API consists of normal functions and their addresses can be
+discovered via L<DynaLoader> at run-time with little effort. See
+L<perlguts/"Internal functions"> for more information.
 
 =head1 SEE MORE
 
-L<LibJIT>
+Perl extensive XS documentation: L<perlxs>, L<perlapi>, L<perlguts>.
+
+JIT-compiler libraries for Perl: L<LibJIT>, L<GCCJIT>.
 
 =head1 AUTHOR
 
@@ -112,7 +156,7 @@ Vickenty Fesunov, E<lt>cpan-ouroboros@setattr.netE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2015 by Vickenty Fesunov.
+Copyright (C) 2016 by Vickenty Fesunov.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
