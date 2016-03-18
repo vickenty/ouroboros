@@ -4,4 +4,5 @@ install:
 build_script:
 - cmd: >-
     perl Makefile.PL
+
     make
