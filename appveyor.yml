@@ -1,0 +1,7 @@
+version: 0.1.{build}
+install:
+- cinst strawberryperl
+build_script:
+- cmd: >-
+    perl Makefile.PL
+    make
