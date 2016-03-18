@@ -1,4 +1,4 @@
-use ExtUtils::MakeMaker;
+use ExtUtils::MakeMaker 6.84;
 use ExtUtils::Constant "WriteConstants";
 
 WriteMakefile(
