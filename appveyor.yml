@@ -1,8 +1,14 @@
-version: 0.1.{build}
-install:
-- cinst strawberryperl
+version: 1.0.{build}
 build_script:
 - cmd: >-
-    perl Makefile.PL
+    set path=%path:C:\Program Files\Git\usr\bin=%
 
-    dmake
+    set path=%path%;C:\MinGW\bin
+
+    gcc -v
+
+    perl -v
+
+    perl Makefile.PL MAKE=gmake
+
+    mingw32-make
