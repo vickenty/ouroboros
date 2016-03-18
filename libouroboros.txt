@@ -110,7 +110,7 @@ sizeof	bool
 sizeof	svtype
 sizeof	PADOFFSET
 sizeof	Optype
-sizeof	struct ouroboros_stack
+sizeof	ouroboros_stack_t
 
 # Elements of svtype
 enum	SVt_NULL

@@ -15,7 +15,7 @@ BOOT:
 		SS(svtype);
 		SS(PADOFFSET);
 		SS(Optype);
-		SS(struct ouroboros_stack);
+		SS(ouroboros_stack_t);
 /* } */
 #undef SS
 	}
