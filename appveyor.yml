@@ -1,4 +1,6 @@
 version: 1.0.{build}
+install:
+- cmd: ppm install FFI-Raw
 build_script:
 - cmd: >-
     set path=%path:C:\Program Files\Git\usr\bin=%
