@@ -2,6 +2,8 @@
 
 Perl XS macros re-exported as C functions.
 
+[![Build status](https://ci.appveyor.com/api/projects/status/tmmk51e2h25qsd99/branch/master?svg=true)](https://ci.appveyor.com/project/vickenty/ouroboros/branch/master)
+
 ## Why
 
 * Write Perl extensions in any language that can produce and link shared
