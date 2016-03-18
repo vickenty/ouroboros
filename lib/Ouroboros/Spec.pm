@@ -18,6 +18,11 @@ my %ITEM_CTOR = (
         };
     },
 
+    sizeof => sub {
+        my ($tags, $kind, $name) = @_;
+        return { type => $name };
+    },
+
     enum => sub {
         my ($tags, $kind, $name) = @_;
         return { name => $name };

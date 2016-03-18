@@ -40,6 +40,14 @@ my @names;
 }
 
 {
+    my $source = "Ouroboros.xs";
+    my $xs = read_file($source);
+    my $sizes = join "", map "\t\tSS($_->{type});\n", @{$spec->{sizeof}};
+    $xs =~ s!(/\*\s*sizeof\s*{\s*\*/)[^}]*(/\*\s*}\s*\*/)!$1\n$sizes$2!m;
+    write_file($source, $xs);
+}
+
+{
     my $decls = do {
         local $" = ", ";
         join "", map sprintf("%s %s(%s%s);\n", $_->{type}, $_->{name}, pthx($_), "@{$_->{params}}"), @{$spec->{fn}}

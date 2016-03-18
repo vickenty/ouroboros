@@ -105,6 +105,13 @@ fn	void	ouroboros_sys_init3	int*	char***	char***
 #+ parens
 fn	void	ouroboros_sys_term
 
+# Sizes of various types
+sizeof	bool
+sizeof	svtype
+sizeof	PADOFFSET
+sizeof	Optype
+sizeof	struct ouroboros_stack
+
 # Elements of svtype
 enum	SVt_NULL
 enum	SVt_IV
