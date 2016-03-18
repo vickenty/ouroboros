@@ -8,6 +8,9 @@ WriteMakefile(
     AUTHOR            => 'Vickenty Fesunov <cpan-ouroboros@setattr.net>',
     LICENSE           => 'bsd',
     PREREQ_PM         => {},
+    TEST_REQUIRES     => {
+        "FFI::Raw" => 0,
+    },
     OBJECT            => [ qw/Ouroboros.o libouroboros.o/ ],
     LIBS              => [],
     DEFINE            => '',
