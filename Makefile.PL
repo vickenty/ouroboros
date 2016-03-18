@@ -1,4 +1,3 @@
-use 5.020002;
 use ExtUtils::MakeMaker;
 use ExtUtils::Constant "WriteConstants";
 
