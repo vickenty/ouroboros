@@ -1,10 +1,27 @@
+#? Initialize ouroboros_stack_t object. Must be first thing called by a XS-sub. Equivalent to C<dXSARGS> macro automatically inserted by C<xsubpp> into every XS sub.
 fn	void	ouroboros_stack_init	ouroboros_stack_t*
+
+#? Returns number of arguments on Perl stack. Equivalent to C<items> local variable in XS.
 fn	int	ouroboros_stack_items	ouroboros_stack_t*
+
 #: XSprePUSH
 fn	void	ouroboros_stack_prepush	ouroboros_stack_t*
+
 #: PUTBACK
 fn	void	ouroboros_stack_putback	ouroboros_stack_t*
+
+#? Read a value from the stack. Equivalent of:
+#?
+#?     return ST(a);
+#?
+#? Perl macro: C<ST(n)>
 fn	SV*	ouroboros_stack_fetch	ouroboros_stack_t*	SSize_t
+
+#? Store a value on the stack. Equivalent of:
+#?
+#?     ST(a) = sv;
+#?
+#? Perl macro: C<ST>
 fn	void	ouroboros_stack_store	ouroboros_stack_t*	SSize_t	SV*
 
 #: EXTEND
@@ -14,6 +31,7 @@ fn	void	ouroboros_stack_extend	ouroboros_stack_t*	SSize_t
 #: PUSHMARK
 #+ needs_sp
 fn	void	ouroboros_stack_pushmark	ouroboros_stack_t*
+
 #: SPAGAIN
 fn	void	ouroboros_stack_spagain	ouroboros_stack_t*
 

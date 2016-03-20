@@ -59,6 +59,11 @@ sub parse_fh {
             $seen_tags{$flag} = 0 if $mode eq "-";
             next;
         }
+        if (my ($doc) = $line =~ /^#\? ?(.*)$/) {
+            no warnings "uninitialized";
+            $seen_tags{apidoc} .= "$doc\n";
+            next;
+        }
 
         # Consume all seen tags.
         my %tags = %seen_tags;

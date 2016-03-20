@@ -135,9 +135,15 @@ provided.
     void ouroboros_stack_init(pTHX_ ouroboros_stack_t*);
 
 
+Initialize ouroboros_stack_t object. Must be first thing called by a XS-sub. Equivalent to C<dXSARGS> macro automatically inserted by C<xsubpp> into every XS sub.
+
+
 =item ouroboros_stack_items_ptr
 
     int ouroboros_stack_items(pTHX_ ouroboros_stack_t*);
+
+
+Returns number of arguments on Perl stack. Equivalent to C<items> local variable in XS.
 
 
 =item ouroboros_stack_prepush_ptr
@@ -159,9 +165,23 @@ Perl macro: C<PUTBACK>
     SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t*, SSize_t);
 
 
+Read a value from the stack. Equivalent of:
+
+    return ST(a);
+
+Perl macro: C<ST(n)>
+
+
 =item ouroboros_stack_store_ptr
 
     void ouroboros_stack_store(pTHX_ ouroboros_stack_t*, SSize_t, SV*);
+
+
+Store a value on the stack. Equivalent of:
+
+    ST(a) = sv;
+
+Perl macro: C<ST>
 
 
 =item ouroboros_stack_extend_ptr

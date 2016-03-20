@@ -51,6 +51,8 @@ sub make_fn_doc {
 
     $doc .= "    $fn->{c_decl}\n\n";
 
+    $doc .= "$fn->{tags}{apidoc}\n\n" if $fn->{tags}{apidoc};
+
     $doc .= "Perl macro: C<$impl>\n\n" if $impl;
 
     return $doc;
