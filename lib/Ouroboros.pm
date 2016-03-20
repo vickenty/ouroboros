@@ -123,6 +123,14 @@ use provided methods to manipulate it.
 Sizes for most primitive data types used by Perl are available via L<Config>
 and supplemented by C<%Ouroboros::Size> hash.
 
+=head1 EXPORTS
+
+Nothing is exported by default.
+
+C<:all> tag exports all methods and constants.
+
+C<:consts> tag exports constants only.
+
 =head1 METHODS
 
 Every sub listed here returns a pointer to a C function with a signature as
