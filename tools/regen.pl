@@ -35,7 +35,7 @@ my @names;
     my $package = "lib/Ouroboros.pm";
     my $pm = read_file($package);
     my $shims = join "", map "    $_\n", @names;
-    $pm =~ s/(our\s+\@EXPORT_OK\s*=\s*qw\()[^\)]*(\);)/$1\n$shims$2/m;
+    $pm =~ s/(our\s+\@EXPORT_OK\s*=\s*qw\()[^\)]*(\);)/$1\n$shims$2/m or die;
     write_file($package, $pm);
 }
 
@@ -43,7 +43,7 @@ my @names;
     my $source = "Ouroboros.xs";
     my $xs = read_file($source);
     my $sizes = join "", map "\t\tSS($_->{type});\n", @{$spec->{sizeof}};
-    $xs =~ s!(/\*\s*sizeof\s*{\s*\*/)[^}]*(/\*\s*}\s*\*/)!$1\n$sizes$2!m;
+    $xs =~ s!(/\*\s*sizeof\s*{\s*\*/)[^}]*(/\*\s*}\s*\*/)!$1\n$sizes$2!m or die;
     write_file($source, $xs);
 }
 
@@ -55,7 +55,7 @@ my @names;
 
     my $header = "libouroboros.h";
     my $ch = read_file($header);
-    $ch =~ s!(/\*\s*functions\s*{\s*\*/)[^}]*(/\*\s*}\s*\*/)!$1\n$decls$2!m;
+    $ch =~ s!(/\*\s*functions\s*{\s*\*/)[^}]*(/\*\s*}\s*\*/)!$1\n$decls$2!m or die;
     write_file($header, $ch);
 }
 
@@ -104,7 +104,7 @@ sub mk_impl {
 
     my $makefile = "Makefile.PL";
     my $mf = read_file($makefile);
-    $mf =~ s/(my\s+\@enums\s*=\s*qw\()[^\)]*(\);)/$1\n$enums$2/m;
-    $mf =~ s/(my\s+\@consts\s*=\s*qw\()[^\)]*(\);)/$1\n$consts$2/m;
+    $mf =~ s/(my\s+\@enums\s*=\s*qw\()[^\)]*(\);)/$1\n$enums$2/m or die;
+    $mf =~ s/(my\s+\@consts\s*=\s*qw\()[^\)]*(\);)/$1\n$consts$2/m or die;
     write_file($makefile, $mf);
 }
