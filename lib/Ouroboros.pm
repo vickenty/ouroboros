@@ -169,10 +169,14 @@ Perl macro: C<PUTBACK>
     void ouroboros_stack_extend(pTHX_ ouroboros_stack_t*, SSize_t);
 
 
+Perl macro: C<EXTEND>
+
 =item ouroboros_stack_pushmark_ptr
 
     void ouroboros_stack_pushmark(pTHX_ ouroboros_stack_t*);
 
+
+Perl macro: C<PUSHMARK>
 
 =item ouroboros_stack_spagain_ptr
 

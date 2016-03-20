@@ -100,6 +100,12 @@ sub mk_impl {
     my ($macro_name, @hints) = @{$fn->{tags}{autoimpl}};
 
     my (@decl, @impl);
+
+    # A couple of macros take an explicit SP argument, while most do not.  We
+    # keep SP inside the stack object and thus this extra argument does not
+    # leak into public API.
+    push @impl, "SP" if $fn->{tags}{needs_sp};
+
     foreach my $ptype (@{$fn->{params}}) {
         my $hint = shift @hints // "";
         my $is_stack = $ptype eq "ouroboros_stack_t*";

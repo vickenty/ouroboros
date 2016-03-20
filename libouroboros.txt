@@ -6,8 +6,13 @@ fn	void	ouroboros_stack_prepush	ouroboros_stack_t*
 fn	void	ouroboros_stack_putback	ouroboros_stack_t*
 fn	SV*	ouroboros_stack_fetch	ouroboros_stack_t*	SSize_t
 fn	void	ouroboros_stack_store	ouroboros_stack_t*	SSize_t	SV*
+
+#: EXTEND
+#+ needs_sp
 fn	void	ouroboros_stack_extend	ouroboros_stack_t*	SSize_t
 
+#: PUSHMARK
+#+ needs_sp
 fn	void	ouroboros_stack_pushmark	ouroboros_stack_t*
 #: SPAGAIN
 fn	void	ouroboros_stack_spagain	ouroboros_stack_t*

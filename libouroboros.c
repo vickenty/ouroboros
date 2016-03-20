@@ -29,16 +29,6 @@ void ouroboros_stack_store(pTHX_ ouroboros_stack_t* stack, SSize_t item, SV* val
         ST(item) = value;
 }
 
-void ouroboros_stack_pushmark(pTHX_ ouroboros_stack_t* stack)
-{
-	PUSHMARK(SP);
-}
-
-void ouroboros_stack_extend(pTHX_ ouroboros_stack_t* stack, SSize_t size)
-{
-	EXTEND(SP, size);
-}
-
 /* functions { */
 void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t* stack)
 {
@@ -48,6 +38,16 @@ void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t* stack)
 void ouroboros_stack_putback(pTHX_ ouroboros_stack_t* stack)
 {
         PUTBACK;
+}
+
+void ouroboros_stack_extend(pTHX_ ouroboros_stack_t* stack, SSize_t a)
+{
+        EXTEND(SP, a);
+}
+
+void ouroboros_stack_pushmark(pTHX_ ouroboros_stack_t* stack)
+{
+        PUSHMARK(SP);
 }
 
 void ouroboros_stack_spagain(pTHX_ ouroboros_stack_t* stack)
