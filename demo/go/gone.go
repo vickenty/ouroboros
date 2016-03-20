@@ -13,7 +13,7 @@ var file []byte = []byte{0}
 
 //export gone_hello
 func gone_hello(perl *C.PerlInterpreter, cv *C.CV) {
-	var stack C.struct_ouroboros_stack
+	var stack C.ouroboros_stack_t
 	C.ouroboros_stack_init(perl, &stack)
 
 	var hello = "Hello from Go"
@@ -27,7 +27,7 @@ func gone_hello(perl *C.PerlInterpreter, cv *C.CV) {
 
 //export boot_Gone
 func boot_Gone(perl *C.PerlInterpreter, cv *C.CV) {
-	var stack C.struct_ouroboros_stack
+	var stack C.ouroboros_stack_t
 	C.ouroboros_stack_init(perl, &stack)
 
 	var hello = C.CString("Gone::hello")

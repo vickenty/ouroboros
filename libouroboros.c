@@ -1,6 +1,6 @@
 #include "libouroboros.h"
 
-void ouroboros_stack_init(pTHX_ ouroboros_stack_t stack)
+void ouroboros_stack_init(pTHX_ ouroboros_stack_t* stack)
 {
         dXSARGS;
         stack->sp = sp;
@@ -9,7 +9,7 @@ void ouroboros_stack_init(pTHX_ ouroboros_stack_t stack)
         stack->items = items;
 }
 
-int ouroboros_stack_items(pTHX_ ouroboros_stack_t stack)
+int ouroboros_stack_items(pTHX_ ouroboros_stack_t* stack)
 {
 	return stack->items;
 }
@@ -19,98 +19,98 @@ int ouroboros_stack_items(pTHX_ ouroboros_stack_t stack)
 #define ax (stack->ax)
 #define items (stack->items)
 
-SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t stack, SSize_t item)
+SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t* stack, SSize_t item)
 {
         return ST(item);
 }
 
-void ouroboros_stack_store(pTHX_ ouroboros_stack_t stack, SSize_t item, SV* value)
+void ouroboros_stack_store(pTHX_ ouroboros_stack_t* stack, SSize_t item, SV* value)
 {
         ST(item) = value;
 }
 
-void ouroboros_stack_pushmark(pTHX_ ouroboros_stack_t stack)
+void ouroboros_stack_pushmark(pTHX_ ouroboros_stack_t* stack)
 {
 	PUSHMARK(SP);
 }
 
-void ouroboros_stack_extend(pTHX_ ouroboros_stack_t stack, SSize_t size)
+void ouroboros_stack_extend(pTHX_ ouroboros_stack_t* stack, SSize_t size)
 {
 	EXTEND(SP, size);
 }
 
 /* functions { */
-void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t stack)
+void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t* stack)
 {
         XSprePUSH;
 }
 
-void ouroboros_stack_putback(pTHX_ ouroboros_stack_t stack)
+void ouroboros_stack_putback(pTHX_ ouroboros_stack_t* stack)
 {
         PUTBACK;
 }
 
-void ouroboros_stack_spagain(pTHX_ ouroboros_stack_t stack)
+void ouroboros_stack_spagain(pTHX_ ouroboros_stack_t* stack)
 {
         SPAGAIN;
 }
 
-void ouroboros_stack_xpush_sv(pTHX_ ouroboros_stack_t stack, SV* sv)
+void ouroboros_stack_xpush_sv(pTHX_ ouroboros_stack_t* stack, SV* sv)
 {
         XPUSHs(sv);
 }
 
-void ouroboros_stack_xpush_sv_mortal(pTHX_ ouroboros_stack_t stack, SV* sv)
+void ouroboros_stack_xpush_sv_mortal(pTHX_ ouroboros_stack_t* stack, SV* sv)
 {
         mXPUSHs(sv);
 }
 
-void ouroboros_stack_xpush_iv(pTHX_ ouroboros_stack_t stack, IV a)
+void ouroboros_stack_xpush_iv(pTHX_ ouroboros_stack_t* stack, IV a)
 {
         mXPUSHi(a);
 }
 
-void ouroboros_stack_xpush_uv(pTHX_ ouroboros_stack_t stack, UV a)
+void ouroboros_stack_xpush_uv(pTHX_ ouroboros_stack_t* stack, UV a)
 {
         mXPUSHu(a);
 }
 
-void ouroboros_stack_xpush_nv(pTHX_ ouroboros_stack_t stack, NV a)
+void ouroboros_stack_xpush_nv(pTHX_ ouroboros_stack_t* stack, NV a)
 {
         mXPUSHn(a);
 }
 
-void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t stack, const char* a, STRLEN b)
+void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t* stack, const char* a, STRLEN b)
 {
         mXPUSHp(a, b);
 }
 
-void ouroboros_stack_push_sv(pTHX_ ouroboros_stack_t stack, SV* sv)
+void ouroboros_stack_push_sv(pTHX_ ouroboros_stack_t* stack, SV* sv)
 {
         PUSHs(sv);
 }
 
-void ouroboros_stack_push_sv_mortal(pTHX_ ouroboros_stack_t stack, SV* sv)
+void ouroboros_stack_push_sv_mortal(pTHX_ ouroboros_stack_t* stack, SV* sv)
 {
         mPUSHs(sv);
 }
 
-void ouroboros_stack_push_iv(pTHX_ ouroboros_stack_t stack, IV a)
+void ouroboros_stack_push_iv(pTHX_ ouroboros_stack_t* stack, IV a)
 {
         mPUSHi(a);
 }
 
-void ouroboros_stack_push_uv(pTHX_ ouroboros_stack_t stack, UV a)
+void ouroboros_stack_push_uv(pTHX_ ouroboros_stack_t* stack, UV a)
 {
         mPUSHu(a);
 }
 
-void ouroboros_stack_push_nv(pTHX_ ouroboros_stack_t stack, NV a)
+void ouroboros_stack_push_nv(pTHX_ ouroboros_stack_t* stack, NV a)
 {
         mPUSHn(a);
 }
 
-void ouroboros_stack_push_pv(pTHX_ ouroboros_stack_t stack, const char* a, STRLEN b)
+void ouroboros_stack_push_pv(pTHX_ ouroboros_stack_t* stack, const char* a, STRLEN b)
 {
         mPUSHp(a, b);
 }

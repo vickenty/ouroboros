@@ -70,14 +70,15 @@ sub mk_impl {
     my (@decl, @impl);
     foreach my $ptype (@{$fn->{params}}) {
         my $hint = shift @hints // "";
+        my $is_stack = $ptype eq "ouroboros_stack_t*";
         my $name =
-            $ptype eq "ouroboros_stack_t"
+            $is_stack
             ? "stack"
             : $ptype eq "SV*"
             ? "sv" . $svn++
             : $pname++;
         push @decl, "$ptype $name";
-        push @impl, "$hint$name" if $ptype ne "ouroboros_stack_t";
+        push @impl, "$hint$name" unless $is_stack;
     }
 
     return sprintf("%s %s(%s%s)\n{\n        %s%s%s;\n}\n",

@@ -1,42 +1,42 @@
-fn	void	ouroboros_stack_init	ouroboros_stack_t
-fn	int	ouroboros_stack_items	ouroboros_stack_t
+fn	void	ouroboros_stack_init	ouroboros_stack_t*
+fn	int	ouroboros_stack_items	ouroboros_stack_t*
 #: XSprePUSH
-fn	void	ouroboros_stack_prepush	ouroboros_stack_t
+fn	void	ouroboros_stack_prepush	ouroboros_stack_t*
 #: PUTBACK
-fn	void	ouroboros_stack_putback	ouroboros_stack_t
-fn	SV*	ouroboros_stack_fetch	ouroboros_stack_t	SSize_t
-fn	void	ouroboros_stack_store	ouroboros_stack_t	SSize_t	SV*
-fn	void	ouroboros_stack_extend	ouroboros_stack_t	SSize_t
+fn	void	ouroboros_stack_putback	ouroboros_stack_t*
+fn	SV*	ouroboros_stack_fetch	ouroboros_stack_t*	SSize_t
+fn	void	ouroboros_stack_store	ouroboros_stack_t*	SSize_t	SV*
+fn	void	ouroboros_stack_extend	ouroboros_stack_t*	SSize_t
 
-fn	void	ouroboros_stack_pushmark	ouroboros_stack_t
+fn	void	ouroboros_stack_pushmark	ouroboros_stack_t*
 #: SPAGAIN
-fn	void	ouroboros_stack_spagain	ouroboros_stack_t
+fn	void	ouroboros_stack_spagain	ouroboros_stack_t*
 
 #: XPUSHs
-fn	void	ouroboros_stack_xpush_sv	ouroboros_stack_t	SV*
+fn	void	ouroboros_stack_xpush_sv	ouroboros_stack_t*	SV*
 #: mXPUSHs
-fn	void	ouroboros_stack_xpush_sv_mortal	ouroboros_stack_t	SV*
+fn	void	ouroboros_stack_xpush_sv_mortal	ouroboros_stack_t*	SV*
 #: mXPUSHi
-fn	void	ouroboros_stack_xpush_iv	ouroboros_stack_t	IV
+fn	void	ouroboros_stack_xpush_iv	ouroboros_stack_t*	IV
 #: mXPUSHu
-fn	void	ouroboros_stack_xpush_uv	ouroboros_stack_t	UV
+fn	void	ouroboros_stack_xpush_uv	ouroboros_stack_t*	UV
 #: mXPUSHn
-fn	void	ouroboros_stack_xpush_nv	ouroboros_stack_t	NV
+fn	void	ouroboros_stack_xpush_nv	ouroboros_stack_t*	NV
 #: mXPUSHp
-fn	void	ouroboros_stack_xpush_pv	ouroboros_stack_t	const char*	STRLEN
+fn	void	ouroboros_stack_xpush_pv	ouroboros_stack_t*	const char*	STRLEN
 
 #: PUSHs
-fn	void	ouroboros_stack_push_sv	ouroboros_stack_t	SV*
+fn	void	ouroboros_stack_push_sv	ouroboros_stack_t*	SV*
 #: mPUSHs
-fn	void	ouroboros_stack_push_sv_mortal	ouroboros_stack_t	SV*
+fn	void	ouroboros_stack_push_sv_mortal	ouroboros_stack_t*	SV*
 #: mPUSHi
-fn	void	ouroboros_stack_push_iv	ouroboros_stack_t	IV
+fn	void	ouroboros_stack_push_iv	ouroboros_stack_t*	IV
 #: mPUSHu
-fn	void	ouroboros_stack_push_uv	ouroboros_stack_t	UV
+fn	void	ouroboros_stack_push_uv	ouroboros_stack_t*	UV
 #: mPUSHn
-fn	void	ouroboros_stack_push_nv	ouroboros_stack_t	NV
+fn	void	ouroboros_stack_push_nv	ouroboros_stack_t*	NV
 #: mPUSHp
-fn	void	ouroboros_stack_push_pv	ouroboros_stack_t	const char*	STRLEN
+fn	void	ouroboros_stack_push_pv	ouroboros_stack_t*	const char*	STRLEN
 
 #: SvIV
 fn	IV	ouroboros_sv_iv	SV*
