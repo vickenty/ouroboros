@@ -125,15 +125,469 @@ and supplemented by C<%Ouroboros::Size> hash.
 
 =head1 METHODS
 
+Every sub listed here returns a pointer to a C function with a signature as
+provided.
+
 =over
+
+=item ouroboros_stack_init_ptr
+
+    void ouroboros_stack_init(pTHX_ ouroboros_stack_t*);
+
+
+=item ouroboros_stack_items_ptr
+
+    int ouroboros_stack_items(pTHX_ ouroboros_stack_t*);
+
+
+=item ouroboros_stack_prepush_ptr
+
+    void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t*);
+
+
+Perl macro: C<XSprePUSH>
+
+=item ouroboros_stack_putback_ptr
+
+    void ouroboros_stack_putback(pTHX_ ouroboros_stack_t*);
+
+
+Perl macro: C<PUTBACK>
+
+=item ouroboros_stack_fetch_ptr
+
+    SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t*, SSize_t);
+
+
+=item ouroboros_stack_store_ptr
+
+    void ouroboros_stack_store(pTHX_ ouroboros_stack_t*, SSize_t, SV*);
+
+
+=item ouroboros_stack_extend_ptr
+
+    void ouroboros_stack_extend(pTHX_ ouroboros_stack_t*, SSize_t);
+
+
+=item ouroboros_stack_pushmark_ptr
+
+    void ouroboros_stack_pushmark(pTHX_ ouroboros_stack_t*);
+
+
+=item ouroboros_stack_spagain_ptr
+
+    void ouroboros_stack_spagain(pTHX_ ouroboros_stack_t*);
+
+
+Perl macro: C<SPAGAIN>
+
+=item ouroboros_stack_xpush_sv_ptr
+
+    void ouroboros_stack_xpush_sv(pTHX_ ouroboros_stack_t*, SV*);
+
+
+Perl macro: C<XPUSHs>
+
+=item ouroboros_stack_xpush_sv_mortal_ptr
+
+    void ouroboros_stack_xpush_sv_mortal(pTHX_ ouroboros_stack_t*, SV*);
+
+
+Perl macro: C<mXPUSHs>
+
+=item ouroboros_stack_xpush_iv_ptr
+
+    void ouroboros_stack_xpush_iv(pTHX_ ouroboros_stack_t*, IV);
+
+
+Perl macro: C<mXPUSHi>
+
+=item ouroboros_stack_xpush_uv_ptr
+
+    void ouroboros_stack_xpush_uv(pTHX_ ouroboros_stack_t*, UV);
+
+
+Perl macro: C<mXPUSHu>
+
+=item ouroboros_stack_xpush_nv_ptr
+
+    void ouroboros_stack_xpush_nv(pTHX_ ouroboros_stack_t*, NV);
+
+
+Perl macro: C<mXPUSHn>
+
+=item ouroboros_stack_xpush_pv_ptr
+
+    void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t*, const char*, STRLEN);
+
+
+Perl macro: C<mXPUSHp>
+
+=item ouroboros_stack_push_sv_ptr
+
+    void ouroboros_stack_push_sv(pTHX_ ouroboros_stack_t*, SV*);
+
+
+Perl macro: C<PUSHs>
+
+=item ouroboros_stack_push_sv_mortal_ptr
+
+    void ouroboros_stack_push_sv_mortal(pTHX_ ouroboros_stack_t*, SV*);
+
+
+Perl macro: C<mPUSHs>
+
+=item ouroboros_stack_push_iv_ptr
+
+    void ouroboros_stack_push_iv(pTHX_ ouroboros_stack_t*, IV);
+
+
+Perl macro: C<mPUSHi>
+
+=item ouroboros_stack_push_uv_ptr
+
+    void ouroboros_stack_push_uv(pTHX_ ouroboros_stack_t*, UV);
+
+
+Perl macro: C<mPUSHu>
+
+=item ouroboros_stack_push_nv_ptr
+
+    void ouroboros_stack_push_nv(pTHX_ ouroboros_stack_t*, NV);
+
+
+Perl macro: C<mPUSHn>
+
+=item ouroboros_stack_push_pv_ptr
+
+    void ouroboros_stack_push_pv(pTHX_ ouroboros_stack_t*, const char*, STRLEN);
+
+
+Perl macro: C<mPUSHp>
+
+=item ouroboros_sv_iv_ptr
+
+    IV ouroboros_sv_iv(pTHX_ SV*);
+
+
+Perl macro: C<SvIV>
+
+=item ouroboros_sv_uv_ptr
+
+    UV ouroboros_sv_uv(pTHX_ SV*);
+
+
+Perl macro: C<SvUV>
+
+=item ouroboros_sv_nv_ptr
+
+    NV ouroboros_sv_nv(pTHX_ SV*);
+
+
+Perl macro: C<SvNV>
+
+=item ouroboros_sv_pv_ptr
+
+    const char* ouroboros_sv_pv(pTHX_ SV*, STRLEN*);
+
+
+Perl macro: C<SvPV>
+
+=item ouroboros_sv_pv_nolen_ptr
+
+    const char* ouroboros_sv_pv_nolen(pTHX_ SV*);
+
+
+Perl macro: C<SvPV_nolen>
+
+=item ouroboros_sv_rok_ptr
+
+    U32 ouroboros_sv_rok(pTHX_ SV*);
+
+
+Perl macro: C<SvROK>
+
+=item ouroboros_sv_rv_ptr
+
+    SV* ouroboros_sv_rv(pTHX_ SV*);
+
+
+Perl macro: C<SvRV>
+
+=item ouroboros_sv_type_ptr
+
+    IV ouroboros_sv_type(pTHX_ SV*);
+
+
+Perl macro: C<SvTYPE>
+
+=item ouroboros_gv_sv_ptr
+
+    SV* ouroboros_gv_sv(pTHX_ GV*);
+
+
+Perl macro: C<GvSV>
+
+=item ouroboros_gv_av_ptr
+
+    AV* ouroboros_gv_av(pTHX_ GV*);
+
+
+Perl macro: C<GvAV>
+
+=item ouroboros_gv_hv_ptr
+
+    HV* ouroboros_gv_hv(pTHX_ GV*);
+
+
+Perl macro: C<GvHV>
+
+=item ouroboros_gv_cv_ptr
+
+    CV* ouroboros_gv_cv(pTHX_ CV*);
+
+
+Perl macro: C<GvCV>
+
+=item ouroboros_sv_refcnt_ptr
+
+    U32 ouroboros_sv_refcnt(pTHX_ SV*);
+
+
+Perl macro: C<SvREFCNT>
+
+=item ouroboros_sv_refcnt_inc_ptr
+
+    SV* ouroboros_sv_refcnt_inc(pTHX_ SV*);
+
+
+Perl macro: C<SvREFCNT_inc_simple>
+
+=item ouroboros_sv_refcnt_inc_nn_ptr
+
+    SV* ouroboros_sv_refcnt_inc_nn(pTHX_ SV*);
+
+
+Perl macro: C<SvREFCNT_inc_simple_NN>
+
+=item ouroboros_sv_refcnt_inc_void_ptr
+
+    void ouroboros_sv_refcnt_inc_void(pTHX_ SV*);
+
+
+Perl macro: C<SvREFCNT_inc_simple_void>
+
+=item ouroboros_sv_refcnt_inc_void_nn_ptr
+
+    void ouroboros_sv_refcnt_inc_void_nn(pTHX_ SV*);
+
+
+Perl macro: C<SvREFCNT_inc_simple_void_NN>
+
+=item ouroboros_sv_refcnt_dec_ptr
+
+    void ouroboros_sv_refcnt_dec(pTHX_ SV*);
+
+
+Perl macro: C<SvREFCNT_dec>
+
+=item ouroboros_sv_refcnt_dec_nn_ptr
+
+    void ouroboros_sv_refcnt_dec_nn(pTHX_ SV*);
+
+
+Perl macro: C<SvREFCNT_dec_NN>
+
+=item ouroboros_enter_ptr
+
+    void ouroboros_enter(pTHX);
+
+
+Perl macro: C<ENTER>
+
+=item ouroboros_leave_ptr
+
+    void ouroboros_leave(pTHX);
+
+
+Perl macro: C<LEAVE>
+
+=item ouroboros_savetmps_ptr
+
+    void ouroboros_savetmps(pTHX);
+
+
+Perl macro: C<SAVETMPS>
+
+=item ouroboros_freetmps_ptr
+
+    void ouroboros_freetmps(pTHX);
+
+
+Perl macro: C<FREETMPS>
+
+=item ouroboros_sys_init3_ptr
+
+    void ouroboros_sys_init3(int*, char***, char***);
+
+
+Perl macro: C<PERL_SYS_INIT3>
+
+=item ouroboros_sys_term_ptr
+
+    void ouroboros_sys_term();
+
+
+Perl macro: C<PERL_SYS_TERM>
+
+
 
 =back
 
 =head1 CONSTANTS
 
-Some constants are already available from L<B>, the rest can be found here.
+This package also provides a number of consants from XS API. Some constants may
+not be available, depending on the Perl version used.
+
+C<@Ouroboros::CONSTS> contains names of all constants provided by this package.
 
 =over
+
+=item SVt_NULL
+
+=item SVt_IV
+
+=item SVt_NV
+
+=item SVt_PV
+
+=item SVt_PVIV
+
+=item SVt_PVNV
+
+=item SVt_PVMG
+
+=item SVt_REGEXP
+
+=item SVt_PVGV
+
+=item SVt_PVLV
+
+=item SVt_PVAV
+
+=item SVt_PVHV
+
+=item SVt_PVCV
+
+=item SVt_PVFM
+
+=item SVt_PVIO
+
+=item SVt_LAST
+
+=item SV_IMMEDIATE_UNREF
+
+=item SV_GMAGIC
+
+=item SV_COW_DROP_PV
+
+=item SV_UTF8_NO_ENCODING
+
+=item SV_NOSTEAL
+
+=item SV_CONST_RETURN
+
+=item SV_MUTABLE_RETURN
+
+=item SV_SMAGIC
+
+=item SV_HAS_TRAILING_NUL
+
+=item SV_COW_SHARED_HASH_KEYS
+
+=item SV_COW_OTHER_PVS
+
+=item SV_UNDEF_RETURNS_NULL
+
+=item SV_FORCE_UTF8_UPGRADE
+
+=item SV_SKIP_OVERLOAD
+
+=item SV_CATBYTES
+
+=item SV_CATUTF8
+
+=item SV_CONST_TIESCALAR
+
+=item SV_CONST_TIEARRAY
+
+=item SV_CONST_TIEHASH
+
+=item SV_CONST_TIEHANDLE
+
+=item SV_CONST_FETCH
+
+=item SV_CONST_FETCHSIZE
+
+=item SV_CONST_STORE
+
+=item SV_CONST_STORESIZE
+
+=item SV_CONST_EXISTS
+
+=item SV_CONST_PUSH
+
+=item SV_CONST_POP
+
+=item SV_CONST_SHIFT
+
+=item SV_CONST_UNSHIFT
+
+=item SV_CONST_SPLICE
+
+=item SV_CONST_EXTEND
+
+=item SV_CONST_FIRSTKEY
+
+=item SV_CONST_NEXTKEY
+
+=item SV_CONST_SCALAR
+
+=item SV_CONST_OPEN
+
+=item SV_CONST_WRITE
+
+=item SV_CONST_PRINT
+
+=item SV_CONST_PRINTF
+
+=item SV_CONST_READ
+
+=item SV_CONST_READLINE
+
+=item SV_CONST_GETC
+
+=item SV_CONST_SEEK
+
+=item SV_CONST_TELL
+
+=item SV_CONST_EOF
+
+=item SV_CONST_BINMODE
+
+=item SV_CONST_FILENO
+
+=item SV_CONST_CLOSE
+
+=item SV_CONST_DELETE
+
+=item SV_CONST_CLEAR
+
+=item SV_CONST_UNTIE
+
+=item SV_CONST_DESTROY
+
+
 
 =back
 

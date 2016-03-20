@@ -11,7 +11,7 @@ use Ouroboros::Spec;
 sub pthx {
     my $fn = shift;
     if ($fn->{tags}{context}) {
-        @{$_->{params}} ? "pTHX_ ": "pTHX"
+        @{$fn->{params}} ? "pTHX_ ": "pTHX"
     } else {
         ""
     }
@@ -20,22 +20,54 @@ sub pthx {
 open my $spec_fh, "<", "libouroboros.txt";
 my $spec = Ouroboros::Spec::parse_fh($spec_fh);
 
-my @names;
+foreach my $fn (@{$spec->{fn}}) {
+    # ptr_name is a name of sub that returns pointer to the wrapper.
+    $fn->{ptr_name} = "$fn->{name}_ptr";
+
+    $fn->{c_decl} = sprintf(
+        "%s %s(%s%s);\n",
+        $fn->{type},
+        $fn->{name},
+        pthx($fn),
+        join(", ", @{$fn->{params}}));
+}
+
 {
     open my $xs, ">", "fn-pointer-xs.inc";
 
-    foreach my $shim (map $_->{name}, @{$spec->{fn}}) {
-        push @names, my $name = $shim . "_ptr";
-        $xs->print("void*\n$name()\n");
-        $xs->print("CODE:\n\tRETVAL = $shim;\nOUTPUT:\n\tRETVAL\n\n");
+    foreach my $fn (@{$spec->{fn}}) {
+        $xs->print("void*\n$fn->{ptr_name}()\n");
+        $xs->print("CODE:\n\tRETVAL = $fn->{name};\nOUTPUT:\n\tRETVAL\n\n");
     }
+}
+
+sub make_fn_doc {
+    my $fn = shift;
+
+    my $impl = $fn->{tags}{autoimpl} ? $fn->{tags}{autoimpl}[0] : "";
+    my $decl = $fn->{c_decl};
+
+    my $doc = "=item $fn->{ptr_name}\n\n";
+
+    $doc .= "    $fn->{c_decl}\n\n";
+
+    $doc .= "Perl macro: C<$impl>\n\n" if $impl;
+
+    return $doc;
 }
 
 {
     my $package = "lib/Ouroboros.pm";
     my $pm = read_file($package);
-    my $shims = join "", map "    $_\n", @names;
+    my $shims = join "", map "    $_->{ptr_name}\n", @{$spec->{fn}};
     $pm =~ s/(our\s+\@EXPORT_OK\s*=\s*qw\()[^\)]*(\);)/$1\n$shims$2/m or die;
+
+    my $fn_doc = join "", map make_fn_doc($_), @{$spec->{fn}};
+    $pm =~ s/(\n=head1 METHODS\n\n.*?\n\n=over\n\n).*?(\n\n=back\n\n)/$1$fn_doc$2/ms or die;
+
+    my $consts = join "", map "=item $_->{name}\n\n", @{$spec->{enum}}, @{$spec->{const}};
+    $pm =~ s/(\n=head1 CONSTANTS\n\n.*?\n\n=over\n\n).*?(\n\n=back\n\n)/$1$consts$2/ms or die;
+
     write_file($package, $pm);
 }
 
