@@ -485,139 +485,139 @@ C<@Ouroboros::CONSTS> contains names of all constants provided by this package.
 
 =over
 
-=item SVt_NULL
+=item C<SVt_NULL>
 
-=item SVt_IV
+=item C<SVt_IV>
 
-=item SVt_NV
+=item C<SVt_NV>
 
-=item SVt_PV
+=item C<SVt_PV>
 
-=item SVt_PVIV
+=item C<SVt_PVIV>
 
-=item SVt_PVNV
+=item C<SVt_PVNV>
 
-=item SVt_PVMG
+=item C<SVt_PVMG>
 
-=item SVt_REGEXP
+=item C<SVt_REGEXP>
 
-=item SVt_PVGV
+=item C<SVt_PVGV>
 
-=item SVt_PVLV
+=item C<SVt_PVLV>
 
-=item SVt_PVAV
+=item C<SVt_PVAV>
 
-=item SVt_PVHV
+=item C<SVt_PVHV>
 
-=item SVt_PVCV
+=item C<SVt_PVCV>
 
-=item SVt_PVFM
+=item C<SVt_PVFM>
 
-=item SVt_PVIO
+=item C<SVt_PVIO>
 
-=item SVt_LAST
+=item C<SVt_LAST>
 
-=item SV_IMMEDIATE_UNREF
+=item C<SV_IMMEDIATE_UNREF>
 
-=item SV_GMAGIC
+=item C<SV_GMAGIC>
 
-=item SV_COW_DROP_PV
+=item C<SV_COW_DROP_PV>
 
-=item SV_UTF8_NO_ENCODING
+=item C<SV_UTF8_NO_ENCODING>
 
-=item SV_NOSTEAL
+=item C<SV_NOSTEAL>
 
-=item SV_CONST_RETURN
+=item C<SV_CONST_RETURN>
 
-=item SV_MUTABLE_RETURN
+=item C<SV_MUTABLE_RETURN>
 
-=item SV_SMAGIC
+=item C<SV_SMAGIC>
 
-=item SV_HAS_TRAILING_NUL
+=item C<SV_HAS_TRAILING_NUL>
 
-=item SV_COW_SHARED_HASH_KEYS
+=item C<SV_COW_SHARED_HASH_KEYS>
 
-=item SV_COW_OTHER_PVS
+=item C<SV_COW_OTHER_PVS>
 
-=item SV_UNDEF_RETURNS_NULL
+=item C<SV_UNDEF_RETURNS_NULL>
 
-=item SV_FORCE_UTF8_UPGRADE
+=item C<SV_FORCE_UTF8_UPGRADE>
 
-=item SV_SKIP_OVERLOAD
+=item C<SV_SKIP_OVERLOAD>
 
-=item SV_CATBYTES
+=item C<SV_CATBYTES>
 
-=item SV_CATUTF8
+=item C<SV_CATUTF8>
 
-=item SV_CONST_TIESCALAR
+=item C<SV_CONST_TIESCALAR>
 
-=item SV_CONST_TIEARRAY
+=item C<SV_CONST_TIEARRAY>
 
-=item SV_CONST_TIEHASH
+=item C<SV_CONST_TIEHASH>
 
-=item SV_CONST_TIEHANDLE
+=item C<SV_CONST_TIEHANDLE>
 
-=item SV_CONST_FETCH
+=item C<SV_CONST_FETCH>
 
-=item SV_CONST_FETCHSIZE
+=item C<SV_CONST_FETCHSIZE>
 
-=item SV_CONST_STORE
+=item C<SV_CONST_STORE>
 
-=item SV_CONST_STORESIZE
+=item C<SV_CONST_STORESIZE>
 
-=item SV_CONST_EXISTS
+=item C<SV_CONST_EXISTS>
 
-=item SV_CONST_PUSH
+=item C<SV_CONST_PUSH>
 
-=item SV_CONST_POP
+=item C<SV_CONST_POP>
 
-=item SV_CONST_SHIFT
+=item C<SV_CONST_SHIFT>
 
-=item SV_CONST_UNSHIFT
+=item C<SV_CONST_UNSHIFT>
 
-=item SV_CONST_SPLICE
+=item C<SV_CONST_SPLICE>
 
-=item SV_CONST_EXTEND
+=item C<SV_CONST_EXTEND>
 
-=item SV_CONST_FIRSTKEY
+=item C<SV_CONST_FIRSTKEY>
 
-=item SV_CONST_NEXTKEY
+=item C<SV_CONST_NEXTKEY>
 
-=item SV_CONST_SCALAR
+=item C<SV_CONST_SCALAR>
 
-=item SV_CONST_OPEN
+=item C<SV_CONST_OPEN>
 
-=item SV_CONST_WRITE
+=item C<SV_CONST_WRITE>
 
-=item SV_CONST_PRINT
+=item C<SV_CONST_PRINT>
 
-=item SV_CONST_PRINTF
+=item C<SV_CONST_PRINTF>
 
-=item SV_CONST_READ
+=item C<SV_CONST_READ>
 
-=item SV_CONST_READLINE
+=item C<SV_CONST_READLINE>
 
-=item SV_CONST_GETC
+=item C<SV_CONST_GETC>
 
-=item SV_CONST_SEEK
+=item C<SV_CONST_SEEK>
 
-=item SV_CONST_TELL
+=item C<SV_CONST_TELL>
 
-=item SV_CONST_EOF
+=item C<SV_CONST_EOF>
 
-=item SV_CONST_BINMODE
+=item C<SV_CONST_BINMODE>
 
-=item SV_CONST_FILENO
+=item C<SV_CONST_FILENO>
 
-=item SV_CONST_CLOSE
+=item C<SV_CONST_CLOSE>
 
-=item SV_CONST_DELETE
+=item C<SV_CONST_DELETE>
 
-=item SV_CONST_CLEAR
+=item C<SV_CONST_CLEAR>
 
-=item SV_CONST_UNTIE
+=item C<SV_CONST_UNTIE>
 
-=item SV_CONST_DESTROY
+=item C<SV_CONST_DESTROY>
 
 
 

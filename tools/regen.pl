@@ -67,7 +67,7 @@ sub make_fn_doc {
     my $fn_doc = join "", map make_fn_doc($_), @{$spec->{fn}};
     $pm =~ s/(\n=head1 METHODS\n\n.*?\n\n=over\n\n).*?(\n\n=back\n\n)/$1$fn_doc$2/ms or die;
 
-    my $consts = join "", map "=item $_->{name}\n\n", @{$spec->{enum}}, @{$spec->{const}};
+    my $consts = join "", map "=item C<$_->{name}>\n\n", @{$spec->{enum}}, @{$spec->{const}};
     $pm =~ s/(\n=head1 CONSTANTS\n\n.*?\n\n=over\n\n).*?(\n\n=back\n\n)/$1$consts$2/ms or die;
 
     write_file($package, $pm);
