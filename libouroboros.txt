@@ -121,10 +121,10 @@ fn	void	ouroboros_savetmps
 fn	void	ouroboros_freetmps
 
 #: PERL_SYS_INIT3
-#- context
+#+ no_pthx
 fn	void	ouroboros_sys_init3	int*	char***	char***
 #: PERL_SYS_TERM
-#- context
+#+ no_pthx
 #+ parens
 fn	void	ouroboros_sys_term
 

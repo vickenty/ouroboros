@@ -3,10 +3,6 @@ package Ouroboros::Spec;
 use strict;
 use warnings;
 
-my %DEFAULT_TAGS = (
-    context => 1,
-);
-
 my %ITEM_CTOR = (
     fn => sub {
         my ($tags, $kind, $type, $name, @params) = @_;
@@ -14,7 +10,7 @@ my %ITEM_CTOR = (
             type => $type,
             name => $name,
             params => \@params,
-            tags => { %DEFAULT_TAGS, %$tags },
+            tags => $tags,
         };
     },
 
@@ -56,7 +52,6 @@ sub parse_fh {
         }
         if (my ($mode, $flag) = $line =~ /^#([+-]) (.*)/) {
             $seen_tags{$flag} = 1 if $mode eq "+";
-            $seen_tags{$flag} = 0 if $mode eq "-";
             next;
         }
         if (my ($doc) = $line =~ /^#\? ?(.*)$/) {

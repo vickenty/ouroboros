@@ -10,7 +10,7 @@ use Ouroboros::Spec;
 
 sub pthx {
     my $fn = shift;
-    if ($fn->{tags}{context}) {
+    if (!$fn->{tags}{no_pthx}) {
         @{$fn->{params}} ? "pTHX_ ": "pTHX"
     } else {
         ""
