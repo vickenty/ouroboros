@@ -3,6 +3,8 @@ package Ouroboros::Spec;
 use strict;
 use warnings;
 
+our $VERSION = "0.01";
+
 my %ITEM_CTOR = (
     fn => sub {
         my ($tags, $kind, $type, $name, @params) = @_;
