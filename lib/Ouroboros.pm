@@ -69,8 +69,6 @@ our @EXPORT = qw();
 
 our $VERSION = '0.01';
 
-our %Size;
-
 require XSLoader;
 XSLoader::load('Ouroboros', $VERSION);
 
