@@ -9,6 +9,7 @@ Makefile.PL
 MANIFEST
 README.md
 COPYRIGHT
+Changes
 t/1-basic.t
 t/2-ffi.t
 tools/regen.pl
