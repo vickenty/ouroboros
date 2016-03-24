@@ -114,7 +114,7 @@ can be allocated on caller's stack or in heap, and should be initialized first
 by calling C<ouroboros_stack_init()>.
 
 Minimum storage size for C<ouroboros_stack_t> is available as
-C<Ouroboros::Size{struct ouroboros_stack}>. Exact layout is intentionally
+C<Ouroboros::Size{ouroboros_stack_t}>. Exact layout is intentionally
 unspecified, user program should treat this type as an opaque object and only
 use provided methods to manipulate it.
 
