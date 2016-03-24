@@ -5,8 +5,8 @@ use warnings;
 use autodie;
 use File::Slurp;
 
-use lib "lib";
-use Ouroboros::Spec;
+use lib "tools/lib";
+use SpecParser;
 
 sub pthx {
     my $fn = shift;
@@ -18,7 +18,7 @@ sub pthx {
 }
 
 open my $spec_fh, "<", "libouroboros.txt";
-my $spec = Ouroboros::Spec::parse_fh($spec_fh);
+my $spec = SpecParser::parse_fh($spec_fh);
 
 foreach my $fn (@{$spec->{fn}}) {
     # ptr_name is a name of sub that returns pointer to the wrapper.

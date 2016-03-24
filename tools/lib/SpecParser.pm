@@ -1,9 +1,7 @@
-package Ouroboros::Spec;
+package SpecParser;
 
 use strict;
 use warnings;
-
-our $VERSION = "0.01";
 
 my %ITEM_CTOR = (
     fn => sub {
