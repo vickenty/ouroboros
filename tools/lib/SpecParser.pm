@@ -46,7 +46,7 @@ sub parse_fh {
         chomp $line;
 
         if ($line =~ /^#: (\w+)(?:\((.*)\))?/) {
-            my $impl = $seen_tags{autoimpl} = [ $1 ];
+            my $impl = $seen_tags{_autoimpl} = [ $1 ];
             push @$impl, split /\s*,\s*/, $2 if $2;
             next;
         }

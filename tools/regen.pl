@@ -47,7 +47,7 @@ foreach my $fn (@{$spec->{fn}}) {
 sub make_fn_doc {
     my $fn = shift;
 
-    my $impl = $fn->{tags}{autoimpl} ? $fn->{tags}{autoimpl}[0] : "";
+    my $impl = $fn->{tags}{_autoimpl} ? $fn->{tags}{_autoimpl}[0] : "";
     my $decl = $fn->{c_decl};
 
     my $doc = "=item $fn->{ptr_name}\n\n";
@@ -102,14 +102,14 @@ sub mk_impl {
     my $pname = "a";
     my $svn = "";
 
-    my ($macro_name, @hints) = @{$fn->{tags}{autoimpl}};
+    my ($macro_name, @hints) = @{$fn->{tags}{_autoimpl}};
 
     my (@decl, @impl);
 
     # A couple of macros take an explicit SP argument, while most do not.  We
     # keep SP inside the stack object and thus this extra argument does not
     # leak into public API.
-    push @impl, "SP" if $fn->{tags}{needs_sp};
+    push @impl, "SP" if $fn->{tags}{_needs_sp};
 
     foreach my $ptype (@{$fn->{params}}) {
         my $hint = shift @hints // "";
@@ -129,12 +129,12 @@ sub mk_impl {
         join(", ", @decl),
         $fn->{type} eq "void" ? "" : "return ",
         $macro_name,
-        @impl ? map("($_)", join ", ", @impl) : $fn->{tags}{parens} ? "()" : ""
+        @impl ? map("($_)", join ", ", @impl) : $fn->{tags}{_parens} ? "()" : ""
     );
 }
 
 {
-    my $impls = join "\n", map mk_impl($_), grep $_->{tags}{autoimpl}, @{$spec->{fn}};
+    my $impls = join "\n", map mk_impl($_), grep $_->{tags}{_autoimpl}, @{$spec->{fn}};
     my $source = "libouroboros.c";
     my $cc = read_file($source);
     $cc =~ s!(/\*\s*functions\s*{\s*\*/).*?(/\*\s*}\s*\*/)!$1\n$impls$2!s or die;
@@ -152,8 +152,20 @@ sub mk_impl {
     write_file($makefile, $mf);
 }
 
+sub strip_private {
+    my $self = shift;
+    if (ref $self eq "ARRAY") {
+        return [ map strip_private($_), @$self ];
+    }
+    if (ref $self eq "HASH") {
+        return { map $_ !~ /^_/ ? ($_ => strip_private($self->{$_})) : (), keys %$self };
+    }
+    return $self;
+}
+
 {
-    my $dump = Data::Dumper->new([$spec], ["*SPEC"])
+    my $pub_spec = strip_private($spec);
+    my $dump = Data::Dumper->new([$pub_spec], ["*SPEC"])
         ->Useqq(1)
         ->Indent(1)
         ->Sortkeys(1);

@@ -243,11 +243,7 @@ our %SPEC = (
         "ouroboros_stack_t*"
       ],
       "ptr_name" => "ouroboros_stack_prepush_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "XSprePUSH"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -257,11 +253,7 @@ our %SPEC = (
         "ouroboros_stack_t*"
       ],
       "ptr_name" => "ouroboros_stack_putback_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "PUTBACK"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -299,12 +291,7 @@ our %SPEC = (
         "SSize_t"
       ],
       "ptr_name" => "ouroboros_stack_extend_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "EXTEND"
-        ],
-        "needs_sp" => 1
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -314,12 +301,7 @@ our %SPEC = (
         "ouroboros_stack_t*"
       ],
       "ptr_name" => "ouroboros_stack_pushmark_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "PUSHMARK"
-        ],
-        "needs_sp" => 1
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -329,11 +311,7 @@ our %SPEC = (
         "ouroboros_stack_t*"
       ],
       "ptr_name" => "ouroboros_stack_spagain_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SPAGAIN"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -344,11 +322,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_stack_xpush_sv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "XPUSHs"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -359,11 +333,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_stack_xpush_sv_mortal_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "mXPUSHs"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -374,11 +344,7 @@ our %SPEC = (
         "IV"
       ],
       "ptr_name" => "ouroboros_stack_xpush_iv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "mXPUSHi"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -389,11 +355,7 @@ our %SPEC = (
         "UV"
       ],
       "ptr_name" => "ouroboros_stack_xpush_uv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "mXPUSHu"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -404,11 +366,7 @@ our %SPEC = (
         "NV"
       ],
       "ptr_name" => "ouroboros_stack_xpush_nv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "mXPUSHn"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -420,11 +378,7 @@ our %SPEC = (
         "STRLEN"
       ],
       "ptr_name" => "ouroboros_stack_xpush_pv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "mXPUSHp"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -435,11 +389,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_stack_push_sv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "PUSHs"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -450,11 +400,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_stack_push_sv_mortal_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "mPUSHs"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -465,11 +411,7 @@ our %SPEC = (
         "IV"
       ],
       "ptr_name" => "ouroboros_stack_push_iv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "mPUSHi"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -480,11 +422,7 @@ our %SPEC = (
         "UV"
       ],
       "ptr_name" => "ouroboros_stack_push_uv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "mPUSHu"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -495,11 +433,7 @@ our %SPEC = (
         "NV"
       ],
       "ptr_name" => "ouroboros_stack_push_nv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "mPUSHn"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -511,11 +445,7 @@ our %SPEC = (
         "STRLEN"
       ],
       "ptr_name" => "ouroboros_stack_push_pv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "mPUSHp"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -525,11 +455,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_iv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvIV"
-        ]
-      },
+      "tags" => {},
       "type" => "IV"
     },
     {
@@ -539,11 +465,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_uv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvUV"
-        ]
-      },
+      "tags" => {},
       "type" => "UV"
     },
     {
@@ -553,11 +475,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_nv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvNV"
-        ]
-      },
+      "tags" => {},
       "type" => "NV"
     },
     {
@@ -568,13 +486,7 @@ our %SPEC = (
         "STRLEN*"
       ],
       "ptr_name" => "ouroboros_sv_pv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvPV",
-          "",
-          "*"
-        ]
-      },
+      "tags" => {},
       "type" => "const char*"
     },
     {
@@ -584,11 +496,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_pv_nolen_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvPV_nolen"
-        ]
-      },
+      "tags" => {},
       "type" => "const char*"
     },
     {
@@ -598,11 +506,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_rok_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvROK"
-        ]
-      },
+      "tags" => {},
       "type" => "U32"
     },
     {
@@ -612,11 +516,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_rv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvRV"
-        ]
-      },
+      "tags" => {},
       "type" => "SV*"
     },
     {
@@ -626,11 +526,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_type_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvTYPE"
-        ]
-      },
+      "tags" => {},
       "type" => "IV"
     },
     {
@@ -640,11 +536,7 @@ our %SPEC = (
         "GV*"
       ],
       "ptr_name" => "ouroboros_gv_sv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "GvSV"
-        ]
-      },
+      "tags" => {},
       "type" => "SV*"
     },
     {
@@ -654,11 +546,7 @@ our %SPEC = (
         "GV*"
       ],
       "ptr_name" => "ouroboros_gv_av_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "GvAV"
-        ]
-      },
+      "tags" => {},
       "type" => "AV*"
     },
     {
@@ -668,11 +556,7 @@ our %SPEC = (
         "GV*"
       ],
       "ptr_name" => "ouroboros_gv_hv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "GvHV"
-        ]
-      },
+      "tags" => {},
       "type" => "HV*"
     },
     {
@@ -682,11 +566,7 @@ our %SPEC = (
         "CV*"
       ],
       "ptr_name" => "ouroboros_gv_cv_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "GvCV"
-        ]
-      },
+      "tags" => {},
       "type" => "CV*"
     },
     {
@@ -696,11 +576,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_refcnt_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvREFCNT"
-        ]
-      },
+      "tags" => {},
       "type" => "U32"
     },
     {
@@ -710,11 +586,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_refcnt_inc_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvREFCNT_inc_simple"
-        ]
-      },
+      "tags" => {},
       "type" => "SV*"
     },
     {
@@ -724,11 +596,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_refcnt_inc_nn_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvREFCNT_inc_simple_NN"
-        ]
-      },
+      "tags" => {},
       "type" => "SV*"
     },
     {
@@ -738,11 +606,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_refcnt_inc_void_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvREFCNT_inc_simple_void"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -752,11 +616,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_refcnt_inc_void_nn_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvREFCNT_inc_simple_void_NN"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -766,11 +626,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_refcnt_dec_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvREFCNT_dec"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -780,11 +636,7 @@ our %SPEC = (
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_refcnt_dec_nn_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SvREFCNT_dec_NN"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -792,11 +644,7 @@ our %SPEC = (
       "name" => "ouroboros_enter",
       "params" => [],
       "ptr_name" => "ouroboros_enter_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "ENTER"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -804,11 +652,7 @@ our %SPEC = (
       "name" => "ouroboros_leave",
       "params" => [],
       "ptr_name" => "ouroboros_leave_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "LEAVE"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -816,11 +660,7 @@ our %SPEC = (
       "name" => "ouroboros_savetmps",
       "params" => [],
       "ptr_name" => "ouroboros_savetmps_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "SAVETMPS"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -828,11 +668,7 @@ our %SPEC = (
       "name" => "ouroboros_freetmps",
       "params" => [],
       "ptr_name" => "ouroboros_freetmps_ptr",
-      "tags" => {
-        "autoimpl" => [
-          "FREETMPS"
-        ]
-      },
+      "tags" => {},
       "type" => "void"
     },
     {
@@ -845,9 +681,6 @@ our %SPEC = (
       ],
       "ptr_name" => "ouroboros_sys_init3_ptr",
       "tags" => {
-        "autoimpl" => [
-          "PERL_SYS_INIT3"
-        ],
         "no_pthx" => 1
       },
       "type" => "void"
@@ -858,11 +691,7 @@ our %SPEC = (
       "params" => [],
       "ptr_name" => "ouroboros_sys_term_ptr",
       "tags" => {
-        "autoimpl" => [
-          "PERL_SYS_TERM"
-        ],
-        "no_pthx" => 1,
-        "parens" => 1
+        "no_pthx" => 1
       },
       "type" => "void"
     }

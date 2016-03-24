@@ -10,8 +10,8 @@
 
 # Flags:
 # #+ no_pthx - wrapper function does not have pTHX argument.
-# #+ needs_sp - force implementation to pass SP as first argument to macro (normally macros just use it directly, but few take it explicitly).
-# #+ parens - force implementation to have parens after macro invocation (normally they are generated only if there are arguments).
+# #+ _needs_sp - force implementation to pass SP as first argument to macro (normally macros just use it directly, but few take it explicitly).
+# #+ _parens - force implementation to have parens after macro invocation (normally they are generated only if there are arguments).
 
 #? Initialize ouroboros_stack_t object. Must be first thing called by a XS-sub. Equivalent to C<dXSARGS> macro automatically inserted by C<xsubpp> into every XS sub.
 fn	void	ouroboros_stack_init	ouroboros_stack_t*
@@ -40,11 +40,11 @@ fn	SV*	ouroboros_stack_fetch	ouroboros_stack_t*	SSize_t
 fn	void	ouroboros_stack_store	ouroboros_stack_t*	SSize_t	SV*
 
 #: EXTEND
-#+ needs_sp
+#+ _needs_sp
 fn	void	ouroboros_stack_extend	ouroboros_stack_t*	SSize_t
 
 #: PUSHMARK
-#+ needs_sp
+#+ _needs_sp
 fn	void	ouroboros_stack_pushmark	ouroboros_stack_t*
 
 #: SPAGAIN
@@ -140,7 +140,7 @@ fn	void	ouroboros_freetmps
 fn	void	ouroboros_sys_init3	int*	char***	char***
 #: PERL_SYS_TERM
 #+ no_pthx
-#+ parens
+#+ _parens
 fn	void	ouroboros_sys_term
 
 # Sizes of various types
