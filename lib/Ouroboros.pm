@@ -575,7 +575,7 @@ C<@Ouroboros::CONSTS> contains names of all constants provided by this package.
 
 Most of the XS API consists of normal functions and their addresses can be
 discovered via L<DynaLoader> at run-time with little effort. See
-L<perlguts/"Internal functions"> for more information.
+L<perlguts/"Internal Functions"> for more information.
 
 =head1 SEE MORE
 
