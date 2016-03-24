@@ -4,6 +4,7 @@ use strict;
 use warnings;
 use autodie;
 use File::Slurp;
+use Data::Dumper;
 
 use lib "tools/lib";
 use SpecParser;
@@ -149,4 +150,17 @@ sub mk_impl {
     $mf =~ s/(my\s+\@enums\s*=\s*qw\()[^\)]*(\);)/$1\n$enums$2/m or die;
     $mf =~ s/(my\s+\@consts\s*=\s*qw\()[^\)]*(\);)/$1\n$consts$2/m or die;
     write_file($makefile, $mf);
+}
+
+{
+    my $dump = Data::Dumper->new([$spec], ["*SPEC"])
+        ->Useqq(1)
+        ->Indent(1)
+        ->Sortkeys(1);
+    my $text = $dump->Dump;
+
+    my $package = "lib/Ouroboros/Spec.pm";
+    my $pm = read_file($package);
+    $pm =~ s/^(#\s*spec\s*{).*?(^#\s*})/$1\nour $text\n$2/ms or die;
+    write_file($package, $pm);
 }
