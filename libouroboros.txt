@@ -1,3 +1,18 @@
+# fn <TAB> return type <TAB> function name <TAB> param1 [<TAB> param2 ]...
+# sizeof <TAB> type - provide size of type in %SIZE_OF
+# const <TAB> name - provide constant value as perl constant.
+# enum <TAB> name - same as above, but don't #ifdef it. Sets undocumented 'macro' flag for ExtUtils::Constant.
+
+# Following metadata can be attached to a fn:
+# #? <text> - POD documentation for following item. Multiple doc lines are concatenated.
+# #: <name> - XS macro name for generating wrapper implementation automatically.
+# #+ <name> - set a specific flag for the item.
+
+# Flags:
+# #+ no_pthx - wrapper function does not have pTHX argument.
+# #+ needs_sp - force implementation to pass SP as first argument to macro (normally macros just use it directly, but few take it explicitly).
+# #+ parens - force implementation to have parens after macro invocation (normally they are generated only if there are arguments).
+
 #? Initialize ouroboros_stack_t object. Must be first thing called by a XS-sub. Equivalent to C<dXSARGS> macro automatically inserted by C<xsubpp> into every XS sub.
 fn	void	ouroboros_stack_init	ouroboros_stack_t*
 
