@@ -112,14 +112,14 @@ can be allocated on caller's stack or in heap, and should be initialized first
 by calling C<ouroboros_stack_init()>.
 
 Minimum storage size for C<ouroboros_stack_t> is available as
-C<Ouroboros::Size{ouroboros_stack_t}>. Exact layout is intentionally
+C<$Ouroboros::SIZE_OF{ouroboros_stack_t}>. Exact layout is intentionally
 unspecified, user program should treat this type as an opaque object and only
 use provided methods to manipulate it.
 
 =head2 Type sizes
 
 Sizes for most primitive data types used by Perl are available via L<Config>
-and supplemented by C<%Ouroboros::Size> hash.
+and supplemented by C<%Ouroboros::SIZE_OF> hash.
 
 =head1 EXPORTS
 
