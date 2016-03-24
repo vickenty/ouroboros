@@ -25,11 +25,13 @@ foreach my $fn (@{$spec->{fn}}) {
     $fn->{ptr_name} = "$fn->{name}_ptr";
 
     $fn->{c_decl} = sprintf(
-        "%s %s(%s%s);\n",
+        "%s %s(%s%s);",
         $fn->{type},
         $fn->{name},
         pthx($fn),
         join(", ", @{$fn->{params}}));
+
+    chomp $fn->{tags}{apidoc} if defined $fn->{tags}{apidoc};
 }
 
 {
@@ -84,7 +86,7 @@ sub make_fn_doc {
 {
     my $decls = do {
         local $" = ", ";
-        join "", map sprintf("%s %s(%s%s);\n", $_->{type}, $_->{name}, pthx($_), "@{$_->{params}}"), @{$spec->{fn}}
+        join "", map "$_->{c_decl}\n", @{$spec->{fn}}
     };
 
     my $header = "libouroboros.h";

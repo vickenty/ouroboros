@@ -140,22 +140,17 @@ provided.
 
     void ouroboros_stack_init(pTHX_ ouroboros_stack_t*);
 
-
 Initialize ouroboros_stack_t object. Must be first thing called by a XS-sub. Equivalent to C<dXSARGS> macro automatically inserted by C<xsubpp> into every XS sub.
-
 
 =item ouroboros_stack_items_ptr
 
     int ouroboros_stack_items(pTHX_ ouroboros_stack_t*);
 
-
 Returns number of arguments on Perl stack. Equivalent to C<items> local variable in XS.
-
 
 =item ouroboros_stack_prepush_ptr
 
     void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t*);
-
 
 Perl macro: C<XSprePUSH>
 
@@ -163,13 +158,11 @@ Perl macro: C<XSprePUSH>
 
     void ouroboros_stack_putback(pTHX_ ouroboros_stack_t*);
 
-
 Perl macro: C<PUTBACK>
 
 =item ouroboros_stack_fetch_ptr
 
     SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t*, SSize_t);
-
 
 Read a value from the stack. Equivalent of:
 
@@ -177,11 +170,9 @@ Read a value from the stack. Equivalent of:
 
 Perl macro: C<ST(n)>
 
-
 =item ouroboros_stack_store_ptr
 
     void ouroboros_stack_store(pTHX_ ouroboros_stack_t*, SSize_t, SV*);
-
 
 Store a value on the stack. Equivalent of:
 
@@ -189,11 +180,9 @@ Store a value on the stack. Equivalent of:
 
 Perl macro: C<ST>
 
-
 =item ouroboros_stack_extend_ptr
 
     void ouroboros_stack_extend(pTHX_ ouroboros_stack_t*, SSize_t);
-
 
 Perl macro: C<EXTEND>
 
@@ -201,13 +190,11 @@ Perl macro: C<EXTEND>
 
     void ouroboros_stack_pushmark(pTHX_ ouroboros_stack_t*);
 
-
 Perl macro: C<PUSHMARK>
 
 =item ouroboros_stack_spagain_ptr
 
     void ouroboros_stack_spagain(pTHX_ ouroboros_stack_t*);
-
 
 Perl macro: C<SPAGAIN>
 
@@ -215,13 +202,11 @@ Perl macro: C<SPAGAIN>
 
     void ouroboros_stack_xpush_sv(pTHX_ ouroboros_stack_t*, SV*);
 
-
 Perl macro: C<XPUSHs>
 
 =item ouroboros_stack_xpush_sv_mortal_ptr
 
     void ouroboros_stack_xpush_sv_mortal(pTHX_ ouroboros_stack_t*, SV*);
-
 
 Perl macro: C<mXPUSHs>
 
@@ -229,13 +214,11 @@ Perl macro: C<mXPUSHs>
 
     void ouroboros_stack_xpush_iv(pTHX_ ouroboros_stack_t*, IV);
 
-
 Perl macro: C<mXPUSHi>
 
 =item ouroboros_stack_xpush_uv_ptr
 
     void ouroboros_stack_xpush_uv(pTHX_ ouroboros_stack_t*, UV);
-
 
 Perl macro: C<mXPUSHu>
 
@@ -243,13 +226,11 @@ Perl macro: C<mXPUSHu>
 
     void ouroboros_stack_xpush_nv(pTHX_ ouroboros_stack_t*, NV);
 
-
 Perl macro: C<mXPUSHn>
 
 =item ouroboros_stack_xpush_pv_ptr
 
     void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t*, const char*, STRLEN);
-
 
 Perl macro: C<mXPUSHp>
 
@@ -257,13 +238,11 @@ Perl macro: C<mXPUSHp>
 
     void ouroboros_stack_push_sv(pTHX_ ouroboros_stack_t*, SV*);
 
-
 Perl macro: C<PUSHs>
 
 =item ouroboros_stack_push_sv_mortal_ptr
 
     void ouroboros_stack_push_sv_mortal(pTHX_ ouroboros_stack_t*, SV*);
-
 
 Perl macro: C<mPUSHs>
 
@@ -271,13 +250,11 @@ Perl macro: C<mPUSHs>
 
     void ouroboros_stack_push_iv(pTHX_ ouroboros_stack_t*, IV);
 
-
 Perl macro: C<mPUSHi>
 
 =item ouroboros_stack_push_uv_ptr
 
     void ouroboros_stack_push_uv(pTHX_ ouroboros_stack_t*, UV);
-
 
 Perl macro: C<mPUSHu>
 
@@ -285,13 +262,11 @@ Perl macro: C<mPUSHu>
 
     void ouroboros_stack_push_nv(pTHX_ ouroboros_stack_t*, NV);
 
-
 Perl macro: C<mPUSHn>
 
 =item ouroboros_stack_push_pv_ptr
 
     void ouroboros_stack_push_pv(pTHX_ ouroboros_stack_t*, const char*, STRLEN);
-
 
 Perl macro: C<mPUSHp>
 
@@ -299,13 +274,11 @@ Perl macro: C<mPUSHp>
 
     IV ouroboros_sv_iv(pTHX_ SV*);
 
-
 Perl macro: C<SvIV>
 
 =item ouroboros_sv_uv_ptr
 
     UV ouroboros_sv_uv(pTHX_ SV*);
-
 
 Perl macro: C<SvUV>
 
@@ -313,13 +286,11 @@ Perl macro: C<SvUV>
 
     NV ouroboros_sv_nv(pTHX_ SV*);
 
-
 Perl macro: C<SvNV>
 
 =item ouroboros_sv_pv_ptr
 
     const char* ouroboros_sv_pv(pTHX_ SV*, STRLEN*);
-
 
 Perl macro: C<SvPV>
 
@@ -327,13 +298,11 @@ Perl macro: C<SvPV>
 
     const char* ouroboros_sv_pv_nolen(pTHX_ SV*);
 
-
 Perl macro: C<SvPV_nolen>
 
 =item ouroboros_sv_rok_ptr
 
     U32 ouroboros_sv_rok(pTHX_ SV*);
-
 
 Perl macro: C<SvROK>
 
@@ -341,13 +310,11 @@ Perl macro: C<SvROK>
 
     SV* ouroboros_sv_rv(pTHX_ SV*);
 
-
 Perl macro: C<SvRV>
 
 =item ouroboros_sv_type_ptr
 
     IV ouroboros_sv_type(pTHX_ SV*);
-
 
 Perl macro: C<SvTYPE>
 
@@ -355,13 +322,11 @@ Perl macro: C<SvTYPE>
 
     SV* ouroboros_gv_sv(pTHX_ GV*);
 
-
 Perl macro: C<GvSV>
 
 =item ouroboros_gv_av_ptr
 
     AV* ouroboros_gv_av(pTHX_ GV*);
-
 
 Perl macro: C<GvAV>
 
@@ -369,13 +334,11 @@ Perl macro: C<GvAV>
 
     HV* ouroboros_gv_hv(pTHX_ GV*);
 
-
 Perl macro: C<GvHV>
 
 =item ouroboros_gv_cv_ptr
 
     CV* ouroboros_gv_cv(pTHX_ CV*);
-
 
 Perl macro: C<GvCV>
 
@@ -383,13 +346,11 @@ Perl macro: C<GvCV>
 
     U32 ouroboros_sv_refcnt(pTHX_ SV*);
 
-
 Perl macro: C<SvREFCNT>
 
 =item ouroboros_sv_refcnt_inc_ptr
 
     SV* ouroboros_sv_refcnt_inc(pTHX_ SV*);
-
 
 Perl macro: C<SvREFCNT_inc_simple>
 
@@ -397,13 +358,11 @@ Perl macro: C<SvREFCNT_inc_simple>
 
     SV* ouroboros_sv_refcnt_inc_nn(pTHX_ SV*);
 
-
 Perl macro: C<SvREFCNT_inc_simple_NN>
 
 =item ouroboros_sv_refcnt_inc_void_ptr
 
     void ouroboros_sv_refcnt_inc_void(pTHX_ SV*);
-
 
 Perl macro: C<SvREFCNT_inc_simple_void>
 
@@ -411,13 +370,11 @@ Perl macro: C<SvREFCNT_inc_simple_void>
 
     void ouroboros_sv_refcnt_inc_void_nn(pTHX_ SV*);
 
-
 Perl macro: C<SvREFCNT_inc_simple_void_NN>
 
 =item ouroboros_sv_refcnt_dec_ptr
 
     void ouroboros_sv_refcnt_dec(pTHX_ SV*);
-
 
 Perl macro: C<SvREFCNT_dec>
 
@@ -425,13 +382,11 @@ Perl macro: C<SvREFCNT_dec>
 
     void ouroboros_sv_refcnt_dec_nn(pTHX_ SV*);
 
-
 Perl macro: C<SvREFCNT_dec_NN>
 
 =item ouroboros_enter_ptr
 
     void ouroboros_enter(pTHX);
-
 
 Perl macro: C<ENTER>
 
@@ -439,13 +394,11 @@ Perl macro: C<ENTER>
 
     void ouroboros_leave(pTHX);
 
-
 Perl macro: C<LEAVE>
 
 =item ouroboros_savetmps_ptr
 
     void ouroboros_savetmps(pTHX);
-
 
 Perl macro: C<SAVETMPS>
 
@@ -453,20 +406,17 @@ Perl macro: C<SAVETMPS>
 
     void ouroboros_freetmps(pTHX);
 
-
 Perl macro: C<FREETMPS>
 
 =item ouroboros_sys_init3_ptr
 
     void ouroboros_sys_init3(int*, char***, char***);
 
-
 Perl macro: C<PERL_SYS_INIT3>
 
 =item ouroboros_sys_term_ptr
 
     void ouroboros_sys_term();
-
 
 Perl macro: C<PERL_SYS_TERM>
 
