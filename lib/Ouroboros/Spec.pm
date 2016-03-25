@@ -736,7 +736,9 @@ certain item type described below, and values are all arrayrefs of hashrefs.
 
     $SPEC{const} = [ { name => "..." }, ... ];
 
-A list of supported numeric constants. Each item has:
+A list of supported numeric constants.
+
+=head3 Keys
 
 =over
 
@@ -751,7 +753,9 @@ Constant name.
     $SPEC{enum} = [ { name => "..." }, ... ];
 
 A list of supported enum values. This is a separate list due to nuance of
-C<ExtUtils::Constant> implementation. Each item has:
+C<ExtUtils::Constant> implementation.
+
+=head3 Keys
 
 =over
 
@@ -810,7 +814,16 @@ When true, indicates that function does not have pTHX as a first argument.
 
 =head2 Type sizes
 
-    $SPEC{sizeof} => [ { name => "..." }, ... ];
+    $SPEC{sizeof} => [ { type => "..." }, ... ];
 
 A list of types available via %SIZE_OF hash in L<Ouroboros> package.
 
+=head3 Keys
+
+=over
+
+=item type
+
+Name of the C type.
+
+=back
