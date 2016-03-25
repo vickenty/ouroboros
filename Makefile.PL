@@ -11,6 +11,7 @@ WriteMakefile(
     PREREQ_PM         => {},
     TEST_REQUIRES     => {
         "FFI::Raw" => 0,
+        "FFI::Platypus" => 0,
     },
     OBJECT            => [ qw/Ouroboros.o libouroboros.o/ ],
     LIBS              => [],
