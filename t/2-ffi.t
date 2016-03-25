@@ -38,7 +38,7 @@ else {
     my $arg = $val;
     my $got = $svnv->call(athx(), int \$arg);
 
-    is($got, $val, "SvNV wrapper works");
+    cmp_ok($got, "==", $val, "SvNV wrapper works");
 }
 
 done_testing;
