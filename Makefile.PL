@@ -7,6 +7,7 @@ WriteMakefile(
     ABSTRACT_FROM     => 'lib/Ouroboros.pm',
     AUTHOR            => 'Vickenty Fesunov <cpan-ouroboros@setattr.net>',
     LICENSE           => 'bsd',
+    MIN_PERL_VERSION  => "5.18.0", # SvREFCNT_dec_NN
     PREREQ_PM         => {},
     TEST_REQUIRES     => {
         "FFI::Raw" => 0,
