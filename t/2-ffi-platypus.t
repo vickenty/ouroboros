@@ -16,6 +16,10 @@ my %NVSIZE_TYPE = (
 if (!eval { require FFI::Platypus }) {
     plan skip_all => "FFI::Platypus not available";
 }
+elsif ($Config{nvsize} == 16 && $FFI::Platypus::VERSION < 0.41 && !eval { require Math::LongDouble }) {
+    # See https://github.com/plicease/FFI-Platypus/pull/63
+    plan skip_all => "FFI::Platypus >= 0.41 required";
+}
 elsif (!defined $NVSIZE_TYPE{$Config{nvsize}}) {
     plan skip_all => "unsupported NV size: $Config{nvsize}";
 }
