@@ -1,5 +1,6 @@
+Changes
+COPYRIGHT
 fn-pointer-xs.inc
-Ouroboros.xs
 lib/Ouroboros.pm
 lib/Ouroboros/Spec.pm
 libouroboros.c
@@ -7,10 +8,11 @@ libouroboros.h
 libouroboros.txt
 Makefile.PL
 MANIFEST
+Ouroboros.xs
 README.md
-COPYRIGHT
-Changes
 t/1-basic.t
-t/2-ffi-raw.t
 t/2-ffi-platypus.t
+t/2-ffi-raw.t
+t/lib/ATHX.pm
+tools/lib/SpecParser.pm
 tools/regen.pl
