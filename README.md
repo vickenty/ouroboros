@@ -28,7 +28,7 @@ libraries.
 
 ## Requirements
 
-Perl of a decently recent version.
+Perl 5.18.0 or later.
 
 A working C compiler.
 
