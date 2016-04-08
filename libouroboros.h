@@ -2,6 +2,7 @@
 #define OUROBOROS_H
 
 #define PERL_NO_GET_CONTEXT
+#define NO_XSLOCKS
 #include "EXTERN.h"
 #include "perl.h"
 #include "XSUB.h"
