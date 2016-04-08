@@ -29,6 +29,23 @@ void ouroboros_stack_store(pTHX_ ouroboros_stack_t* stack, SSize_t item, SV* val
         ST(item) = value;
 }
 
+int ouroboros_xcpt_try(pTHX_ ouroboros_xcpt_callback_t cb, void* arg)
+{
+	int rc = 0;
+	dJMPENV;
+	JMPENV_PUSH(rc);
+	if (rc == 0) {
+		cb(arg);
+	}
+	JMPENV_POP;
+	return rc;
+}
+
+void ouroboros_xcpt_rethrow(pTHX_ int rc)
+{
+	JMPENV_JUMP(rc);
+}
+
 /* functions { */
 void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t* stack)
 {

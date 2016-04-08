@@ -13,6 +13,8 @@ typedef struct {
         int items;
 } ouroboros_stack_t;
 
+typedef void (*ouroboros_xcpt_callback_t)(void *);
+
 /* functions { */
 void ouroboros_stack_init(pTHX_ ouroboros_stack_t*);
 int ouroboros_stack_items(pTHX_ ouroboros_stack_t*);
@@ -60,6 +62,8 @@ void ouroboros_savetmps(pTHX);
 void ouroboros_freetmps(pTHX);
 void ouroboros_sys_init3(int*, char***, char***);
 void ouroboros_sys_term();
+int ouroboros_xcpt_try(pTHX_ ouroboros_xcpt_callback_t, void*);
+void ouroboros_xcpt_rethrow(pTHX_ int);
 /* } */
 
 #endif

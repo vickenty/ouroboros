@@ -56,6 +56,8 @@ our @EXPORT_OK = qw(
     ouroboros_freetmps_ptr
     ouroboros_sys_init3_ptr
     ouroboros_sys_term_ptr
+    ouroboros_xcpt_try_ptr
+    ouroboros_xcpt_rethrow_ptr
 );
 
 our @CONSTS;
@@ -120,6 +122,10 @@ use provided methods to manipulate it.
 
 Sizes for most primitive data types used by Perl are available via L<Config>
 and supplemented by C<%Ouroboros::SIZE_OF> hash.
+
+=head2 Exception handling
+
+See L</ouroboros_xcpt_try> and L</ouroboros_xcpt_rethrow>.
 
 =head1 EXPORTS
 
@@ -419,6 +425,28 @@ Perl macro: C<PERL_SYS_INIT3>
     void ouroboros_sys_term();
 
 Perl macro: C<PERL_SYS_TERM>
+
+=item ouroboros_xcpt_try_ptr
+
+    int ouroboros_xcpt_try(pTHX_ ouroboros_xcpt_callback_t, void*);
+
+Execute callback once while capturing Perl exceptions. Second argument is passed to the callback as is and can be NULL.
+
+This is equivalent of C<XCPT_TRY_START> and C<XCPT_TRY_END> macros, see L<perlguts/Exception Handling>.
+
+Returns zero if callback was executed successfully and no Perl exceptions were thrown.
+
+Returns non-zero if Perl exception was thrown while executing callback. After doing cleanups, this value must be passed to L</ouroboros_xcpt_rethrow>.
+
+Perl macro: C<XCPT_TRY_START> and C<XCPT_TRY_END>
+
+=item ouroboros_xcpt_rethrow_ptr
+
+    void ouroboros_xcpt_rethrow(pTHX_ int);
+
+Continue exception unwinding after unsuccessful call to L</ouroboros_xcpt_try>.
+
+Perl macro: C<XCPT_RETHROW>
 
 
 

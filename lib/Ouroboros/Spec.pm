@@ -694,6 +694,31 @@ our %SPEC = (
         "no_pthx" => 1
       },
       "type" => "void"
+    },
+    {
+      "c_decl" => "int ouroboros_xcpt_try(pTHX_ ouroboros_xcpt_callback_t, void*);",
+      "name" => "ouroboros_xcpt_try",
+      "params" => [
+        "ouroboros_xcpt_callback_t",
+        "void*"
+      ],
+      "ptr_name" => "ouroboros_xcpt_try_ptr",
+      "tags" => {
+        "apidoc" => "Execute callback once while capturing Perl exceptions. Second argument is passed to the callback as is and can be NULL.\n\nThis is equivalent of C<XCPT_TRY_START> and C<XCPT_TRY_END> macros, see L<perlguts/Exception Handling>.\n\nReturns zero if callback was executed successfully and no Perl exceptions were thrown.\n\nReturns non-zero if Perl exception was thrown while executing callback. After doing cleanups, this value must be passed to L</ouroboros_xcpt_rethrow>.\n\nPerl macro: C<XCPT_TRY_START> and C<XCPT_TRY_END>"
+      },
+      "type" => "int"
+    },
+    {
+      "c_decl" => "void ouroboros_xcpt_rethrow(pTHX_ int);",
+      "name" => "ouroboros_xcpt_rethrow",
+      "params" => [
+        "int"
+      ],
+      "ptr_name" => "ouroboros_xcpt_rethrow_ptr",
+      "tags" => {
+        "apidoc" => "Continue exception unwinding after unsuccessful call to L</ouroboros_xcpt_try>.\n\nPerl macro: C<XCPT_RETHROW>"
+      },
+      "type" => "void"
     }
   ],
   "sizeof" => [

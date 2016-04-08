@@ -320,3 +320,17 @@ CODE:
 OUTPUT:
 	RETVAL
 
+void*
+ouroboros_xcpt_try_ptr()
+CODE:
+	RETVAL = ouroboros_xcpt_try;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_xcpt_rethrow_ptr()
+CODE:
+	RETVAL = ouroboros_xcpt_rethrow;
+OUTPUT:
+	RETVAL
+
