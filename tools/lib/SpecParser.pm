@@ -59,13 +59,16 @@ sub parse_fh {
             $seen_tags{apidoc} .= "$doc\n";
             next;
         }
+        if ($line =~ /^# /) {
+            next;
+        }
 
         # Consume all seen tags.
         my %tags = %seen_tags;
         %seen_tags = ();
 
-        if (!$line || $line =~ /^#/) {
-            $warn->("tags applied to a non-item") if %tags;
+        if (!$line) {
+            $warn->("no blank lines are allowed between tags and items") if %tags;
             next;
         }
 
