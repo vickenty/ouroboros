@@ -43,6 +43,13 @@ our @EXPORT_OK = qw(
     ouroboros_gv_av_ptr
     ouroboros_gv_hv_ptr
     ouroboros_gv_cv_ptr
+    ouroboros_he_pv_ptr
+    ouroboros_he_val_ptr
+    ouroboros_he_hash_ptr
+    ouroboros_he_svkey_ptr
+    ouroboros_he_svkey_force_ptr
+    ouroboros_he_svkey_set_ptr
+    ouroboros_perl_hash_ptr
     ouroboros_sv_refcnt_ptr
     ouroboros_sv_refcnt_inc_ptr
     ouroboros_sv_refcnt_inc_nn_ptr
@@ -347,6 +354,50 @@ Perl macro: C<GvHV>
     CV* ouroboros_gv_cv(pTHX_ CV*);
 
 Perl macro: C<GvCV>
+
+=item ouroboros_he_pv_ptr
+
+    const char* ouroboros_he_pv(pTHX_ HE*, STRLEN*);
+
+Perl macro: C<HePV>
+
+=item ouroboros_he_val_ptr
+
+    SV* ouroboros_he_val(pTHX_ HE*);
+
+Perl macro: C<HeVAL>
+
+=item ouroboros_he_hash_ptr
+
+    U32 ouroboros_he_hash(pTHX_ HE*);
+
+Perl macro: C<HeHASH>
+
+=item ouroboros_he_svkey_ptr
+
+    SV* ouroboros_he_svkey(pTHX_ HE*);
+
+Perl macro: C<HeSVKEY>
+
+=item ouroboros_he_svkey_force_ptr
+
+    SV* ouroboros_he_svkey_force(pTHX_ HE*);
+
+Perl macro: C<HeSVKEY_force>
+
+=item ouroboros_he_svkey_set_ptr
+
+    SV* ouroboros_he_svkey_set(pTHX_ HE*, SV*);
+
+Perl macro: C<HeSVKEY_set>
+
+=item ouroboros_perl_hash_ptr
+
+    U32 ouroboros_perl_hash(pTHX_ U8*, STRLEN);
+
+Unlike macro, returns hash value instead of assigning it to argument.
+
+Perl macro: C<PERL_HASH>
 
 =item ouroboros_sv_refcnt_ptr
 

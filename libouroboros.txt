@@ -102,6 +102,23 @@ fn	HV*	ouroboros_gv_hv	GV*
 #: GvCV
 fn	CV*	ouroboros_gv_cv	CV*
 
+#: HePV(,*)
+fn	const char*	ouroboros_he_pv	HE*	STRLEN*
+#: HeVAL
+fn	SV*	ouroboros_he_val	HE*
+#: HeHASH
+fn	U32	ouroboros_he_hash	HE*
+#: HeSVKEY
+fn	SV*	ouroboros_he_svkey	HE*
+#: HeSVKEY_force
+fn	SV*	ouroboros_he_svkey_force	HE*
+#: HeSVKEY_set
+fn	SV*	ouroboros_he_svkey_set	HE*	SV*
+#? Unlike macro, returns hash value instead of assigning it to an argument.
+#?
+#? Perl macro: C<PERL_HASH>
+fn	U32	ouroboros_perl_hash	U8*	STRLEN
+
 #: SvREFCNT
 fn	U32	ouroboros_sv_refcnt	SV*
 

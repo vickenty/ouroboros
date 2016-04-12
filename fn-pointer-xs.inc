@@ -230,6 +230,55 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_he_pv_ptr()
+CODE:
+	RETVAL = ouroboros_he_pv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_he_val_ptr()
+CODE:
+	RETVAL = ouroboros_he_val;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_he_hash_ptr()
+CODE:
+	RETVAL = ouroboros_he_hash;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_he_svkey_ptr()
+CODE:
+	RETVAL = ouroboros_he_svkey;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_he_svkey_force_ptr()
+CODE:
+	RETVAL = ouroboros_he_svkey_force;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_he_svkey_set_ptr()
+CODE:
+	RETVAL = ouroboros_he_svkey_set;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_perl_hash_ptr()
+CODE:
+	RETVAL = ouroboros_perl_hash;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_sv_refcnt_ptr()
 CODE:
 	RETVAL = ouroboros_sv_refcnt;

@@ -46,6 +46,13 @@ void ouroboros_xcpt_rethrow(pTHX_ int rc)
 	JMPENV_JUMP(rc);
 }
 
+U32 ouroboros_perl_hash(pTHX_ U8* key, STRLEN len)
+{
+	U32 hash;
+	PERL_HASH(hash, key, len);
+	return hash;
+}
+
 /* functions { */
 void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t* stack)
 {
@@ -190,6 +197,36 @@ HV* ouroboros_gv_hv(pTHX_ GV* a)
 CV* ouroboros_gv_cv(pTHX_ CV* a)
 {
         return GvCV(a);
+}
+
+const char* ouroboros_he_pv(pTHX_ HE* a, STRLEN* b)
+{
+        return HePV(a, *b);
+}
+
+SV* ouroboros_he_val(pTHX_ HE* a)
+{
+        return HeVAL(a);
+}
+
+U32 ouroboros_he_hash(pTHX_ HE* a)
+{
+        return HeHASH(a);
+}
+
+SV* ouroboros_he_svkey(pTHX_ HE* a)
+{
+        return HeSVKEY(a);
+}
+
+SV* ouroboros_he_svkey_force(pTHX_ HE* a)
+{
+        return HeSVKEY_force(a);
+}
+
+SV* ouroboros_he_svkey_set(pTHX_ HE* a, SV* sv)
+{
+        return HeSVKEY_set(a, sv);
 }
 
 U32 ouroboros_sv_refcnt(pTHX_ SV* sv)

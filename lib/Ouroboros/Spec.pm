@@ -570,6 +570,81 @@ our %SPEC = (
       "type" => "CV*"
     },
     {
+      "c_decl" => "const char* ouroboros_he_pv(pTHX_ HE*, STRLEN*);",
+      "name" => "ouroboros_he_pv",
+      "params" => [
+        "HE*",
+        "STRLEN*"
+      ],
+      "ptr_name" => "ouroboros_he_pv_ptr",
+      "tags" => {},
+      "type" => "const char*"
+    },
+    {
+      "c_decl" => "SV* ouroboros_he_val(pTHX_ HE*);",
+      "name" => "ouroboros_he_val",
+      "params" => [
+        "HE*"
+      ],
+      "ptr_name" => "ouroboros_he_val_ptr",
+      "tags" => {},
+      "type" => "SV*"
+    },
+    {
+      "c_decl" => "U32 ouroboros_he_hash(pTHX_ HE*);",
+      "name" => "ouroboros_he_hash",
+      "params" => [
+        "HE*"
+      ],
+      "ptr_name" => "ouroboros_he_hash_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
+      "c_decl" => "SV* ouroboros_he_svkey(pTHX_ HE*);",
+      "name" => "ouroboros_he_svkey",
+      "params" => [
+        "HE*"
+      ],
+      "ptr_name" => "ouroboros_he_svkey_ptr",
+      "tags" => {},
+      "type" => "SV*"
+    },
+    {
+      "c_decl" => "SV* ouroboros_he_svkey_force(pTHX_ HE*);",
+      "name" => "ouroboros_he_svkey_force",
+      "params" => [
+        "HE*"
+      ],
+      "ptr_name" => "ouroboros_he_svkey_force_ptr",
+      "tags" => {},
+      "type" => "SV*"
+    },
+    {
+      "c_decl" => "SV* ouroboros_he_svkey_set(pTHX_ HE*, SV*);",
+      "name" => "ouroboros_he_svkey_set",
+      "params" => [
+        "HE*",
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_he_svkey_set_ptr",
+      "tags" => {},
+      "type" => "SV*"
+    },
+    {
+      "c_decl" => "U32 ouroboros_perl_hash(pTHX_ U8*, STRLEN);",
+      "name" => "ouroboros_perl_hash",
+      "params" => [
+        "U8*",
+        "STRLEN"
+      ],
+      "ptr_name" => "ouroboros_perl_hash_ptr",
+      "tags" => {
+        "apidoc" => "Unlike macro, returns hash value instead of assigning it to argument.\n\nPerl macro: C<PERL_HASH>"
+      },
+      "type" => "U32"
+    },
+    {
       "c_decl" => "U32 ouroboros_sv_refcnt(pTHX_ SV*);",
       "name" => "ouroboros_sv_refcnt",
       "params" => [
