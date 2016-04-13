@@ -4,6 +4,16 @@ use warnings;
 
 our $VERSION = "0.04";
 
+sub c_source {
+    require File::ShareDir;
+    File::ShareDir::dist_file("Ouroboros", "libouroboros.c");
+}
+
+sub c_header {
+    require File::ShareDir;
+    File::ShareDir::dist_file("Ouroboros", "libouroboros.h");
+}
+
 # spec {
 our %SPEC = (
   "const" => [

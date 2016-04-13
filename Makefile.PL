@@ -115,3 +115,20 @@ WriteConstants(
     ],
     PROXYSUBS => { push => "CONSTS" },
 );
+
+package MY;
+use File::Spec::Functions qw/catfile/;
+
+sub MY::postamble {
+    my $self = shift;
+    my $dest = catfile(qw#$(INST_LIB) auto share dist $(DISTNAME)#);
+    my $make = "config::\n";
+    my @files = qw/libouroboros.h libouroboros.c/;
+
+    join "", map "$_\n",
+        "config::",
+        "\t\$(NOECHO) \$(MKPATH) '$dest'\n",
+        map "\t\$(NOECHO) \$(CP) '$_->[0]' '$_->[1]'",
+        map [ $_, catfile($dest, $_) ],
+        @files;
+}
