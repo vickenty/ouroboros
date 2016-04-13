@@ -179,6 +179,26 @@ IV ouroboros_sv_type(pTHX_ SV* sv)
         return SvTYPE(sv);
 }
 
+UV ouroboros_sv_flags(pTHX_ SV* sv)
+{
+        return SvFLAGS(sv);
+}
+
+bool ouroboros_sv_utf8(pTHX_ SV* sv)
+{
+        return SvUTF8(sv);
+}
+
+void ouroboros_sv_utf8_on(pTHX_ SV* sv)
+{
+        SvUTF8_on(sv);
+}
+
+void ouroboros_sv_utf8_off(pTHX_ SV* sv)
+{
+        SvUTF8_off(sv);
+}
+
 SV* ouroboros_gv_sv(pTHX_ GV* a)
 {
         return GvSV(a);

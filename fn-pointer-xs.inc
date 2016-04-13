@@ -202,6 +202,34 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_flags_ptr()
+CODE:
+	RETVAL = ouroboros_sv_flags;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_utf8_ptr()
+CODE:
+	RETVAL = ouroboros_sv_utf8;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_utf8_on_ptr()
+CODE:
+	RETVAL = ouroboros_sv_utf8_on;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_utf8_off_ptr()
+CODE:
+	RETVAL = ouroboros_sv_utf8_off;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_gv_sv_ptr()
 CODE:
 	RETVAL = ouroboros_gv_sv;

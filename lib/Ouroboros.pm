@@ -39,6 +39,10 @@ our @EXPORT_OK = qw(
     ouroboros_sv_rok_ptr
     ouroboros_sv_rv_ptr
     ouroboros_sv_type_ptr
+    ouroboros_sv_flags_ptr
+    ouroboros_sv_utf8_ptr
+    ouroboros_sv_utf8_on_ptr
+    ouroboros_sv_utf8_off_ptr
     ouroboros_gv_sv_ptr
     ouroboros_gv_av_ptr
     ouroboros_gv_hv_ptr
@@ -331,6 +335,30 @@ Perl macro: C<SvRV>
 
 Perl macro: C<SvTYPE>
 
+=item ouroboros_sv_flags_ptr
+
+    UV ouroboros_sv_flags(pTHX_ SV*);
+
+Perl macro: C<SvFLAGS>
+
+=item ouroboros_sv_utf8_ptr
+
+    bool ouroboros_sv_utf8(pTHX_ SV*);
+
+Perl macro: C<SvUTF8>
+
+=item ouroboros_sv_utf8_on_ptr
+
+    void ouroboros_sv_utf8_on(pTHX_ SV*);
+
+Perl macro: C<SvUTF8_on>
+
+=item ouroboros_sv_utf8_off_ptr
+
+    void ouroboros_sv_utf8_off(pTHX_ SV*);
+
+Perl macro: C<SvUTF8_off>
+
 =item ouroboros_gv_sv_ptr
 
     SV* ouroboros_gv_sv(pTHX_ GV*);
@@ -395,7 +423,7 @@ Perl macro: C<HeSVKEY_set>
 
     U32 ouroboros_perl_hash(pTHX_ U8*, STRLEN);
 
-Unlike macro, returns hash value instead of assigning it to argument.
+Unlike macro, returns hash value instead of assigning it to an argument.
 
 Perl macro: C<PERL_HASH>
 

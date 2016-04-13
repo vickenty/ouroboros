@@ -530,6 +530,46 @@ our %SPEC = (
       "type" => "IV"
     },
     {
+      "c_decl" => "UV ouroboros_sv_flags(pTHX_ SV*);",
+      "name" => "ouroboros_sv_flags",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_flags_ptr",
+      "tags" => {},
+      "type" => "UV"
+    },
+    {
+      "c_decl" => "bool ouroboros_sv_utf8(pTHX_ SV*);",
+      "name" => "ouroboros_sv_utf8",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_utf8_ptr",
+      "tags" => {},
+      "type" => "bool"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_utf8_on(pTHX_ SV*);",
+      "name" => "ouroboros_sv_utf8_on",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_utf8_on_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_utf8_off(pTHX_ SV*);",
+      "name" => "ouroboros_sv_utf8_off",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_utf8_off_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
       "c_decl" => "SV* ouroboros_gv_sv(pTHX_ GV*);",
       "name" => "ouroboros_gv_sv",
       "params" => [
@@ -640,7 +680,7 @@ our %SPEC = (
       ],
       "ptr_name" => "ouroboros_perl_hash_ptr",
       "tags" => {
-        "apidoc" => "Unlike macro, returns hash value instead of assigning it to argument.\n\nPerl macro: C<PERL_HASH>"
+        "apidoc" => "Unlike macro, returns hash value instead of assigning it to an argument.\n\nPerl macro: C<PERL_HASH>"
       },
       "type" => "U32"
     },
