@@ -1,3 +1,8 @@
+0.05	2016-04-13
+	- Install library source along the perl package.
+	- Add SvFLAGS and SvUTF* macros.
+	- Add hash entry related macros.
+	- Fix build on on Windows.
 0.04    2016-04-09
 	- Add exception handling
 	- Test fixes
