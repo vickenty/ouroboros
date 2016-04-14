@@ -5,6 +5,7 @@
 ^demo/
 ~$
 ^Ouroboros.c$
+^Ouroboros.bs$
 \.o$
 ^MYMETA\.
 ^pm_to_blib$

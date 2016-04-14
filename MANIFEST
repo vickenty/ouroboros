@@ -2,6 +2,7 @@ Changes
 COPYRIGHT
 fn-pointer-xs.inc
 lib/Ouroboros.pm
+lib/Ouroboros/Library.pm
 lib/Ouroboros/Spec.pm
 libouroboros.c
 libouroboros.h
