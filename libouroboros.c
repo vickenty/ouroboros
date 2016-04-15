@@ -144,9 +144,39 @@ IV ouroboros_sv_iv(pTHX_ SV* sv)
         return SvIV(sv);
 }
 
+IV ouroboros_sv_iv_nomg(pTHX_ SV* sv)
+{
+        return SvIV_nomg(sv);
+}
+
+IV ouroboros_sv_iv_raw(pTHX_ SV* sv)
+{
+        return SvIVX(sv);
+}
+
+void ouroboros_sv_iv_set(pTHX_ SV* sv, IV a)
+{
+        SvIV_set(sv, a);
+}
+
 UV ouroboros_sv_uv(pTHX_ SV* sv)
 {
         return SvUV(sv);
+}
+
+UV ouroboros_sv_uv_nomg(pTHX_ SV* sv)
+{
+        return SvUV_nomg(sv);
+}
+
+UV ouroboros_sv_uv_raw(pTHX_ SV* sv)
+{
+        return SvUVX(sv);
+}
+
+void ouroboros_sv_uv_set(pTHX_ SV* sv, UV a)
+{
+        SvUV_set(sv, a);
 }
 
 NV ouroboros_sv_nv(pTHX_ SV* sv)
@@ -154,14 +184,69 @@ NV ouroboros_sv_nv(pTHX_ SV* sv)
         return SvNV(sv);
 }
 
+NV ouroboros_sv_nv_nomg(pTHX_ SV* sv)
+{
+        return SvNV_nomg(sv);
+}
+
+NV ouroboros_sv_nv_raw(pTHX_ SV* sv)
+{
+        return SvNVX(sv);
+}
+
+void ouroboros_sv_nv_set(pTHX_ SV* sv, NV a)
+{
+        SvNV_set(sv, a);
+}
+
 const char* ouroboros_sv_pv(pTHX_ SV* sv, STRLEN* a)
 {
         return SvPV(sv, *a);
 }
 
+const char* ouroboros_sv_pv_nomg(pTHX_ SV* sv, STRLEN* a)
+{
+        return SvPV_nomg(sv, *a);
+}
+
 const char* ouroboros_sv_pv_nolen(pTHX_ SV* sv)
 {
         return SvPV_nolen(sv);
+}
+
+const char* ouroboros_sv_pv_nomg_nolen(pTHX_ SV* sv)
+{
+        return SvPV_nomg_nolen(sv);
+}
+
+char* ouroboros_sv_pv_raw(pTHX_ SV* sv)
+{
+        return SvPVX(sv);
+}
+
+STRLEN ouroboros_sv_pv_cur(pTHX_ SV* sv)
+{
+        return SvCUR(sv);
+}
+
+void ouroboros_sv_pv_cur_set(pTHX_ SV* sv, STRLEN a)
+{
+        SvCUR_set(sv, a);
+}
+
+STRLEN ouroboros_sv_pv_len(pTHX_ SV* sv)
+{
+        return SvLEN(sv);
+}
+
+void ouroboros_sv_pv_len_set(pTHX_ SV* sv, STRLEN a)
+{
+        SvLEN_set(sv, a);
+}
+
+char* ouroboros_sv_pv_end(pTHX_ SV* sv)
+{
+        return SvEND(sv);
 }
 
 U32 ouroboros_sv_rok(pTHX_ SV* sv)

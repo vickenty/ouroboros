@@ -32,10 +32,27 @@ our @EXPORT_OK = qw(
     ouroboros_stack_push_nv_ptr
     ouroboros_stack_push_pv_ptr
     ouroboros_sv_iv_ptr
+    ouroboros_sv_iv_nomg_ptr
+    ouroboros_sv_iv_raw_ptr
+    ouroboros_sv_iv_set_ptr
     ouroboros_sv_uv_ptr
+    ouroboros_sv_uv_nomg_ptr
+    ouroboros_sv_uv_raw_ptr
+    ouroboros_sv_uv_set_ptr
     ouroboros_sv_nv_ptr
+    ouroboros_sv_nv_nomg_ptr
+    ouroboros_sv_nv_raw_ptr
+    ouroboros_sv_nv_set_ptr
     ouroboros_sv_pv_ptr
+    ouroboros_sv_pv_nomg_ptr
     ouroboros_sv_pv_nolen_ptr
+    ouroboros_sv_pv_nomg_nolen_ptr
+    ouroboros_sv_pv_raw_ptr
+    ouroboros_sv_pv_cur_ptr
+    ouroboros_sv_pv_cur_set_ptr
+    ouroboros_sv_pv_len_ptr
+    ouroboros_sv_pv_len_set_ptr
+    ouroboros_sv_pv_end_ptr
     ouroboros_sv_rok_ptr
     ouroboros_sv_rv_ptr
     ouroboros_sv_type_ptr
@@ -293,11 +310,47 @@ Perl macro: C<mPUSHp>
 
 Perl macro: C<SvIV>
 
+=item ouroboros_sv_iv_nomg_ptr
+
+    IV ouroboros_sv_iv_nomg(pTHX_ SV*);
+
+Perl macro: C<SvIV_nomg>
+
+=item ouroboros_sv_iv_raw_ptr
+
+    IV ouroboros_sv_iv_raw(pTHX_ SV*);
+
+Perl macro: C<SvIVX>
+
+=item ouroboros_sv_iv_set_ptr
+
+    void ouroboros_sv_iv_set(pTHX_ SV*, IV);
+
+Perl macro: C<SvIV_set>
+
 =item ouroboros_sv_uv_ptr
 
     UV ouroboros_sv_uv(pTHX_ SV*);
 
 Perl macro: C<SvUV>
+
+=item ouroboros_sv_uv_nomg_ptr
+
+    UV ouroboros_sv_uv_nomg(pTHX_ SV*);
+
+Perl macro: C<SvUV_nomg>
+
+=item ouroboros_sv_uv_raw_ptr
+
+    UV ouroboros_sv_uv_raw(pTHX_ SV*);
+
+Perl macro: C<SvUVX>
+
+=item ouroboros_sv_uv_set_ptr
+
+    void ouroboros_sv_uv_set(pTHX_ SV*, UV);
+
+Perl macro: C<SvUV_set>
 
 =item ouroboros_sv_nv_ptr
 
@@ -305,17 +358,83 @@ Perl macro: C<SvUV>
 
 Perl macro: C<SvNV>
 
+=item ouroboros_sv_nv_nomg_ptr
+
+    NV ouroboros_sv_nv_nomg(pTHX_ SV*);
+
+Perl macro: C<SvNV_nomg>
+
+=item ouroboros_sv_nv_raw_ptr
+
+    NV ouroboros_sv_nv_raw(pTHX_ SV*);
+
+Perl macro: C<SvNVX>
+
+=item ouroboros_sv_nv_set_ptr
+
+    void ouroboros_sv_nv_set(pTHX_ SV*, NV);
+
+Perl macro: C<SvNV_set>
+
 =item ouroboros_sv_pv_ptr
 
     const char* ouroboros_sv_pv(pTHX_ SV*, STRLEN*);
 
 Perl macro: C<SvPV>
 
+=item ouroboros_sv_pv_nomg_ptr
+
+    const char* ouroboros_sv_pv_nomg(pTHX_ SV*, STRLEN*);
+
+Perl macro: C<SvPV_nomg>
+
 =item ouroboros_sv_pv_nolen_ptr
 
     const char* ouroboros_sv_pv_nolen(pTHX_ SV*);
 
 Perl macro: C<SvPV_nolen>
+
+=item ouroboros_sv_pv_nomg_nolen_ptr
+
+    const char* ouroboros_sv_pv_nomg_nolen(pTHX_ SV*);
+
+Perl macro: C<SvPV_nomg_nolen>
+
+=item ouroboros_sv_pv_raw_ptr
+
+    char* ouroboros_sv_pv_raw(pTHX_ SV*);
+
+Perl macro: C<SvPVX>
+
+=item ouroboros_sv_pv_cur_ptr
+
+    STRLEN ouroboros_sv_pv_cur(pTHX_ SV*);
+
+Perl macro: C<SvCUR>
+
+=item ouroboros_sv_pv_cur_set_ptr
+
+    void ouroboros_sv_pv_cur_set(pTHX_ SV*, STRLEN);
+
+Perl macro: C<SvCUR_set>
+
+=item ouroboros_sv_pv_len_ptr
+
+    STRLEN ouroboros_sv_pv_len(pTHX_ SV*);
+
+Perl macro: C<SvLEN>
+
+=item ouroboros_sv_pv_len_set_ptr
+
+    void ouroboros_sv_pv_len_set(pTHX_ SV*, STRLEN);
+
+Perl macro: C<SvLEN_set>
+
+=item ouroboros_sv_pv_end_ptr
+
+    char* ouroboros_sv_pv_end(pTHX_ SV*);
+
+Perl macro: C<SvEND>
 
 =item ouroboros_sv_rok_ptr
 

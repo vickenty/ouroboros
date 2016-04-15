@@ -153,9 +153,51 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_iv_nomg_ptr()
+CODE:
+	RETVAL = ouroboros_sv_iv_nomg;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_iv_raw_ptr()
+CODE:
+	RETVAL = ouroboros_sv_iv_raw;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_iv_set_ptr()
+CODE:
+	RETVAL = ouroboros_sv_iv_set;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_sv_uv_ptr()
 CODE:
 	RETVAL = ouroboros_sv_uv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_uv_nomg_ptr()
+CODE:
+	RETVAL = ouroboros_sv_uv_nomg;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_uv_raw_ptr()
+CODE:
+	RETVAL = ouroboros_sv_uv_raw;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_uv_set_ptr()
+CODE:
+	RETVAL = ouroboros_sv_uv_set;
 OUTPUT:
 	RETVAL
 
@@ -167,6 +209,27 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_nv_nomg_ptr()
+CODE:
+	RETVAL = ouroboros_sv_nv_nomg;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_nv_raw_ptr()
+CODE:
+	RETVAL = ouroboros_sv_nv_raw;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_nv_set_ptr()
+CODE:
+	RETVAL = ouroboros_sv_nv_set;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_sv_pv_ptr()
 CODE:
 	RETVAL = ouroboros_sv_pv;
@@ -174,9 +237,65 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_pv_nomg_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pv_nomg;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_sv_pv_nolen_ptr()
 CODE:
 	RETVAL = ouroboros_sv_pv_nolen;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_pv_nomg_nolen_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pv_nomg_nolen;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_pv_raw_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pv_raw;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_pv_cur_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pv_cur;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_pv_cur_set_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pv_cur_set;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_pv_len_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pv_len;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_pv_len_set_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pv_len_set;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_pv_end_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pv_end;
 OUTPUT:
 	RETVAL
 
