@@ -109,6 +109,11 @@ void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t* stack, const char* a, STR
         mXPUSHp(a, b);
 }
 
+void ouroboros_stack_xpush_mortal(pTHX_ ouroboros_stack_t* stack)
+{
+        XPUSHmortal;
+}
+
 void ouroboros_stack_push_sv(pTHX_ ouroboros_stack_t* stack, SV* sv)
 {
         PUSHs(sv);
@@ -137,6 +142,11 @@ void ouroboros_stack_push_nv(pTHX_ ouroboros_stack_t* stack, NV a)
 void ouroboros_stack_push_pv(pTHX_ ouroboros_stack_t* stack, const char* a, STRLEN b)
 {
         mPUSHp(a, b);
+}
+
+void ouroboros_stack_push_mortal(pTHX_ ouroboros_stack_t* stack)
+{
+        PUSHmortal;
 }
 
 IV ouroboros_sv_iv(pTHX_ SV* sv)

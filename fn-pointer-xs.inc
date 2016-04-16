@@ -104,6 +104,13 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_stack_xpush_mortal_ptr()
+CODE:
+	RETVAL = ouroboros_stack_xpush_mortal;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_stack_push_sv_ptr()
 CODE:
 	RETVAL = ouroboros_stack_push_sv;
@@ -142,6 +149,13 @@ void*
 ouroboros_stack_push_pv_ptr()
 CODE:
 	RETVAL = ouroboros_stack_push_pv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_stack_push_mortal_ptr()
+CODE:
+	RETVAL = ouroboros_stack_push_mortal;
 OUTPUT:
 	RETVAL
 

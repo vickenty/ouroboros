@@ -382,6 +382,16 @@ our %SPEC = (
       "type" => "void"
     },
     {
+      "c_decl" => "void ouroboros_stack_xpush_mortal(pTHX_ ouroboros_stack_t*);",
+      "name" => "ouroboros_stack_xpush_mortal",
+      "params" => [
+        "ouroboros_stack_t*"
+      ],
+      "ptr_name" => "ouroboros_stack_xpush_mortal_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
       "c_decl" => "void ouroboros_stack_push_sv(pTHX_ ouroboros_stack_t*, SV*);",
       "name" => "ouroboros_stack_push_sv",
       "params" => [
@@ -445,6 +455,16 @@ our %SPEC = (
         "STRLEN"
       ],
       "ptr_name" => "ouroboros_stack_push_pv_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_stack_push_mortal(pTHX_ ouroboros_stack_t*);",
+      "name" => "ouroboros_stack_push_mortal",
+      "params" => [
+        "ouroboros_stack_t*"
+      ],
+      "ptr_name" => "ouroboros_stack_push_mortal_ptr",
       "tags" => {},
       "type" => "void"
     },

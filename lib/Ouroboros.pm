@@ -25,12 +25,14 @@ our @EXPORT_OK = qw(
     ouroboros_stack_xpush_uv_ptr
     ouroboros_stack_xpush_nv_ptr
     ouroboros_stack_xpush_pv_ptr
+    ouroboros_stack_xpush_mortal_ptr
     ouroboros_stack_push_sv_ptr
     ouroboros_stack_push_sv_mortal_ptr
     ouroboros_stack_push_iv_ptr
     ouroboros_stack_push_uv_ptr
     ouroboros_stack_push_nv_ptr
     ouroboros_stack_push_pv_ptr
+    ouroboros_stack_push_mortal_ptr
     ouroboros_sv_iv_ptr
     ouroboros_sv_iv_nomg_ptr
     ouroboros_sv_iv_raw_ptr
@@ -268,6 +270,12 @@ Perl macro: C<mXPUSHn>
 
 Perl macro: C<mXPUSHp>
 
+=item ouroboros_stack_xpush_mortal_ptr
+
+    void ouroboros_stack_xpush_mortal(pTHX_ ouroboros_stack_t*);
+
+Perl macro: C<XPUSHmortal>
+
 =item ouroboros_stack_push_sv_ptr
 
     void ouroboros_stack_push_sv(pTHX_ ouroboros_stack_t*, SV*);
@@ -303,6 +311,12 @@ Perl macro: C<mPUSHn>
     void ouroboros_stack_push_pv(pTHX_ ouroboros_stack_t*, const char*, STRLEN);
 
 Perl macro: C<mPUSHp>
+
+=item ouroboros_stack_push_mortal_ptr
+
+    void ouroboros_stack_push_mortal(pTHX_ ouroboros_stack_t*);
+
+Perl macro: C<PUSHmortal>
 
 =item ouroboros_sv_iv_ptr
 
