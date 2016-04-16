@@ -7,6 +7,8 @@ perl:
     - "5.22-thr"
     - "5.20"
     - "5.20-thr"
+    - "5.18.3"
+    - "5.18.3-thr"
 matrix:
     allow_failures:
         - perl: blead
