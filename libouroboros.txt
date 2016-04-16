@@ -62,6 +62,8 @@ fn	void	ouroboros_stack_xpush_uv	ouroboros_stack_t*	UV
 fn	void	ouroboros_stack_xpush_nv	ouroboros_stack_t*	NV
 #: mXPUSHp
 fn	void	ouroboros_stack_xpush_pv	ouroboros_stack_t*	const char*	STRLEN
+#: XPUSHmortal
+fn	void	ouroboros_stack_xpush_mortal
 
 #: PUSHs
 fn	void	ouroboros_stack_push_sv	ouroboros_stack_t*	SV*
@@ -75,6 +77,8 @@ fn	void	ouroboros_stack_push_uv	ouroboros_stack_t*	UV
 fn	void	ouroboros_stack_push_nv	ouroboros_stack_t*	NV
 #: mPUSHp
 fn	void	ouroboros_stack_push_pv	ouroboros_stack_t*	const char*	STRLEN
+#: PUSHmortal
+fn	void	ouroboros_stack_push_mortal
 
 #: SvIV
 fn	IV	ouroboros_sv_iv	SV*
