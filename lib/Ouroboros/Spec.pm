@@ -469,6 +469,297 @@ our %SPEC = (
       "type" => "void"
     },
     {
+      "c_decl" => "void ouroboros_sv_upgrade(pTHX_ SV*, svtype);",
+      "name" => "ouroboros_sv_upgrade",
+      "params" => [
+        "SV*",
+        "svtype"
+      ],
+      "ptr_name" => "ouroboros_sv_upgrade_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "U32 ouroboros_sv_niok(pTHX_ SV*);",
+      "name" => "ouroboros_sv_niok",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_niok_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
+      "c_decl" => "U32 ouroboros_sv_niok_priv(pTHX_ SV*);",
+      "name" => "ouroboros_sv_niok_priv",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_niok_priv_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_niok_off(pTHX_ SV*);",
+      "name" => "ouroboros_sv_niok_off",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_niok_off_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "U32 ouroboros_sv_ok(pTHX_ SV*);",
+      "name" => "ouroboros_sv_ok",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_ok_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
+      "c_decl" => "U32 ouroboros_sv_iok_priv(pTHX_ SV*);",
+      "name" => "ouroboros_sv_iok_priv",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_iok_priv_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
+      "c_decl" => "U32 ouroboros_sv_nok_priv(pTHX_ SV*);",
+      "name" => "ouroboros_sv_nok_priv",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_nok_priv_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
+      "c_decl" => "U32 ouroboros_sv_pok_priv(pTHX_ SV*);",
+      "name" => "ouroboros_sv_pok_priv",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_pok_priv_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
+      "c_decl" => "U32 ouroboros_sv_iok(pTHX_ SV*);",
+      "name" => "ouroboros_sv_iok",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_iok_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_iok_on(pTHX_ SV*);",
+      "name" => "ouroboros_sv_iok_on",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_iok_on_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_iok_off(pTHX_ SV*);",
+      "name" => "ouroboros_sv_iok_off",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_iok_off_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_iok_only(pTHX_ SV*);",
+      "name" => "ouroboros_sv_iok_only",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_iok_only_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_iok_only_uv(pTHX_ SV*);",
+      "name" => "ouroboros_sv_iok_only_uv",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_iok_only_uv_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "bool ouroboros_sv_iok_uv(pTHX_ SV*);",
+      "name" => "ouroboros_sv_iok_uv",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_iok_uv_ptr",
+      "tags" => {},
+      "type" => "bool"
+    },
+    {
+      "c_decl" => "bool ouroboros_sv_uok(pTHX_ SV*);",
+      "name" => "ouroboros_sv_uok",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_uok_ptr",
+      "tags" => {},
+      "type" => "bool"
+    },
+    {
+      "c_decl" => "bool ouroboros_sv_iok_not_uv(pTHX_ SV*);",
+      "name" => "ouroboros_sv_iok_not_uv",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_iok_not_uv_ptr",
+      "tags" => {},
+      "type" => "bool"
+    },
+    {
+      "c_decl" => "U32 ouroboros_sv_nok(pTHX_ SV*);",
+      "name" => "ouroboros_sv_nok",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_nok_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_nok_on(pTHX_ SV*);",
+      "name" => "ouroboros_sv_nok_on",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_nok_on_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_nok_off(pTHX_ SV*);",
+      "name" => "ouroboros_sv_nok_off",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_nok_off_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_nok_only(pTHX_ SV*);",
+      "name" => "ouroboros_sv_nok_only",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_nok_only_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "U32 ouroboros_sv_pok(pTHX_ SV*);",
+      "name" => "ouroboros_sv_pok",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_pok_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_pok_on(pTHX_ SV*);",
+      "name" => "ouroboros_sv_pok_on",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_pok_on_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_pok_off(pTHX_ SV*);",
+      "name" => "ouroboros_sv_pok_off",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_pok_off_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_pok_only(pTHX_ SV*);",
+      "name" => "ouroboros_sv_pok_only",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_pok_only_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "bool ouroboros_sv_vok(pTHX_ SV*);",
+      "name" => "ouroboros_sv_vok",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_vok_ptr",
+      "tags" => {},
+      "type" => "bool"
+    },
+    {
+      "c_decl" => "U32 ouroboros_sv_ook(pTHX_ SV*);",
+      "name" => "ouroboros_sv_ook",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_ook_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
+      "c_decl" => "U32 ouroboros_sv_rok(pTHX_ SV*);",
+      "name" => "ouroboros_sv_rok",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_rok_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_rok_on(pTHX_ SV*);",
+      "name" => "ouroboros_sv_rok_on",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_rok_on_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_rok_off(pTHX_ SV*);",
+      "name" => "ouroboros_sv_rok_off",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_rok_off_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
       "c_decl" => "IV ouroboros_sv_iv(pTHX_ SV*);",
       "name" => "ouroboros_sv_iv",
       "params" => [
@@ -696,16 +987,6 @@ our %SPEC = (
       "type" => "char*"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_rok(pTHX_ SV*);",
-      "name" => "ouroboros_sv_rok",
-      "params" => [
-        "SV*"
-      ],
-      "ptr_name" => "ouroboros_sv_rok_ptr",
-      "tags" => {},
-      "type" => "U32"
-    },
-    {
       "c_decl" => "SV* ouroboros_sv_rv(pTHX_ SV*);",
       "name" => "ouroboros_sv_rv",
       "params" => [
@@ -714,6 +995,17 @@ our %SPEC = (
       "ptr_name" => "ouroboros_sv_rv_ptr",
       "tags" => {},
       "type" => "SV*"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_rv_set(pTHX_ SV*, SV*);",
+      "name" => "ouroboros_sv_rv_set",
+      "params" => [
+        "SV*",
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_rv_set_ptr",
+      "tags" => {},
+      "type" => "void"
     },
     {
       "c_decl" => "IV ouroboros_sv_type(pTHX_ SV*);",

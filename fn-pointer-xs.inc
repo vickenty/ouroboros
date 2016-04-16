@@ -160,6 +160,209 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_upgrade_ptr()
+CODE:
+	RETVAL = ouroboros_sv_upgrade;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_niok_ptr()
+CODE:
+	RETVAL = ouroboros_sv_niok;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_niok_priv_ptr()
+CODE:
+	RETVAL = ouroboros_sv_niok_priv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_niok_off_ptr()
+CODE:
+	RETVAL = ouroboros_sv_niok_off;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_ok_ptr()
+CODE:
+	RETVAL = ouroboros_sv_ok;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_iok_priv_ptr()
+CODE:
+	RETVAL = ouroboros_sv_iok_priv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_nok_priv_ptr()
+CODE:
+	RETVAL = ouroboros_sv_nok_priv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_pok_priv_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pok_priv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_iok_ptr()
+CODE:
+	RETVAL = ouroboros_sv_iok;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_iok_on_ptr()
+CODE:
+	RETVAL = ouroboros_sv_iok_on;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_iok_off_ptr()
+CODE:
+	RETVAL = ouroboros_sv_iok_off;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_iok_only_ptr()
+CODE:
+	RETVAL = ouroboros_sv_iok_only;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_iok_only_uv_ptr()
+CODE:
+	RETVAL = ouroboros_sv_iok_only_uv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_iok_uv_ptr()
+CODE:
+	RETVAL = ouroboros_sv_iok_uv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_uok_ptr()
+CODE:
+	RETVAL = ouroboros_sv_uok;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_iok_not_uv_ptr()
+CODE:
+	RETVAL = ouroboros_sv_iok_not_uv;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_nok_ptr()
+CODE:
+	RETVAL = ouroboros_sv_nok;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_nok_on_ptr()
+CODE:
+	RETVAL = ouroboros_sv_nok_on;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_nok_off_ptr()
+CODE:
+	RETVAL = ouroboros_sv_nok_off;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_nok_only_ptr()
+CODE:
+	RETVAL = ouroboros_sv_nok_only;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_pok_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pok;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_pok_on_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pok_on;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_pok_off_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pok_off;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_pok_only_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pok_only;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_vok_ptr()
+CODE:
+	RETVAL = ouroboros_sv_vok;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_ook_ptr()
+CODE:
+	RETVAL = ouroboros_sv_ook;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_rok_ptr()
+CODE:
+	RETVAL = ouroboros_sv_rok;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_rok_on_ptr()
+CODE:
+	RETVAL = ouroboros_sv_rok_on;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_rok_off_ptr()
+CODE:
+	RETVAL = ouroboros_sv_rok_off;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_sv_iv_ptr()
 CODE:
 	RETVAL = ouroboros_sv_iv;
@@ -314,16 +517,16 @@ OUTPUT:
 	RETVAL
 
 void*
-ouroboros_sv_rok_ptr()
+ouroboros_sv_rv_ptr()
 CODE:
-	RETVAL = ouroboros_sv_rok;
+	RETVAL = ouroboros_sv_rv;
 OUTPUT:
 	RETVAL
 
 void*
-ouroboros_sv_rv_ptr()
+ouroboros_sv_rv_set_ptr()
 CODE:
-	RETVAL = ouroboros_sv_rv;
+	RETVAL = ouroboros_sv_rv_set;
 OUTPUT:
 	RETVAL
 

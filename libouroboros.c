@@ -149,6 +149,151 @@ void ouroboros_stack_push_mortal(pTHX_ ouroboros_stack_t* stack)
         PUSHmortal;
 }
 
+void ouroboros_sv_upgrade(pTHX_ SV* sv, svtype a)
+{
+        SvUPGRADE(sv, a);
+}
+
+U32 ouroboros_sv_niok(pTHX_ SV* sv)
+{
+        return SvNIOK(sv);
+}
+
+U32 ouroboros_sv_niok_priv(pTHX_ SV* sv)
+{
+        return SvNIOKp(sv);
+}
+
+void ouroboros_sv_niok_off(pTHX_ SV* sv)
+{
+        SvNIOK_off(sv);
+}
+
+U32 ouroboros_sv_ok(pTHX_ SV* sv)
+{
+        return SvOK(sv);
+}
+
+U32 ouroboros_sv_iok_priv(pTHX_ SV* sv)
+{
+        return SvIOKp(sv);
+}
+
+U32 ouroboros_sv_nok_priv(pTHX_ SV* sv)
+{
+        return SvNOKp(sv);
+}
+
+U32 ouroboros_sv_pok_priv(pTHX_ SV* sv)
+{
+        return SvPOKp(sv);
+}
+
+U32 ouroboros_sv_iok(pTHX_ SV* sv)
+{
+        return SvIOK(sv);
+}
+
+void ouroboros_sv_iok_on(pTHX_ SV* sv)
+{
+        SvIOK_on(sv);
+}
+
+void ouroboros_sv_iok_off(pTHX_ SV* sv)
+{
+        SvIOK_off(sv);
+}
+
+void ouroboros_sv_iok_only(pTHX_ SV* sv)
+{
+        SvIOK_only(sv);
+}
+
+void ouroboros_sv_iok_only_uv(pTHX_ SV* sv)
+{
+        SvIOK_only_UV(sv);
+}
+
+bool ouroboros_sv_iok_uv(pTHX_ SV* sv)
+{
+        return SvIOK_UV(sv);
+}
+
+bool ouroboros_sv_uok(pTHX_ SV* sv)
+{
+        return SvUOK(sv);
+}
+
+bool ouroboros_sv_iok_not_uv(pTHX_ SV* sv)
+{
+        return SvIOK_notUV(sv);
+}
+
+U32 ouroboros_sv_nok(pTHX_ SV* sv)
+{
+        return SvNOK(sv);
+}
+
+void ouroboros_sv_nok_on(pTHX_ SV* sv)
+{
+        SvNOK_on(sv);
+}
+
+void ouroboros_sv_nok_off(pTHX_ SV* sv)
+{
+        SvNOK_off(sv);
+}
+
+void ouroboros_sv_nok_only(pTHX_ SV* sv)
+{
+        SvNOK_only(sv);
+}
+
+U32 ouroboros_sv_pok(pTHX_ SV* sv)
+{
+        return SvPOK(sv);
+}
+
+void ouroboros_sv_pok_on(pTHX_ SV* sv)
+{
+        SvPOK_on(sv);
+}
+
+void ouroboros_sv_pok_off(pTHX_ SV* sv)
+{
+        SvPOK_off(sv);
+}
+
+void ouroboros_sv_pok_only(pTHX_ SV* sv)
+{
+        SvPOK_only(sv);
+}
+
+bool ouroboros_sv_vok(pTHX_ SV* sv)
+{
+        return SvVOK(sv);
+}
+
+U32 ouroboros_sv_ook(pTHX_ SV* sv)
+{
+        return SvOOK(sv);
+}
+
+U32 ouroboros_sv_rok(pTHX_ SV* sv)
+{
+        return SvROK(sv);
+}
+
+void ouroboros_sv_rok_on(pTHX_ SV* sv)
+{
+        SvROK_on(sv);
+}
+
+void ouroboros_sv_rok_off(pTHX_ SV* sv)
+{
+        SvROK_off(sv);
+}
+
 IV ouroboros_sv_iv(pTHX_ SV* sv)
 {
         return SvIV(sv);
@@ -259,14 +404,14 @@ char* ouroboros_sv_pv_end(pTHX_ SV* sv)
         return SvEND(sv);
 }
 
-U32 ouroboros_sv_rok(pTHX_ SV* sv)
-{
-        return SvROK(sv);
-}
-
 SV* ouroboros_sv_rv(pTHX_ SV* sv)
 {
         return SvRV(sv);
+}
+
+void ouroboros_sv_rv_set(pTHX_ SV* sv, SV* sv1)
+{
+        SvRV_set(sv, sv1);
 }
 
 IV ouroboros_sv_type(pTHX_ SV* sv)

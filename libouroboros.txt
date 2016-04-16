@@ -80,6 +80,65 @@ fn	void	ouroboros_stack_push_pv	ouroboros_stack_t*	const char*	STRLEN
 #: PUSHmortal
 fn	void	ouroboros_stack_push_mortal	ouroboros_stack_t*
 
+#: SvUPGRADE
+fn	void	ouroboros_sv_upgrade	SV*	svtype
+#: SvNIOK
+fn	U32	ouroboros_sv_niok	SV*
+#: SvNIOKp
+fn	U32	ouroboros_sv_niok_priv	SV*
+#: SvNIOK_off
+fn	void	ouroboros_sv_niok_off	SV*
+#: SvOK
+fn	U32	ouroboros_sv_ok	SV*
+#: SvIOKp
+fn	U32	ouroboros_sv_iok_priv	SV*
+#: SvNOKp
+fn	U32	ouroboros_sv_nok_priv	SV*
+#: SvPOKp
+fn	U32	ouroboros_sv_pok_priv	SV*
+#: SvIOK
+fn	U32	ouroboros_sv_iok	SV*
+#: SvIOK_on
+fn	void	ouroboros_sv_iok_on	SV*
+#: SvIOK_off
+fn	void	ouroboros_sv_iok_off	SV*
+#: SvIOK_only
+fn	void	ouroboros_sv_iok_only	SV*
+#: SvIOK_only_UV
+fn	void	ouroboros_sv_iok_only_uv	SV*
+#: SvIOK_UV
+fn	bool	ouroboros_sv_iok_uv	SV*
+#: SvUOK
+fn	bool	ouroboros_sv_uok	SV*
+#: SvIOK_notUV
+fn	bool	ouroboros_sv_iok_not_uv	SV*
+#: SvNOK
+fn	U32	ouroboros_sv_nok	SV*
+#: SvNOK_on
+fn	void	ouroboros_sv_nok_on	SV*
+#: SvNOK_off
+fn	void	ouroboros_sv_nok_off	SV*
+#: SvNOK_only
+fn	void	ouroboros_sv_nok_only	SV*
+#: SvPOK
+fn	U32	ouroboros_sv_pok	SV*
+#: SvPOK_on
+fn	void	ouroboros_sv_pok_on	SV*
+#: SvPOK_off
+fn	void	ouroboros_sv_pok_off	SV*
+#: SvPOK_only
+fn	void	ouroboros_sv_pok_only	SV*
+#: SvVOK
+fn	bool	ouroboros_sv_vok	SV*
+#: SvOOK
+fn	U32	ouroboros_sv_ook	SV*
+#: SvROK
+fn	U32	ouroboros_sv_rok	SV*
+#: SvROK_on
+fn	void	ouroboros_sv_rok_on	SV*
+#: SvROK_off
+fn	void	ouroboros_sv_rok_off	SV*
+
 #: SvIV
 fn	IV	ouroboros_sv_iv	SV*
 #: SvIV_nomg
@@ -128,10 +187,11 @@ fn	void	ouroboros_sv_pv_len_set	SV*	STRLEN
 #: SvEND
 fn	char*	ouroboros_sv_pv_end	SV*
 
-#: SvROK
-fn	U32	ouroboros_sv_rok	SV*
 #: SvRV
 fn	SV*	ouroboros_sv_rv	SV*
+#: SvRV_set
+fn	void	ouroboros_sv_rv_set	SV*	SV*
+
 #: SvTYPE
 fn	IV	ouroboros_sv_type	SV*
 #: SvFLAGS
