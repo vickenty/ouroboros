@@ -1,4 +1,4 @@
-use ExtUtils::MakeMaker 6.84;
+use ExtUtils::MakeMaker;
 use ExtUtils::Constant "WriteConstants";
 
 WriteMakefile(
@@ -13,7 +13,7 @@ WriteMakefile(
         "FFI::Raw" => 0,
         "FFI::Platypus" => 0,
     },
-    OBJECT            => [ qw/Ouroboros.o libouroboros.o/ ],
+    OBJECT            => "Ouroboros.o libouroboros.o",
     LIBS              => [],
     DEFINE            => '',
     INC               => '-I.',
