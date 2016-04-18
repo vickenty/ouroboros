@@ -101,6 +101,8 @@ UV ouroboros_sv_flags(pTHX_ SV*);
 bool ouroboros_sv_utf8(pTHX_ SV*);
 void ouroboros_sv_utf8_on(pTHX_ SV*);
 void ouroboros_sv_utf8_off(pTHX_ SV*);
+U32 ouroboros_sv_is_cow(pTHX_ SV*);
+bool ouroboros_sv_is_cow_shared_hash(pTHX_ SV*);
 bool ouroboros_sv_tainted(pTHX_ SV*);
 void ouroboros_sv_tainted_on(pTHX_ SV*);
 void ouroboros_sv_tainted_off(pTHX_ SV*);

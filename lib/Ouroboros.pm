@@ -94,6 +94,8 @@ our @EXPORT_OK = qw(
     ouroboros_sv_utf8_ptr
     ouroboros_sv_utf8_on_ptr
     ouroboros_sv_utf8_off_ptr
+    ouroboros_sv_is_cow_ptr
+    ouroboros_sv_is_cow_shared_hash_ptr
     ouroboros_sv_tainted_ptr
     ouroboros_sv_tainted_on_ptr
     ouroboros_sv_tainted_off_ptr
@@ -736,6 +738,18 @@ Perl macro: C<SvUTF8_on>
     void ouroboros_sv_utf8_off(pTHX_ SV*);
 
 Perl macro: C<SvUTF8_off>
+
+=item ouroboros_sv_is_cow_ptr
+
+    U32 ouroboros_sv_is_cow(pTHX_ SV*);
+
+Perl macro: C<SvIsCOW>
+
+=item ouroboros_sv_is_cow_shared_hash_ptr
+
+    bool ouroboros_sv_is_cow_shared_hash(pTHX_ SV*);
+
+Perl macro: C<SvIsCOW_shared_hash>
 
 =item ouroboros_sv_tainted_ptr
 

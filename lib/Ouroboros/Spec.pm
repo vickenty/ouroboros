@@ -1088,6 +1088,26 @@ our %SPEC = (
       "type" => "void"
     },
     {
+      "c_decl" => "U32 ouroboros_sv_is_cow(pTHX_ SV*);",
+      "name" => "ouroboros_sv_is_cow",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_is_cow_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
+      "c_decl" => "bool ouroboros_sv_is_cow_shared_hash(pTHX_ SV*);",
+      "name" => "ouroboros_sv_is_cow_shared_hash",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_is_cow_shared_hash_ptr",
+      "tags" => {},
+      "type" => "bool"
+    },
+    {
       "c_decl" => "bool ouroboros_sv_tainted(pTHX_ SV*);",
       "name" => "ouroboros_sv_tainted",
       "params" => [

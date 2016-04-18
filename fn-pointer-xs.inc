@@ -587,6 +587,20 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_is_cow_ptr()
+CODE:
+	RETVAL = ouroboros_sv_is_cow;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_is_cow_shared_hash_ptr()
+CODE:
+	RETVAL = ouroboros_sv_is_cow_shared_hash;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_sv_tainted_ptr()
 CODE:
 	RETVAL = ouroboros_sv_tainted;

@@ -469,6 +469,16 @@ void ouroboros_sv_utf8_off(pTHX_ SV* sv)
         SvUTF8_off(sv);
 }
 
+U32 ouroboros_sv_is_cow(pTHX_ SV* sv)
+{
+        return SvIsCOW(sv);
+}
+
+bool ouroboros_sv_is_cow_shared_hash(pTHX_ SV* sv)
+{
+        return SvIsCOW_shared_hash(sv);
+}
+
 bool ouroboros_sv_tainted(pTHX_ SV* sv)
 {
         return SvTAINTED(sv);

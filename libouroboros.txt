@@ -208,6 +208,10 @@ fn	bool	ouroboros_sv_utf8	SV*
 fn	void	ouroboros_sv_utf8_on	SV*
 #: SvUTF8_off
 fn	void	ouroboros_sv_utf8_off	SV*
+#: SvIsCOW
+fn	U32	ouroboros_sv_is_cow	SV*
+#: SvIsCOW_shared_hash
+fn	bool	ouroboros_sv_is_cow_shared_hash	SV*
 
 #: SvTAINTED
 fn	bool	ouroboros_sv_tainted	SV*
