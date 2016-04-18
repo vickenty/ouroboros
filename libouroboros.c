@@ -613,4 +613,9 @@ void ouroboros_sys_term()
 {
         PERL_SYS_TERM();
 }
+
+U32 ouroboros_gimme(pTHX)
+{
+        return GIMME_V;
+}
 /* } */

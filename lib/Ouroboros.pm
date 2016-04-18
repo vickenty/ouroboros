@@ -127,6 +127,7 @@ our @EXPORT_OK = qw(
     ouroboros_sv_undef_ptr
     ouroboros_sv_no_ptr
     ouroboros_sv_yes_ptr
+    ouroboros_gimme_ptr
     ouroboros_xcpt_try_ptr
     ouroboros_xcpt_rethrow_ptr
 );
@@ -924,6 +925,12 @@ Return address of C<PL_sv_no> global.
     SV* ouroboros_sv_yes(pTHX);
 
 Return address of C<PL_sv_yes> global.
+
+=item ouroboros_gimme_ptr
+
+    U32 ouroboros_gimme(pTHX);
+
+Perl macro: C<GIMME_V>
 
 =item ouroboros_xcpt_try_ptr
 

@@ -1420,6 +1420,14 @@ our %SPEC = (
       "type" => "SV*"
     },
     {
+      "c_decl" => "U32 ouroboros_gimme(pTHX);",
+      "name" => "ouroboros_gimme",
+      "params" => [],
+      "ptr_name" => "ouroboros_gimme_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
       "c_decl" => "int ouroboros_xcpt_try(pTHX_ ouroboros_xcpt_callback_t, void*);",
       "name" => "ouroboros_xcpt_try",
       "params" => [

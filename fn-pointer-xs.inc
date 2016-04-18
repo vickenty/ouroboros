@@ -818,6 +818,13 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_gimme_ptr()
+CODE:
+	RETVAL = ouroboros_gimme;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_xcpt_try_ptr()
 CODE:
 	RETVAL = ouroboros_xcpt_try;
