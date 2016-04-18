@@ -601,6 +601,34 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_get_a_magic_ptr()
+CODE:
+	RETVAL = ouroboros_sv_get_a_magic;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_magic_set_ptr()
+CODE:
+	RETVAL = ouroboros_sv_magic_set;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_get_magic_ptr()
+CODE:
+	RETVAL = ouroboros_sv_get_magic;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_set_magic_ptr()
+CODE:
+	RETVAL = ouroboros_sv_set_magic;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_gv_sv_ptr()
 CODE:
 	RETVAL = ouroboros_gv_sv;

@@ -96,6 +96,10 @@ our @EXPORT_OK = qw(
     ouroboros_sv_tainted_on_ptr
     ouroboros_sv_tainted_off_ptr
     ouroboros_sv_taint_ptr
+    ouroboros_sv_get_a_magic_ptr
+    ouroboros_sv_magic_set_ptr
+    ouroboros_sv_get_magic_ptr
+    ouroboros_sv_set_magic_ptr
     ouroboros_gv_sv_ptr
     ouroboros_gv_av_ptr
     ouroboros_gv_hv_ptr
@@ -742,6 +746,30 @@ Perl macro: C<SvTAINTED_off>
     void ouroboros_sv_taint(pTHX_ SV*);
 
 Perl macro: C<SvTAINT>
+
+=item ouroboros_sv_get_a_magic_ptr
+
+    U32 ouroboros_sv_get_a_magic(pTHX_ SV*);
+
+Perl macro: C<SvGAMAGIC>
+
+=item ouroboros_sv_magic_set_ptr
+
+    void ouroboros_sv_magic_set(pTHX_ SV*, MAGIC*);
+
+Perl macro: C<SvMAGIC_set>
+
+=item ouroboros_sv_get_magic_ptr
+
+    void ouroboros_sv_get_magic(pTHX_ SV*);
+
+Perl macro: C<SvGETMAGIC>
+
+=item ouroboros_sv_set_magic_ptr
+
+    void ouroboros_sv_set_magic(pTHX_ SV*);
+
+Perl macro: C<SvSETMAGIC>
 
 =item ouroboros_gv_sv_ptr
 

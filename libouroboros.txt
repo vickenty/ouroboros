@@ -214,6 +214,15 @@ fn	void	ouroboros_sv_tainted_off	SV*
 #: SvTAINT
 fn	void	ouroboros_sv_taint	SV*
 
+#: SvGAMAGIC
+fn	U32	ouroboros_sv_get_a_magic	SV*
+#: SvMAGIC_set
+fn	void	ouroboros_sv_magic_set	SV*	MAGIC*
+#: SvGETMAGIC
+fn	void	ouroboros_sv_get_magic	SV*
+#: SvSETMAGIC
+fn	void	ouroboros_sv_set_magic	SV*
+
 #: GvSV
 fn	SV*	ouroboros_gv_sv	GV*
 #: GvAV

@@ -479,6 +479,26 @@ void ouroboros_sv_taint(pTHX_ SV* sv)
         SvTAINT(sv);
 }
 
+U32 ouroboros_sv_get_a_magic(pTHX_ SV* sv)
+{
+        return SvGAMAGIC(sv);
+}
+
+void ouroboros_sv_magic_set(pTHX_ SV* sv, MAGIC* a)
+{
+        SvMAGIC_set(sv, a);
+}
+
+void ouroboros_sv_get_magic(pTHX_ SV* sv)
+{
+        SvGETMAGIC(sv);
+}
+
+void ouroboros_sv_set_magic(pTHX_ SV* sv)
+{
+        SvSETMAGIC(sv);
+}
+
 SV* ouroboros_gv_sv(pTHX_ GV* a)
 {
         return GvSV(a);

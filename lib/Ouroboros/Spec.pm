@@ -1108,6 +1108,47 @@ our %SPEC = (
       "type" => "void"
     },
     {
+      "c_decl" => "U32 ouroboros_sv_get_a_magic(pTHX_ SV*);",
+      "name" => "ouroboros_sv_get_a_magic",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_get_a_magic_ptr",
+      "tags" => {},
+      "type" => "U32"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_magic_set(pTHX_ SV*, MAGIC*);",
+      "name" => "ouroboros_sv_magic_set",
+      "params" => [
+        "SV*",
+        "MAGIC*"
+      ],
+      "ptr_name" => "ouroboros_sv_magic_set_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_get_magic(pTHX_ SV*);",
+      "name" => "ouroboros_sv_get_magic",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_get_magic_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_set_magic(pTHX_ SV*);",
+      "name" => "ouroboros_sv_set_magic",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_set_magic_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
       "c_decl" => "SV* ouroboros_gv_sv(pTHX_ GV*);",
       "name" => "ouroboros_gv_sv",
       "params" => [
