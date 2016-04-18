@@ -499,6 +499,21 @@ void ouroboros_sv_taint(pTHX_ SV* sv)
         SvTAINT(sv);
 }
 
+void ouroboros_sv_share(pTHX_ SV* sv)
+{
+        SvSHARE(sv);
+}
+
+void ouroboros_sv_lock(pTHX_ SV* sv)
+{
+        SvLOCK(sv);
+}
+
+void ouroboros_sv_unlock(pTHX_ SV* sv)
+{
+        SvUNLOCK(sv);
+}
+
 U32 ouroboros_sv_get_a_magic(pTHX_ SV* sv)
 {
         return SvGAMAGIC(sv);

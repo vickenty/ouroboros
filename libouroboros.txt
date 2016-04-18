@@ -222,6 +222,13 @@ fn	void	ouroboros_sv_tainted_off	SV*
 #: SvTAINT
 fn	void	ouroboros_sv_taint	SV*
 
+#: SvSHARE
+fn	void	ouroboros_sv_share	SV*
+#: SvLOCK
+fn	void	ouroboros_sv_lock	SV*
+#: SvUNLOCK
+fn	void	ouroboros_sv_unlock	SV*
+
 #: SvGAMAGIC
 fn	U32	ouroboros_sv_get_a_magic	SV*
 #: SvMAGIC_set

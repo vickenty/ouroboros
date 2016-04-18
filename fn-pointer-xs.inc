@@ -629,6 +629,27 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_share_ptr()
+CODE:
+	RETVAL = ouroboros_sv_share;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_lock_ptr()
+CODE:
+	RETVAL = ouroboros_sv_lock;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_unlock_ptr()
+CODE:
+	RETVAL = ouroboros_sv_unlock;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_sv_get_a_magic_ptr()
 CODE:
 	RETVAL = ouroboros_sv_get_a_magic;

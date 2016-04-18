@@ -1148,6 +1148,36 @@ our %SPEC = (
       "type" => "void"
     },
     {
+      "c_decl" => "void ouroboros_sv_share(pTHX_ SV*);",
+      "name" => "ouroboros_sv_share",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_share_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_lock(pTHX_ SV*);",
+      "name" => "ouroboros_sv_lock",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_lock_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_unlock(pTHX_ SV*);",
+      "name" => "ouroboros_sv_unlock",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_unlock_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
       "c_decl" => "U32 ouroboros_sv_get_a_magic(pTHX_ SV*);",
       "name" => "ouroboros_sv_get_a_magic",
       "params" => [
