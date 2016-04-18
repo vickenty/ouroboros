@@ -740,6 +740,17 @@ our %SPEC = (
       "type" => "U32"
     },
     {
+      "c_decl" => "void ouroboros_sv_ook_offset(pTHX_ SV*, STRLEN*);",
+      "name" => "ouroboros_sv_ook_offset",
+      "params" => [
+        "SV*",
+        "STRLEN*"
+      ],
+      "ptr_name" => "ouroboros_sv_ook_offset_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
       "c_decl" => "U32 ouroboros_sv_rok(pTHX_ SV*);",
       "name" => "ouroboros_sv_rok",
       "params" => [

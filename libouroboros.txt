@@ -134,6 +134,8 @@ fn	void	ouroboros_sv_pok_only_utf8	SV*
 fn	bool	ouroboros_sv_vok	SV*
 #: SvOOK
 fn	U32	ouroboros_sv_ook	SV*
+#: SvOOK_offset(,*)
+fn	void	ouroboros_sv_ook_offset	SV*	STRLEN*
 #: SvROK
 fn	U32	ouroboros_sv_rok	SV*
 #: SvROK_on

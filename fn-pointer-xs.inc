@@ -349,6 +349,13 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_ook_offset_ptr()
+CODE:
+	RETVAL = ouroboros_sv_ook_offset;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_sv_rok_ptr()
 CODE:
 	RETVAL = ouroboros_sv_rok;

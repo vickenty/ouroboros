@@ -60,6 +60,7 @@ our @EXPORT_OK = qw(
     ouroboros_sv_pok_only_utf8_ptr
     ouroboros_sv_vok_ptr
     ouroboros_sv_ook_ptr
+    ouroboros_sv_ook_offset_ptr
     ouroboros_sv_rok_ptr
     ouroboros_sv_rok_on_ptr
     ouroboros_sv_rok_off_ptr
@@ -537,6 +538,12 @@ Perl macro: C<SvVOK>
     U32 ouroboros_sv_ook(pTHX_ SV*);
 
 Perl macro: C<SvOOK>
+
+=item ouroboros_sv_ook_offset_ptr
+
+    void ouroboros_sv_ook_offset(pTHX_ SV*, STRLEN*);
+
+Perl macro: C<SvOOK_offset>
 
 =item ouroboros_sv_rok_ptr
 

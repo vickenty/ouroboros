@@ -299,6 +299,11 @@ U32 ouroboros_sv_ook(pTHX_ SV* sv)
         return SvOOK(sv);
 }
 
+void ouroboros_sv_ook_offset(pTHX_ SV* sv, STRLEN* a)
+{
+        SvOOK_offset(sv, *a);
+}
+
 U32 ouroboros_sv_rok(pTHX_ SV* sv)
 {
         return SvROK(sv);
