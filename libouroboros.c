@@ -53,6 +53,21 @@ U32 ouroboros_perl_hash(pTHX_ U8* key, STRLEN len)
 	return hash;
 }
 
+SV* ouroboros_sv_undef(pTHX)
+{
+        return &PL_sv_undef;
+}
+
+SV* ouroboros_sv_no(pTHX)
+{
+        return &PL_sv_no;
+}
+
+SV* ouroboros_sv_yes(pTHX)
+{
+        return &PL_sv_yes;
+}
+
 /* functions { */
 void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t* stack)
 {

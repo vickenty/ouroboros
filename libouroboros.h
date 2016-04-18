@@ -131,6 +131,9 @@ void ouroboros_savetmps(pTHX);
 void ouroboros_freetmps(pTHX);
 void ouroboros_sys_init3(int*, char***, char***);
 void ouroboros_sys_term();
+SV* ouroboros_sv_undef(pTHX);
+SV* ouroboros_sv_no(pTHX);
+SV* ouroboros_sv_yes(pTHX);
 int ouroboros_xcpt_try(pTHX_ ouroboros_xcpt_callback_t, void*);
 void ouroboros_xcpt_rethrow(pTHX_ int);
 /* } */

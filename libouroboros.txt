@@ -289,6 +289,13 @@ fn	void	ouroboros_sys_init3	int*	char***	char***
 #+ _parens
 fn	void	ouroboros_sys_term
 
+#? Return address of C<PL_sv_undef> global.
+fn	SV*	ouroboros_sv_undef
+#? Return address of C<PL_sv_no> global.
+fn	SV*	ouroboros_sv_no
+#? Return address of C<PL_sv_yes> global.
+fn	SV*	ouroboros_sv_yes
+
 #? Execute callback once while capturing Perl exceptions. Second argument is passed to the callback as is and can be NULL.
 #?
 #? This is equivalent of C<XCPT_TRY_START> and C<XCPT_TRY_END> macros, see L<perlguts/Exception Handling>.

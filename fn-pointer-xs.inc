@@ -797,6 +797,27 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_undef_ptr()
+CODE:
+	RETVAL = ouroboros_sv_undef;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_no_ptr()
+CODE:
+	RETVAL = ouroboros_sv_no;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_yes_ptr()
+CODE:
+	RETVAL = ouroboros_sv_yes;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_xcpt_try_ptr()
 CODE:
 	RETVAL = ouroboros_xcpt_try;

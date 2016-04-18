@@ -124,6 +124,9 @@ our @EXPORT_OK = qw(
     ouroboros_freetmps_ptr
     ouroboros_sys_init3_ptr
     ouroboros_sys_term_ptr
+    ouroboros_sv_undef_ptr
+    ouroboros_sv_no_ptr
+    ouroboros_sv_yes_ptr
     ouroboros_xcpt_try_ptr
     ouroboros_xcpt_rethrow_ptr
 );
@@ -903,6 +906,24 @@ Perl macro: C<PERL_SYS_INIT3>
     void ouroboros_sys_term();
 
 Perl macro: C<PERL_SYS_TERM>
+
+=item ouroboros_sv_undef_ptr
+
+    SV* ouroboros_sv_undef(pTHX);
+
+Return address of C<PL_sv_undef> global.
+
+=item ouroboros_sv_no_ptr
+
+    SV* ouroboros_sv_no(pTHX);
+
+Return address of C<PL_sv_no> global.
+
+=item ouroboros_sv_yes_ptr
+
+    SV* ouroboros_sv_yes(pTHX);
+
+Return address of C<PL_sv_yes> global.
 
 =item ouroboros_xcpt_try_ptr
 

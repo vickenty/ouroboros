@@ -1390,6 +1390,36 @@ our %SPEC = (
       "type" => "void"
     },
     {
+      "c_decl" => "SV* ouroboros_sv_undef(pTHX);",
+      "name" => "ouroboros_sv_undef",
+      "params" => [],
+      "ptr_name" => "ouroboros_sv_undef_ptr",
+      "tags" => {
+        "apidoc" => "Return address of C<PL_sv_undef> global."
+      },
+      "type" => "SV*"
+    },
+    {
+      "c_decl" => "SV* ouroboros_sv_no(pTHX);",
+      "name" => "ouroboros_sv_no",
+      "params" => [],
+      "ptr_name" => "ouroboros_sv_no_ptr",
+      "tags" => {
+        "apidoc" => "Return address of C<PL_sv_no> global."
+      },
+      "type" => "SV*"
+    },
+    {
+      "c_decl" => "SV* ouroboros_sv_yes(pTHX);",
+      "name" => "ouroboros_sv_yes",
+      "params" => [],
+      "ptr_name" => "ouroboros_sv_yes_ptr",
+      "tags" => {
+        "apidoc" => "Return address of C<PL_sv_yes> global."
+      },
+      "type" => "SV*"
+    },
+    {
       "c_decl" => "int ouroboros_xcpt_try(pTHX_ ouroboros_xcpt_callback_t, void*);",
       "name" => "ouroboros_xcpt_try",
       "params" => [
