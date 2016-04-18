@@ -459,6 +459,51 @@ CV* ouroboros_gv_cv(pTHX_ CV* a)
         return GvCV(a);
 }
 
+HV* ouroboros_sv_stash(pTHX_ SV* sv)
+{
+        return SvSTASH(sv);
+}
+
+void ouroboros_sv_stash_set(pTHX_ SV* sv, HV* a)
+{
+        SvSTASH_set(sv, a);
+}
+
+void ouroboros_cv_stash(pTHX_ CV* a)
+{
+        CvSTASH(a);
+}
+
+const char* ouroboros_hv_name(pTHX_ HV* a)
+{
+        return HvNAME(a);
+}
+
+STRLEN ouroboros_hv_name_len(pTHX_ HV* a)
+{
+        return HvNAMELEN(a);
+}
+
+unsigned char ouroboros_hv_name_utf8(pTHX_ HV* a)
+{
+        return HvNAMEUTF8(a);
+}
+
+const char* ouroboros_hv_ename(pTHX_ HV* a)
+{
+        return HvENAME(a);
+}
+
+STRLEN ouroboros_hv_ename_len(pTHX_ HV* a)
+{
+        return HvENAMELEN(a);
+}
+
+unsigned char ouroboros_hv_ename_utf8(pTHX_ HV* a)
+{
+        return HvENAMEUTF8(a);
+}
+
 const char* ouroboros_he_pv(pTHX_ HE* a, STRLEN* b)
 {
         return HePV(a, *b);

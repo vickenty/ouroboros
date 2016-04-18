@@ -594,6 +594,69 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_stash_ptr()
+CODE:
+	RETVAL = ouroboros_sv_stash;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_stash_set_ptr()
+CODE:
+	RETVAL = ouroboros_sv_stash_set;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_cv_stash_ptr()
+CODE:
+	RETVAL = ouroboros_cv_stash;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_hv_name_ptr()
+CODE:
+	RETVAL = ouroboros_hv_name;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_hv_name_len_ptr()
+CODE:
+	RETVAL = ouroboros_hv_name_len;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_hv_name_utf8_ptr()
+CODE:
+	RETVAL = ouroboros_hv_name_utf8;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_hv_ename_ptr()
+CODE:
+	RETVAL = ouroboros_hv_ename;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_hv_ename_len_ptr()
+CODE:
+	RETVAL = ouroboros_hv_ename_len;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_hv_ename_utf8_ptr()
+CODE:
+	RETVAL = ouroboros_hv_ename_utf8;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_he_pv_ptr()
 CODE:
 	RETVAL = ouroboros_he_pv;

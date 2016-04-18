@@ -95,6 +95,15 @@ our @EXPORT_OK = qw(
     ouroboros_gv_av_ptr
     ouroboros_gv_hv_ptr
     ouroboros_gv_cv_ptr
+    ouroboros_sv_stash_ptr
+    ouroboros_sv_stash_set_ptr
+    ouroboros_cv_stash_ptr
+    ouroboros_hv_name_ptr
+    ouroboros_hv_name_len_ptr
+    ouroboros_hv_name_utf8_ptr
+    ouroboros_hv_ename_ptr
+    ouroboros_hv_ename_len_ptr
+    ouroboros_hv_ename_utf8_ptr
     ouroboros_he_pv_ptr
     ouroboros_he_val_ptr
     ouroboros_he_hash_ptr
@@ -718,6 +727,60 @@ Perl macro: C<GvHV>
     CV* ouroboros_gv_cv(pTHX_ CV*);
 
 Perl macro: C<GvCV>
+
+=item ouroboros_sv_stash_ptr
+
+    HV* ouroboros_sv_stash(pTHX_ SV*);
+
+Perl macro: C<SvSTASH>
+
+=item ouroboros_sv_stash_set_ptr
+
+    void ouroboros_sv_stash_set(pTHX_ SV*, HV*);
+
+Perl macro: C<SvSTASH_set>
+
+=item ouroboros_cv_stash_ptr
+
+    void ouroboros_cv_stash(pTHX_ CV*);
+
+Perl macro: C<CvSTASH>
+
+=item ouroboros_hv_name_ptr
+
+    const char* ouroboros_hv_name(pTHX_ HV*);
+
+Perl macro: C<HvNAME>
+
+=item ouroboros_hv_name_len_ptr
+
+    STRLEN ouroboros_hv_name_len(pTHX_ HV*);
+
+Perl macro: C<HvNAMELEN>
+
+=item ouroboros_hv_name_utf8_ptr
+
+    unsigned char ouroboros_hv_name_utf8(pTHX_ HV*);
+
+Perl macro: C<HvNAMEUTF8>
+
+=item ouroboros_hv_ename_ptr
+
+    const char* ouroboros_hv_ename(pTHX_ HV*);
+
+Perl macro: C<HvENAME>
+
+=item ouroboros_hv_ename_len_ptr
+
+    STRLEN ouroboros_hv_ename_len(pTHX_ HV*);
+
+Perl macro: C<HvENAMELEN>
+
+=item ouroboros_hv_ename_utf8_ptr
+
+    unsigned char ouroboros_hv_ename_utf8(pTHX_ HV*);
+
+Perl macro: C<HvENAMEUTF8>
 
 =item ouroboros_he_pv_ptr
 

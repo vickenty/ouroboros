@@ -1098,6 +1098,97 @@ our %SPEC = (
       "type" => "CV*"
     },
     {
+      "c_decl" => "HV* ouroboros_sv_stash(pTHX_ SV*);",
+      "name" => "ouroboros_sv_stash",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_stash_ptr",
+      "tags" => {},
+      "type" => "HV*"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_stash_set(pTHX_ SV*, HV*);",
+      "name" => "ouroboros_sv_stash_set",
+      "params" => [
+        "SV*",
+        "HV*"
+      ],
+      "ptr_name" => "ouroboros_sv_stash_set_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_cv_stash(pTHX_ CV*);",
+      "name" => "ouroboros_cv_stash",
+      "params" => [
+        "CV*"
+      ],
+      "ptr_name" => "ouroboros_cv_stash_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "const char* ouroboros_hv_name(pTHX_ HV*);",
+      "name" => "ouroboros_hv_name",
+      "params" => [
+        "HV*"
+      ],
+      "ptr_name" => "ouroboros_hv_name_ptr",
+      "tags" => {},
+      "type" => "const char*"
+    },
+    {
+      "c_decl" => "STRLEN ouroboros_hv_name_len(pTHX_ HV*);",
+      "name" => "ouroboros_hv_name_len",
+      "params" => [
+        "HV*"
+      ],
+      "ptr_name" => "ouroboros_hv_name_len_ptr",
+      "tags" => {},
+      "type" => "STRLEN"
+    },
+    {
+      "c_decl" => "unsigned char ouroboros_hv_name_utf8(pTHX_ HV*);",
+      "name" => "ouroboros_hv_name_utf8",
+      "params" => [
+        "HV*"
+      ],
+      "ptr_name" => "ouroboros_hv_name_utf8_ptr",
+      "tags" => {},
+      "type" => "unsigned char"
+    },
+    {
+      "c_decl" => "const char* ouroboros_hv_ename(pTHX_ HV*);",
+      "name" => "ouroboros_hv_ename",
+      "params" => [
+        "HV*"
+      ],
+      "ptr_name" => "ouroboros_hv_ename_ptr",
+      "tags" => {},
+      "type" => "const char*"
+    },
+    {
+      "c_decl" => "STRLEN ouroboros_hv_ename_len(pTHX_ HV*);",
+      "name" => "ouroboros_hv_ename_len",
+      "params" => [
+        "HV*"
+      ],
+      "ptr_name" => "ouroboros_hv_ename_len_ptr",
+      "tags" => {},
+      "type" => "STRLEN"
+    },
+    {
+      "c_decl" => "unsigned char ouroboros_hv_ename_utf8(pTHX_ HV*);",
+      "name" => "ouroboros_hv_ename_utf8",
+      "params" => [
+        "HV*"
+      ],
+      "ptr_name" => "ouroboros_hv_ename_utf8_ptr",
+      "tags" => {},
+      "type" => "unsigned char"
+    },
+    {
       "c_decl" => "const char* ouroboros_he_pv(pTHX_ HE*, STRLEN*);",
       "name" => "ouroboros_he_pv",
       "params" => [
