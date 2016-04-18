@@ -128,6 +128,8 @@ fn	void	ouroboros_sv_pok_on	SV*
 fn	void	ouroboros_sv_pok_off	SV*
 #: SvPOK_only
 fn	void	ouroboros_sv_pok_only	SV*
+#: SvPOK_only_UTF8
+fn	void	ouroboros_sv_pok_only_utf8	SV*
 #: SvVOK
 fn	bool	ouroboros_sv_vok	SV*
 #: SvOOK

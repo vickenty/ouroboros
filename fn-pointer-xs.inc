@@ -328,6 +328,13 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_pok_only_utf8_ptr()
+CODE:
+	RETVAL = ouroboros_sv_pok_only_utf8;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_sv_vok_ptr()
 CODE:
 	RETVAL = ouroboros_sv_vok;

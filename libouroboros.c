@@ -284,6 +284,11 @@ void ouroboros_sv_pok_only(pTHX_ SV* sv)
         SvPOK_only(sv);
 }
 
+void ouroboros_sv_pok_only_utf8(pTHX_ SV* sv)
+{
+        SvPOK_only_UTF8(sv);
+}
+
 bool ouroboros_sv_vok(pTHX_ SV* sv)
 {
         return SvVOK(sv);

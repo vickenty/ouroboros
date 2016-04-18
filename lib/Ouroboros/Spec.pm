@@ -710,6 +710,16 @@ our %SPEC = (
       "type" => "void"
     },
     {
+      "c_decl" => "void ouroboros_sv_pok_only_utf8(pTHX_ SV*);",
+      "name" => "ouroboros_sv_pok_only_utf8",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_pok_only_utf8_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
       "c_decl" => "bool ouroboros_sv_vok(pTHX_ SV*);",
       "name" => "ouroboros_sv_vok",
       "params" => [

@@ -57,6 +57,7 @@ our @EXPORT_OK = qw(
     ouroboros_sv_pok_on_ptr
     ouroboros_sv_pok_off_ptr
     ouroboros_sv_pok_only_ptr
+    ouroboros_sv_pok_only_utf8_ptr
     ouroboros_sv_vok_ptr
     ouroboros_sv_ook_ptr
     ouroboros_sv_rok_ptr
@@ -503,6 +504,12 @@ Perl macro: C<SvPOK_off>
     void ouroboros_sv_pok_only(pTHX_ SV*);
 
 Perl macro: C<SvPOK_only>
+
+=item ouroboros_sv_pok_only_utf8_ptr
+
+    void ouroboros_sv_pok_only_utf8(pTHX_ SV*);
+
+Perl macro: C<SvPOK_only_UTF8>
 
 =item ouroboros_sv_vok_ptr
 

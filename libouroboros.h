@@ -64,6 +64,7 @@ U32 ouroboros_sv_pok(pTHX_ SV*);
 void ouroboros_sv_pok_on(pTHX_ SV*);
 void ouroboros_sv_pok_off(pTHX_ SV*);
 void ouroboros_sv_pok_only(pTHX_ SV*);
+void ouroboros_sv_pok_only_utf8(pTHX_ SV*);
 bool ouroboros_sv_vok(pTHX_ SV*);
 U32 ouroboros_sv_ook(pTHX_ SV*);
 U32 ouroboros_sv_rok(pTHX_ SV*);
