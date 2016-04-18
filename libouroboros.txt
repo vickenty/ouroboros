@@ -194,6 +194,10 @@ fn	SV*	ouroboros_sv_rv	SV*
 #: SvRV_set
 fn	void	ouroboros_sv_rv_set	SV*	SV*
 
+#: SvTRUE
+fn	bool	ouroboros_sv_true	SV*
+#: SvTRUE_nomg
+fn	bool	ouroboros_sv_true_nomg	SV*
 #: SvTYPE
 fn	IV	ouroboros_sv_type	SV*
 #: SvFLAGS

@@ -94,6 +94,8 @@ void ouroboros_sv_pv_len_set(pTHX_ SV*, STRLEN);
 char* ouroboros_sv_pv_end(pTHX_ SV*);
 SV* ouroboros_sv_rv(pTHX_ SV*);
 void ouroboros_sv_rv_set(pTHX_ SV*, SV*);
+bool ouroboros_sv_true(pTHX_ SV*);
+bool ouroboros_sv_true_nomg(pTHX_ SV*);
 IV ouroboros_sv_type(pTHX_ SV*);
 UV ouroboros_sv_flags(pTHX_ SV*);
 bool ouroboros_sv_utf8(pTHX_ SV*);

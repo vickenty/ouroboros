@@ -434,6 +434,16 @@ void ouroboros_sv_rv_set(pTHX_ SV* sv, SV* sv1)
         SvRV_set(sv, sv1);
 }
 
+bool ouroboros_sv_true(pTHX_ SV* sv)
+{
+        return SvTRUE(sv);
+}
+
+bool ouroboros_sv_true_nomg(pTHX_ SV* sv)
+{
+        return SvTRUE_nomg(sv);
+}
+
 IV ouroboros_sv_type(pTHX_ SV* sv)
 {
         return SvTYPE(sv);

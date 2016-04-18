@@ -1018,6 +1018,26 @@ our %SPEC = (
       "type" => "void"
     },
     {
+      "c_decl" => "bool ouroboros_sv_true(pTHX_ SV*);",
+      "name" => "ouroboros_sv_true",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_true_ptr",
+      "tags" => {},
+      "type" => "bool"
+    },
+    {
+      "c_decl" => "bool ouroboros_sv_true_nomg(pTHX_ SV*);",
+      "name" => "ouroboros_sv_true_nomg",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_true_nomg_ptr",
+      "tags" => {},
+      "type" => "bool"
+    },
+    {
       "c_decl" => "IV ouroboros_sv_type(pTHX_ SV*);",
       "name" => "ouroboros_sv_type",
       "params" => [

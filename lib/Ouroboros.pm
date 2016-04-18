@@ -87,6 +87,8 @@ our @EXPORT_OK = qw(
     ouroboros_sv_pv_end_ptr
     ouroboros_sv_rv_ptr
     ouroboros_sv_rv_set_ptr
+    ouroboros_sv_true_ptr
+    ouroboros_sv_true_nomg_ptr
     ouroboros_sv_type_ptr
     ouroboros_sv_flags_ptr
     ouroboros_sv_utf8_ptr
@@ -692,6 +694,18 @@ Perl macro: C<SvRV>
     void ouroboros_sv_rv_set(pTHX_ SV*, SV*);
 
 Perl macro: C<SvRV_set>
+
+=item ouroboros_sv_true_ptr
+
+    bool ouroboros_sv_true(pTHX_ SV*);
+
+Perl macro: C<SvTRUE>
+
+=item ouroboros_sv_true_nomg_ptr
+
+    bool ouroboros_sv_true_nomg(pTHX_ SV*);
+
+Perl macro: C<SvTRUE_nomg>
 
 =item ouroboros_sv_type_ptr
 
