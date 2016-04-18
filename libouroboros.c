@@ -459,6 +459,26 @@ void ouroboros_sv_utf8_off(pTHX_ SV* sv)
         SvUTF8_off(sv);
 }
 
+bool ouroboros_sv_tainted(pTHX_ SV* sv)
+{
+        return SvTAINTED(sv);
+}
+
+void ouroboros_sv_tainted_on(pTHX_ SV* sv)
+{
+        SvTAINTED_on(sv);
+}
+
+void ouroboros_sv_tainted_off(pTHX_ SV* sv)
+{
+        SvTAINTED_off(sv);
+}
+
+void ouroboros_sv_taint(pTHX_ SV* sv)
+{
+        SvTAINT(sv);
+}
+
 SV* ouroboros_gv_sv(pTHX_ GV* a)
 {
         return GvSV(a);

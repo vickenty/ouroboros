@@ -205,6 +205,15 @@ fn	void	ouroboros_sv_utf8_on	SV*
 #: SvUTF8_off
 fn	void	ouroboros_sv_utf8_off	SV*
 
+#: SvTAINTED
+fn	bool	ouroboros_sv_tainted	SV*
+#: SvTAINTED_on
+fn	void	ouroboros_sv_tainted_on	SV*
+#: SvTAINTED_off
+fn	void	ouroboros_sv_tainted_off	SV*
+#: SvTAINT
+fn	void	ouroboros_sv_taint	SV*
+
 #: GvSV
 fn	SV*	ouroboros_gv_sv	GV*
 #: GvAV

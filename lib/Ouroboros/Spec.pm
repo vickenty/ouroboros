@@ -1068,6 +1068,46 @@ our %SPEC = (
       "type" => "void"
     },
     {
+      "c_decl" => "bool ouroboros_sv_tainted(pTHX_ SV*);",
+      "name" => "ouroboros_sv_tainted",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_tainted_ptr",
+      "tags" => {},
+      "type" => "bool"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_tainted_on(pTHX_ SV*);",
+      "name" => "ouroboros_sv_tainted_on",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_tainted_on_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_tainted_off(pTHX_ SV*);",
+      "name" => "ouroboros_sv_tainted_off",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_tainted_off_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
+      "c_decl" => "void ouroboros_sv_taint(pTHX_ SV*);",
+      "name" => "ouroboros_sv_taint",
+      "params" => [
+        "SV*"
+      ],
+      "ptr_name" => "ouroboros_sv_taint_ptr",
+      "tags" => {},
+      "type" => "void"
+    },
+    {
       "c_decl" => "SV* ouroboros_gv_sv(pTHX_ GV*);",
       "name" => "ouroboros_gv_sv",
       "params" => [

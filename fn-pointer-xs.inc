@@ -573,6 +573,34 @@ OUTPUT:
 	RETVAL
 
 void*
+ouroboros_sv_tainted_ptr()
+CODE:
+	RETVAL = ouroboros_sv_tainted;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_tainted_on_ptr()
+CODE:
+	RETVAL = ouroboros_sv_tainted_on;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_tainted_off_ptr()
+CODE:
+	RETVAL = ouroboros_sv_tainted_off;
+OUTPUT:
+	RETVAL
+
+void*
+ouroboros_sv_taint_ptr()
+CODE:
+	RETVAL = ouroboros_sv_taint;
+OUTPUT:
+	RETVAL
+
+void*
 ouroboros_gv_sv_ptr()
 CODE:
 	RETVAL = ouroboros_gv_sv;
