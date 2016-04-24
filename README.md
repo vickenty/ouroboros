@@ -23,6 +23,9 @@ libraries.
 
 * `Ouroboros::Spec` - run-time information about Ouroboros API.
 
+* `Ouroboros::Library` - provides paths to C source of the wrapper library,
+  which is bundled with the installation.
+
 * `libouroboros.txt` - main source file for the entire thing, lists
   all supported functions, their signatures, and constants.
 
