@@ -1,3 +1,8 @@
+0.06	2016-04-19
+	- Add many SV, HV related macros.
+	- Add accessors for interpreter global variables.
+	- Makefile.PL compatible with older MM.
+	- Packaging fixes.
 0.05	2016-04-13
 	- Install library source along the perl package.
 	- Add SvFLAGS and SvUTF* macros.
