@@ -23,6 +23,9 @@ WriteMakefile(
     realclean         => { FILES => "const-c.inc const-xs.inc" },
     META_MERGE        => {
         "meta-spec" => { version => 2 },
+        no_index => {
+            directory => [ qw/tools/ ],
+        },
         resources => {
             repository => {
                 type => "git",
