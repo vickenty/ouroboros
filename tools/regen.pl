@@ -26,7 +26,7 @@ foreach my $fn (@{$spec->{fn}}) {
     $fn->{ptr_name} = "$fn->{name}_ptr";
 
     $fn->{c_decl} = sprintf(
-        "%s %s(%s%s);",
+        "OUROBOROS_STATIC %s %s(%s%s);",
         $fn->{type},
         $fn->{name},
         pthx($fn),

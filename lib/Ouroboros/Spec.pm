@@ -213,7 +213,7 @@ our %SPEC = (
   ],
   "fn" => [
     {
-      "c_decl" => "void ouroboros_stack_init(pTHX_ ouroboros_stack_t*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_init(pTHX_ ouroboros_stack_t*);",
       "name" => "ouroboros_stack_init",
       "params" => [
         "ouroboros_stack_t*"
@@ -225,7 +225,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "int ouroboros_stack_items(pTHX_ ouroboros_stack_t*);",
+      "c_decl" => "OUROBOROS_STATIC int ouroboros_stack_items(pTHX_ ouroboros_stack_t*);",
       "name" => "ouroboros_stack_items",
       "params" => [
         "ouroboros_stack_t*"
@@ -237,7 +237,7 @@ our %SPEC = (
       "type" => "int"
     },
     {
-      "c_decl" => "void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t*);",
       "name" => "ouroboros_stack_prepush",
       "params" => [
         "ouroboros_stack_t*"
@@ -247,7 +247,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_putback(pTHX_ ouroboros_stack_t*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_putback(pTHX_ ouroboros_stack_t*);",
       "name" => "ouroboros_stack_putback",
       "params" => [
         "ouroboros_stack_t*"
@@ -257,7 +257,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t*, SSize_t);",
+      "c_decl" => "OUROBOROS_STATIC SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t*, SSize_t);",
       "name" => "ouroboros_stack_fetch",
       "params" => [
         "ouroboros_stack_t*",
@@ -270,7 +270,7 @@ our %SPEC = (
       "type" => "SV*"
     },
     {
-      "c_decl" => "void ouroboros_stack_store(pTHX_ ouroboros_stack_t*, SSize_t, SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_store(pTHX_ ouroboros_stack_t*, SSize_t, SV*);",
       "name" => "ouroboros_stack_store",
       "params" => [
         "ouroboros_stack_t*",
@@ -284,7 +284,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_extend(pTHX_ ouroboros_stack_t*, SSize_t);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_extend(pTHX_ ouroboros_stack_t*, SSize_t);",
       "name" => "ouroboros_stack_extend",
       "params" => [
         "ouroboros_stack_t*",
@@ -295,7 +295,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_pushmark(pTHX_ ouroboros_stack_t*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_pushmark(pTHX_ ouroboros_stack_t*);",
       "name" => "ouroboros_stack_pushmark",
       "params" => [
         "ouroboros_stack_t*"
@@ -305,7 +305,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_spagain(pTHX_ ouroboros_stack_t*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_spagain(pTHX_ ouroboros_stack_t*);",
       "name" => "ouroboros_stack_spagain",
       "params" => [
         "ouroboros_stack_t*"
@@ -315,7 +315,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_xpush_sv(pTHX_ ouroboros_stack_t*, SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_xpush_sv(pTHX_ ouroboros_stack_t*, SV*);",
       "name" => "ouroboros_stack_xpush_sv",
       "params" => [
         "ouroboros_stack_t*",
@@ -326,7 +326,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_xpush_sv_mortal(pTHX_ ouroboros_stack_t*, SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_xpush_sv_mortal(pTHX_ ouroboros_stack_t*, SV*);",
       "name" => "ouroboros_stack_xpush_sv_mortal",
       "params" => [
         "ouroboros_stack_t*",
@@ -337,7 +337,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_xpush_iv(pTHX_ ouroboros_stack_t*, IV);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_xpush_iv(pTHX_ ouroboros_stack_t*, IV);",
       "name" => "ouroboros_stack_xpush_iv",
       "params" => [
         "ouroboros_stack_t*",
@@ -348,7 +348,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_xpush_uv(pTHX_ ouroboros_stack_t*, UV);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_xpush_uv(pTHX_ ouroboros_stack_t*, UV);",
       "name" => "ouroboros_stack_xpush_uv",
       "params" => [
         "ouroboros_stack_t*",
@@ -359,7 +359,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_xpush_nv(pTHX_ ouroboros_stack_t*, NV);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_xpush_nv(pTHX_ ouroboros_stack_t*, NV);",
       "name" => "ouroboros_stack_xpush_nv",
       "params" => [
         "ouroboros_stack_t*",
@@ -370,7 +370,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t*, const char*, STRLEN);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_xpush_pv(pTHX_ ouroboros_stack_t*, const char*, STRLEN);",
       "name" => "ouroboros_stack_xpush_pv",
       "params" => [
         "ouroboros_stack_t*",
@@ -382,7 +382,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_xpush_mortal(pTHX_ ouroboros_stack_t*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_xpush_mortal(pTHX_ ouroboros_stack_t*);",
       "name" => "ouroboros_stack_xpush_mortal",
       "params" => [
         "ouroboros_stack_t*"
@@ -392,7 +392,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_push_sv(pTHX_ ouroboros_stack_t*, SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_push_sv(pTHX_ ouroboros_stack_t*, SV*);",
       "name" => "ouroboros_stack_push_sv",
       "params" => [
         "ouroboros_stack_t*",
@@ -403,7 +403,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_push_sv_mortal(pTHX_ ouroboros_stack_t*, SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_push_sv_mortal(pTHX_ ouroboros_stack_t*, SV*);",
       "name" => "ouroboros_stack_push_sv_mortal",
       "params" => [
         "ouroboros_stack_t*",
@@ -414,7 +414,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_push_iv(pTHX_ ouroboros_stack_t*, IV);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_push_iv(pTHX_ ouroboros_stack_t*, IV);",
       "name" => "ouroboros_stack_push_iv",
       "params" => [
         "ouroboros_stack_t*",
@@ -425,7 +425,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_push_uv(pTHX_ ouroboros_stack_t*, UV);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_push_uv(pTHX_ ouroboros_stack_t*, UV);",
       "name" => "ouroboros_stack_push_uv",
       "params" => [
         "ouroboros_stack_t*",
@@ -436,7 +436,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_push_nv(pTHX_ ouroboros_stack_t*, NV);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_push_nv(pTHX_ ouroboros_stack_t*, NV);",
       "name" => "ouroboros_stack_push_nv",
       "params" => [
         "ouroboros_stack_t*",
@@ -447,7 +447,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_push_pv(pTHX_ ouroboros_stack_t*, const char*, STRLEN);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_push_pv(pTHX_ ouroboros_stack_t*, const char*, STRLEN);",
       "name" => "ouroboros_stack_push_pv",
       "params" => [
         "ouroboros_stack_t*",
@@ -459,7 +459,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_stack_push_mortal(pTHX_ ouroboros_stack_t*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_push_mortal(pTHX_ ouroboros_stack_t*);",
       "name" => "ouroboros_stack_push_mortal",
       "params" => [
         "ouroboros_stack_t*"
@@ -469,7 +469,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_upgrade(pTHX_ SV*, svtype);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_upgrade(pTHX_ SV*, svtype);",
       "name" => "ouroboros_sv_upgrade",
       "params" => [
         "SV*",
@@ -480,7 +480,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_niok(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_sv_niok(pTHX_ SV*);",
       "name" => "ouroboros_sv_niok",
       "params" => [
         "SV*"
@@ -490,7 +490,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_niok_priv(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_sv_niok_priv(pTHX_ SV*);",
       "name" => "ouroboros_sv_niok_priv",
       "params" => [
         "SV*"
@@ -500,7 +500,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "void ouroboros_sv_niok_off(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_niok_off(pTHX_ SV*);",
       "name" => "ouroboros_sv_niok_off",
       "params" => [
         "SV*"
@@ -510,7 +510,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_ok(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_sv_ok(pTHX_ SV*);",
       "name" => "ouroboros_sv_ok",
       "params" => [
         "SV*"
@@ -520,7 +520,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_iok_priv(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_sv_iok_priv(pTHX_ SV*);",
       "name" => "ouroboros_sv_iok_priv",
       "params" => [
         "SV*"
@@ -530,7 +530,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_nok_priv(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_sv_nok_priv(pTHX_ SV*);",
       "name" => "ouroboros_sv_nok_priv",
       "params" => [
         "SV*"
@@ -540,7 +540,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_pok_priv(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_sv_pok_priv(pTHX_ SV*);",
       "name" => "ouroboros_sv_pok_priv",
       "params" => [
         "SV*"
@@ -550,7 +550,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_iok(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_sv_iok(pTHX_ SV*);",
       "name" => "ouroboros_sv_iok",
       "params" => [
         "SV*"
@@ -560,7 +560,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "void ouroboros_sv_iok_on(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_iok_on(pTHX_ SV*);",
       "name" => "ouroboros_sv_iok_on",
       "params" => [
         "SV*"
@@ -570,7 +570,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_iok_off(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_iok_off(pTHX_ SV*);",
       "name" => "ouroboros_sv_iok_off",
       "params" => [
         "SV*"
@@ -580,7 +580,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_iok_only(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_iok_only(pTHX_ SV*);",
       "name" => "ouroboros_sv_iok_only",
       "params" => [
         "SV*"
@@ -590,7 +590,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_iok_only_uv(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_iok_only_uv(pTHX_ SV*);",
       "name" => "ouroboros_sv_iok_only_uv",
       "params" => [
         "SV*"
@@ -600,7 +600,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "bool ouroboros_sv_iok_uv(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC bool ouroboros_sv_iok_uv(pTHX_ SV*);",
       "name" => "ouroboros_sv_iok_uv",
       "params" => [
         "SV*"
@@ -610,7 +610,7 @@ our %SPEC = (
       "type" => "bool"
     },
     {
-      "c_decl" => "bool ouroboros_sv_uok(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC bool ouroboros_sv_uok(pTHX_ SV*);",
       "name" => "ouroboros_sv_uok",
       "params" => [
         "SV*"
@@ -620,7 +620,7 @@ our %SPEC = (
       "type" => "bool"
     },
     {
-      "c_decl" => "bool ouroboros_sv_iok_not_uv(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC bool ouroboros_sv_iok_not_uv(pTHX_ SV*);",
       "name" => "ouroboros_sv_iok_not_uv",
       "params" => [
         "SV*"
@@ -630,7 +630,7 @@ our %SPEC = (
       "type" => "bool"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_nok(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_sv_nok(pTHX_ SV*);",
       "name" => "ouroboros_sv_nok",
       "params" => [
         "SV*"
@@ -640,7 +640,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "void ouroboros_sv_nok_on(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_nok_on(pTHX_ SV*);",
       "name" => "ouroboros_sv_nok_on",
       "params" => [
         "SV*"
@@ -650,7 +650,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_nok_off(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_nok_off(pTHX_ SV*);",
       "name" => "ouroboros_sv_nok_off",
       "params" => [
         "SV*"
@@ -660,7 +660,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_nok_only(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_nok_only(pTHX_ SV*);",
       "name" => "ouroboros_sv_nok_only",
       "params" => [
         "SV*"
@@ -670,7 +670,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_pok(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_sv_pok(pTHX_ SV*);",
       "name" => "ouroboros_sv_pok",
       "params" => [
         "SV*"
@@ -680,7 +680,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "void ouroboros_sv_pok_on(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_pok_on(pTHX_ SV*);",
       "name" => "ouroboros_sv_pok_on",
       "params" => [
         "SV*"
@@ -690,7 +690,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_pok_off(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_pok_off(pTHX_ SV*);",
       "name" => "ouroboros_sv_pok_off",
       "params" => [
         "SV*"
@@ -700,7 +700,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_pok_only(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_pok_only(pTHX_ SV*);",
       "name" => "ouroboros_sv_pok_only",
       "params" => [
         "SV*"
@@ -710,7 +710,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_pok_only_utf8(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_pok_only_utf8(pTHX_ SV*);",
       "name" => "ouroboros_sv_pok_only_utf8",
       "params" => [
         "SV*"
@@ -720,7 +720,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "bool ouroboros_sv_vok(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC bool ouroboros_sv_vok(pTHX_ SV*);",
       "name" => "ouroboros_sv_vok",
       "params" => [
         "SV*"
@@ -730,7 +730,7 @@ our %SPEC = (
       "type" => "bool"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_ook(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_sv_ook(pTHX_ SV*);",
       "name" => "ouroboros_sv_ook",
       "params" => [
         "SV*"
@@ -740,7 +740,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "void ouroboros_sv_ook_offset(pTHX_ SV*, STRLEN*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_ook_offset(pTHX_ SV*, STRLEN*);",
       "name" => "ouroboros_sv_ook_offset",
       "params" => [
         "SV*",
@@ -751,7 +751,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_rok(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_sv_rok(pTHX_ SV*);",
       "name" => "ouroboros_sv_rok",
       "params" => [
         "SV*"
@@ -761,7 +761,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "void ouroboros_sv_rok_on(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_rok_on(pTHX_ SV*);",
       "name" => "ouroboros_sv_rok_on",
       "params" => [
         "SV*"
@@ -771,7 +771,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_rok_off(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_rok_off(pTHX_ SV*);",
       "name" => "ouroboros_sv_rok_off",
       "params" => [
         "SV*"
@@ -781,7 +781,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "IV ouroboros_sv_iv(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC IV ouroboros_sv_iv(pTHX_ SV*);",
       "name" => "ouroboros_sv_iv",
       "params" => [
         "SV*"
@@ -791,7 +791,7 @@ our %SPEC = (
       "type" => "IV"
     },
     {
-      "c_decl" => "IV ouroboros_sv_iv_nomg(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC IV ouroboros_sv_iv_nomg(pTHX_ SV*);",
       "name" => "ouroboros_sv_iv_nomg",
       "params" => [
         "SV*"
@@ -801,7 +801,7 @@ our %SPEC = (
       "type" => "IV"
     },
     {
-      "c_decl" => "IV ouroboros_sv_iv_raw(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC IV ouroboros_sv_iv_raw(pTHX_ SV*);",
       "name" => "ouroboros_sv_iv_raw",
       "params" => [
         "SV*"
@@ -811,7 +811,7 @@ our %SPEC = (
       "type" => "IV"
     },
     {
-      "c_decl" => "void ouroboros_sv_iv_set(pTHX_ SV*, IV);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_iv_set(pTHX_ SV*, IV);",
       "name" => "ouroboros_sv_iv_set",
       "params" => [
         "SV*",
@@ -822,7 +822,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "UV ouroboros_sv_uv(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC UV ouroboros_sv_uv(pTHX_ SV*);",
       "name" => "ouroboros_sv_uv",
       "params" => [
         "SV*"
@@ -832,7 +832,7 @@ our %SPEC = (
       "type" => "UV"
     },
     {
-      "c_decl" => "UV ouroboros_sv_uv_nomg(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC UV ouroboros_sv_uv_nomg(pTHX_ SV*);",
       "name" => "ouroboros_sv_uv_nomg",
       "params" => [
         "SV*"
@@ -842,7 +842,7 @@ our %SPEC = (
       "type" => "UV"
     },
     {
-      "c_decl" => "UV ouroboros_sv_uv_raw(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC UV ouroboros_sv_uv_raw(pTHX_ SV*);",
       "name" => "ouroboros_sv_uv_raw",
       "params" => [
         "SV*"
@@ -852,7 +852,7 @@ our %SPEC = (
       "type" => "UV"
     },
     {
-      "c_decl" => "void ouroboros_sv_uv_set(pTHX_ SV*, UV);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_uv_set(pTHX_ SV*, UV);",
       "name" => "ouroboros_sv_uv_set",
       "params" => [
         "SV*",
@@ -863,7 +863,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "NV ouroboros_sv_nv(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC NV ouroboros_sv_nv(pTHX_ SV*);",
       "name" => "ouroboros_sv_nv",
       "params" => [
         "SV*"
@@ -873,7 +873,7 @@ our %SPEC = (
       "type" => "NV"
     },
     {
-      "c_decl" => "NV ouroboros_sv_nv_nomg(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC NV ouroboros_sv_nv_nomg(pTHX_ SV*);",
       "name" => "ouroboros_sv_nv_nomg",
       "params" => [
         "SV*"
@@ -883,7 +883,7 @@ our %SPEC = (
       "type" => "NV"
     },
     {
-      "c_decl" => "NV ouroboros_sv_nv_raw(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC NV ouroboros_sv_nv_raw(pTHX_ SV*);",
       "name" => "ouroboros_sv_nv_raw",
       "params" => [
         "SV*"
@@ -893,7 +893,7 @@ our %SPEC = (
       "type" => "NV"
     },
     {
-      "c_decl" => "void ouroboros_sv_nv_set(pTHX_ SV*, NV);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_nv_set(pTHX_ SV*, NV);",
       "name" => "ouroboros_sv_nv_set",
       "params" => [
         "SV*",
@@ -904,7 +904,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "const char* ouroboros_sv_pv(pTHX_ SV*, STRLEN*);",
+      "c_decl" => "OUROBOROS_STATIC const char* ouroboros_sv_pv(pTHX_ SV*, STRLEN*);",
       "name" => "ouroboros_sv_pv",
       "params" => [
         "SV*",
@@ -915,7 +915,7 @@ our %SPEC = (
       "type" => "const char*"
     },
     {
-      "c_decl" => "const char* ouroboros_sv_pv_nomg(pTHX_ SV*, STRLEN*);",
+      "c_decl" => "OUROBOROS_STATIC const char* ouroboros_sv_pv_nomg(pTHX_ SV*, STRLEN*);",
       "name" => "ouroboros_sv_pv_nomg",
       "params" => [
         "SV*",
@@ -926,7 +926,7 @@ our %SPEC = (
       "type" => "const char*"
     },
     {
-      "c_decl" => "const char* ouroboros_sv_pv_nolen(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC const char* ouroboros_sv_pv_nolen(pTHX_ SV*);",
       "name" => "ouroboros_sv_pv_nolen",
       "params" => [
         "SV*"
@@ -936,7 +936,7 @@ our %SPEC = (
       "type" => "const char*"
     },
     {
-      "c_decl" => "const char* ouroboros_sv_pv_nomg_nolen(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC const char* ouroboros_sv_pv_nomg_nolen(pTHX_ SV*);",
       "name" => "ouroboros_sv_pv_nomg_nolen",
       "params" => [
         "SV*"
@@ -946,7 +946,7 @@ our %SPEC = (
       "type" => "const char*"
     },
     {
-      "c_decl" => "char* ouroboros_sv_pv_raw(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC char* ouroboros_sv_pv_raw(pTHX_ SV*);",
       "name" => "ouroboros_sv_pv_raw",
       "params" => [
         "SV*"
@@ -956,7 +956,7 @@ our %SPEC = (
       "type" => "char*"
     },
     {
-      "c_decl" => "STRLEN ouroboros_sv_pv_cur(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC STRLEN ouroboros_sv_pv_cur(pTHX_ SV*);",
       "name" => "ouroboros_sv_pv_cur",
       "params" => [
         "SV*"
@@ -966,7 +966,7 @@ our %SPEC = (
       "type" => "STRLEN"
     },
     {
-      "c_decl" => "void ouroboros_sv_pv_cur_set(pTHX_ SV*, STRLEN);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_pv_cur_set(pTHX_ SV*, STRLEN);",
       "name" => "ouroboros_sv_pv_cur_set",
       "params" => [
         "SV*",
@@ -977,7 +977,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "STRLEN ouroboros_sv_pv_len(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC STRLEN ouroboros_sv_pv_len(pTHX_ SV*);",
       "name" => "ouroboros_sv_pv_len",
       "params" => [
         "SV*"
@@ -987,7 +987,7 @@ our %SPEC = (
       "type" => "STRLEN"
     },
     {
-      "c_decl" => "void ouroboros_sv_pv_len_set(pTHX_ SV*, STRLEN);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_pv_len_set(pTHX_ SV*, STRLEN);",
       "name" => "ouroboros_sv_pv_len_set",
       "params" => [
         "SV*",
@@ -998,7 +998,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "char* ouroboros_sv_pv_end(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC char* ouroboros_sv_pv_end(pTHX_ SV*);",
       "name" => "ouroboros_sv_pv_end",
       "params" => [
         "SV*"
@@ -1008,7 +1008,7 @@ our %SPEC = (
       "type" => "char*"
     },
     {
-      "c_decl" => "SV* ouroboros_sv_rv(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC SV* ouroboros_sv_rv(pTHX_ SV*);",
       "name" => "ouroboros_sv_rv",
       "params" => [
         "SV*"
@@ -1018,7 +1018,7 @@ our %SPEC = (
       "type" => "SV*"
     },
     {
-      "c_decl" => "void ouroboros_sv_rv_set(pTHX_ SV*, SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_rv_set(pTHX_ SV*, SV*);",
       "name" => "ouroboros_sv_rv_set",
       "params" => [
         "SV*",
@@ -1029,7 +1029,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "bool ouroboros_sv_true(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC bool ouroboros_sv_true(pTHX_ SV*);",
       "name" => "ouroboros_sv_true",
       "params" => [
         "SV*"
@@ -1039,7 +1039,7 @@ our %SPEC = (
       "type" => "bool"
     },
     {
-      "c_decl" => "bool ouroboros_sv_true_nomg(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC bool ouroboros_sv_true_nomg(pTHX_ SV*);",
       "name" => "ouroboros_sv_true_nomg",
       "params" => [
         "SV*"
@@ -1049,7 +1049,7 @@ our %SPEC = (
       "type" => "bool"
     },
     {
-      "c_decl" => "IV ouroboros_sv_type(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC IV ouroboros_sv_type(pTHX_ SV*);",
       "name" => "ouroboros_sv_type",
       "params" => [
         "SV*"
@@ -1059,7 +1059,7 @@ our %SPEC = (
       "type" => "IV"
     },
     {
-      "c_decl" => "UV ouroboros_sv_flags(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC UV ouroboros_sv_flags(pTHX_ SV*);",
       "name" => "ouroboros_sv_flags",
       "params" => [
         "SV*"
@@ -1069,7 +1069,7 @@ our %SPEC = (
       "type" => "UV"
     },
     {
-      "c_decl" => "bool ouroboros_sv_utf8(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC bool ouroboros_sv_utf8(pTHX_ SV*);",
       "name" => "ouroboros_sv_utf8",
       "params" => [
         "SV*"
@@ -1079,7 +1079,7 @@ our %SPEC = (
       "type" => "bool"
     },
     {
-      "c_decl" => "void ouroboros_sv_utf8_on(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_utf8_on(pTHX_ SV*);",
       "name" => "ouroboros_sv_utf8_on",
       "params" => [
         "SV*"
@@ -1089,7 +1089,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_utf8_off(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_utf8_off(pTHX_ SV*);",
       "name" => "ouroboros_sv_utf8_off",
       "params" => [
         "SV*"
@@ -1099,7 +1099,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_is_cow(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_sv_is_cow(pTHX_ SV*);",
       "name" => "ouroboros_sv_is_cow",
       "params" => [
         "SV*"
@@ -1109,7 +1109,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "bool ouroboros_sv_is_cow_shared_hash(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC bool ouroboros_sv_is_cow_shared_hash(pTHX_ SV*);",
       "name" => "ouroboros_sv_is_cow_shared_hash",
       "params" => [
         "SV*"
@@ -1119,7 +1119,7 @@ our %SPEC = (
       "type" => "bool"
     },
     {
-      "c_decl" => "bool ouroboros_sv_tainted(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC bool ouroboros_sv_tainted(pTHX_ SV*);",
       "name" => "ouroboros_sv_tainted",
       "params" => [
         "SV*"
@@ -1129,7 +1129,7 @@ our %SPEC = (
       "type" => "bool"
     },
     {
-      "c_decl" => "void ouroboros_sv_tainted_on(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_tainted_on(pTHX_ SV*);",
       "name" => "ouroboros_sv_tainted_on",
       "params" => [
         "SV*"
@@ -1139,7 +1139,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_tainted_off(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_tainted_off(pTHX_ SV*);",
       "name" => "ouroboros_sv_tainted_off",
       "params" => [
         "SV*"
@@ -1149,7 +1149,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_taint(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_taint(pTHX_ SV*);",
       "name" => "ouroboros_sv_taint",
       "params" => [
         "SV*"
@@ -1159,7 +1159,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_share(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_share(pTHX_ SV*);",
       "name" => "ouroboros_sv_share",
       "params" => [
         "SV*"
@@ -1169,7 +1169,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_lock(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_lock(pTHX_ SV*);",
       "name" => "ouroboros_sv_lock",
       "params" => [
         "SV*"
@@ -1179,7 +1179,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_unlock(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_unlock(pTHX_ SV*);",
       "name" => "ouroboros_sv_unlock",
       "params" => [
         "SV*"
@@ -1189,7 +1189,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_get_a_magic(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_sv_get_a_magic(pTHX_ SV*);",
       "name" => "ouroboros_sv_get_a_magic",
       "params" => [
         "SV*"
@@ -1199,7 +1199,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "void ouroboros_sv_magic_set(pTHX_ SV*, MAGIC*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_magic_set(pTHX_ SV*, MAGIC*);",
       "name" => "ouroboros_sv_magic_set",
       "params" => [
         "SV*",
@@ -1210,7 +1210,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_get_magic(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_get_magic(pTHX_ SV*);",
       "name" => "ouroboros_sv_get_magic",
       "params" => [
         "SV*"
@@ -1220,7 +1220,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_set_magic(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_set_magic(pTHX_ SV*);",
       "name" => "ouroboros_sv_set_magic",
       "params" => [
         "SV*"
@@ -1230,7 +1230,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "SV* ouroboros_gv_sv(pTHX_ GV*);",
+      "c_decl" => "OUROBOROS_STATIC SV* ouroboros_gv_sv(pTHX_ GV*);",
       "name" => "ouroboros_gv_sv",
       "params" => [
         "GV*"
@@ -1240,7 +1240,7 @@ our %SPEC = (
       "type" => "SV*"
     },
     {
-      "c_decl" => "AV* ouroboros_gv_av(pTHX_ GV*);",
+      "c_decl" => "OUROBOROS_STATIC AV* ouroboros_gv_av(pTHX_ GV*);",
       "name" => "ouroboros_gv_av",
       "params" => [
         "GV*"
@@ -1250,7 +1250,7 @@ our %SPEC = (
       "type" => "AV*"
     },
     {
-      "c_decl" => "HV* ouroboros_gv_hv(pTHX_ GV*);",
+      "c_decl" => "OUROBOROS_STATIC HV* ouroboros_gv_hv(pTHX_ GV*);",
       "name" => "ouroboros_gv_hv",
       "params" => [
         "GV*"
@@ -1260,7 +1260,7 @@ our %SPEC = (
       "type" => "HV*"
     },
     {
-      "c_decl" => "CV* ouroboros_gv_cv(pTHX_ CV*);",
+      "c_decl" => "OUROBOROS_STATIC CV* ouroboros_gv_cv(pTHX_ CV*);",
       "name" => "ouroboros_gv_cv",
       "params" => [
         "CV*"
@@ -1270,7 +1270,7 @@ our %SPEC = (
       "type" => "CV*"
     },
     {
-      "c_decl" => "HV* ouroboros_sv_stash(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC HV* ouroboros_sv_stash(pTHX_ SV*);",
       "name" => "ouroboros_sv_stash",
       "params" => [
         "SV*"
@@ -1280,7 +1280,7 @@ our %SPEC = (
       "type" => "HV*"
     },
     {
-      "c_decl" => "void ouroboros_sv_stash_set(pTHX_ SV*, HV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_stash_set(pTHX_ SV*, HV*);",
       "name" => "ouroboros_sv_stash_set",
       "params" => [
         "SV*",
@@ -1291,7 +1291,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_cv_stash(pTHX_ CV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_cv_stash(pTHX_ CV*);",
       "name" => "ouroboros_cv_stash",
       "params" => [
         "CV*"
@@ -1301,7 +1301,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "const char* ouroboros_hv_name(pTHX_ HV*);",
+      "c_decl" => "OUROBOROS_STATIC const char* ouroboros_hv_name(pTHX_ HV*);",
       "name" => "ouroboros_hv_name",
       "params" => [
         "HV*"
@@ -1311,7 +1311,7 @@ our %SPEC = (
       "type" => "const char*"
     },
     {
-      "c_decl" => "STRLEN ouroboros_hv_name_len(pTHX_ HV*);",
+      "c_decl" => "OUROBOROS_STATIC STRLEN ouroboros_hv_name_len(pTHX_ HV*);",
       "name" => "ouroboros_hv_name_len",
       "params" => [
         "HV*"
@@ -1321,7 +1321,7 @@ our %SPEC = (
       "type" => "STRLEN"
     },
     {
-      "c_decl" => "unsigned char ouroboros_hv_name_utf8(pTHX_ HV*);",
+      "c_decl" => "OUROBOROS_STATIC unsigned char ouroboros_hv_name_utf8(pTHX_ HV*);",
       "name" => "ouroboros_hv_name_utf8",
       "params" => [
         "HV*"
@@ -1331,7 +1331,7 @@ our %SPEC = (
       "type" => "unsigned char"
     },
     {
-      "c_decl" => "const char* ouroboros_hv_ename(pTHX_ HV*);",
+      "c_decl" => "OUROBOROS_STATIC const char* ouroboros_hv_ename(pTHX_ HV*);",
       "name" => "ouroboros_hv_ename",
       "params" => [
         "HV*"
@@ -1341,7 +1341,7 @@ our %SPEC = (
       "type" => "const char*"
     },
     {
-      "c_decl" => "STRLEN ouroboros_hv_ename_len(pTHX_ HV*);",
+      "c_decl" => "OUROBOROS_STATIC STRLEN ouroboros_hv_ename_len(pTHX_ HV*);",
       "name" => "ouroboros_hv_ename_len",
       "params" => [
         "HV*"
@@ -1351,7 +1351,7 @@ our %SPEC = (
       "type" => "STRLEN"
     },
     {
-      "c_decl" => "unsigned char ouroboros_hv_ename_utf8(pTHX_ HV*);",
+      "c_decl" => "OUROBOROS_STATIC unsigned char ouroboros_hv_ename_utf8(pTHX_ HV*);",
       "name" => "ouroboros_hv_ename_utf8",
       "params" => [
         "HV*"
@@ -1361,7 +1361,7 @@ our %SPEC = (
       "type" => "unsigned char"
     },
     {
-      "c_decl" => "const char* ouroboros_he_pv(pTHX_ HE*, STRLEN*);",
+      "c_decl" => "OUROBOROS_STATIC const char* ouroboros_he_pv(pTHX_ HE*, STRLEN*);",
       "name" => "ouroboros_he_pv",
       "params" => [
         "HE*",
@@ -1372,7 +1372,7 @@ our %SPEC = (
       "type" => "const char*"
     },
     {
-      "c_decl" => "SV* ouroboros_he_val(pTHX_ HE*);",
+      "c_decl" => "OUROBOROS_STATIC SV* ouroboros_he_val(pTHX_ HE*);",
       "name" => "ouroboros_he_val",
       "params" => [
         "HE*"
@@ -1382,7 +1382,7 @@ our %SPEC = (
       "type" => "SV*"
     },
     {
-      "c_decl" => "U32 ouroboros_he_hash(pTHX_ HE*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_he_hash(pTHX_ HE*);",
       "name" => "ouroboros_he_hash",
       "params" => [
         "HE*"
@@ -1392,7 +1392,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "SV* ouroboros_he_svkey(pTHX_ HE*);",
+      "c_decl" => "OUROBOROS_STATIC SV* ouroboros_he_svkey(pTHX_ HE*);",
       "name" => "ouroboros_he_svkey",
       "params" => [
         "HE*"
@@ -1402,7 +1402,7 @@ our %SPEC = (
       "type" => "SV*"
     },
     {
-      "c_decl" => "SV* ouroboros_he_svkey_force(pTHX_ HE*);",
+      "c_decl" => "OUROBOROS_STATIC SV* ouroboros_he_svkey_force(pTHX_ HE*);",
       "name" => "ouroboros_he_svkey_force",
       "params" => [
         "HE*"
@@ -1412,7 +1412,7 @@ our %SPEC = (
       "type" => "SV*"
     },
     {
-      "c_decl" => "SV* ouroboros_he_svkey_set(pTHX_ HE*, SV*);",
+      "c_decl" => "OUROBOROS_STATIC SV* ouroboros_he_svkey_set(pTHX_ HE*, SV*);",
       "name" => "ouroboros_he_svkey_set",
       "params" => [
         "HE*",
@@ -1423,7 +1423,7 @@ our %SPEC = (
       "type" => "SV*"
     },
     {
-      "c_decl" => "U32 ouroboros_perl_hash(pTHX_ U8*, STRLEN);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_perl_hash(pTHX_ U8*, STRLEN);",
       "name" => "ouroboros_perl_hash",
       "params" => [
         "U8*",
@@ -1436,7 +1436,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "U32 ouroboros_sv_refcnt(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_sv_refcnt(pTHX_ SV*);",
       "name" => "ouroboros_sv_refcnt",
       "params" => [
         "SV*"
@@ -1446,7 +1446,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "SV* ouroboros_sv_refcnt_inc(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC SV* ouroboros_sv_refcnt_inc(pTHX_ SV*);",
       "name" => "ouroboros_sv_refcnt_inc",
       "params" => [
         "SV*"
@@ -1456,7 +1456,7 @@ our %SPEC = (
       "type" => "SV*"
     },
     {
-      "c_decl" => "SV* ouroboros_sv_refcnt_inc_nn(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC SV* ouroboros_sv_refcnt_inc_nn(pTHX_ SV*);",
       "name" => "ouroboros_sv_refcnt_inc_nn",
       "params" => [
         "SV*"
@@ -1466,7 +1466,7 @@ our %SPEC = (
       "type" => "SV*"
     },
     {
-      "c_decl" => "void ouroboros_sv_refcnt_inc_void(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_refcnt_inc_void(pTHX_ SV*);",
       "name" => "ouroboros_sv_refcnt_inc_void",
       "params" => [
         "SV*"
@@ -1476,7 +1476,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_refcnt_inc_void_nn(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_refcnt_inc_void_nn(pTHX_ SV*);",
       "name" => "ouroboros_sv_refcnt_inc_void_nn",
       "params" => [
         "SV*"
@@ -1486,7 +1486,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_refcnt_dec(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_refcnt_dec(pTHX_ SV*);",
       "name" => "ouroboros_sv_refcnt_dec",
       "params" => [
         "SV*"
@@ -1496,7 +1496,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sv_refcnt_dec_nn(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sv_refcnt_dec_nn(pTHX_ SV*);",
       "name" => "ouroboros_sv_refcnt_dec_nn",
       "params" => [
         "SV*"
@@ -1506,7 +1506,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_enter(pTHX);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_enter(pTHX);",
       "name" => "ouroboros_enter",
       "params" => [],
       "ptr_name" => "ouroboros_enter_ptr",
@@ -1514,7 +1514,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_leave(pTHX);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_leave(pTHX);",
       "name" => "ouroboros_leave",
       "params" => [],
       "ptr_name" => "ouroboros_leave_ptr",
@@ -1522,7 +1522,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_savetmps(pTHX);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_savetmps(pTHX);",
       "name" => "ouroboros_savetmps",
       "params" => [],
       "ptr_name" => "ouroboros_savetmps_ptr",
@@ -1530,7 +1530,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_freetmps(pTHX);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_freetmps(pTHX);",
       "name" => "ouroboros_freetmps",
       "params" => [],
       "ptr_name" => "ouroboros_freetmps_ptr",
@@ -1538,7 +1538,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sys_init3(int*, char***, char***);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sys_init3(int*, char***, char***);",
       "name" => "ouroboros_sys_init3",
       "params" => [
         "int*",
@@ -1552,7 +1552,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "void ouroboros_sys_term();",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_sys_term();",
       "name" => "ouroboros_sys_term",
       "params" => [],
       "ptr_name" => "ouroboros_sys_term_ptr",
@@ -1562,7 +1562,7 @@ our %SPEC = (
       "type" => "void"
     },
     {
-      "c_decl" => "SV* ouroboros_sv_undef(pTHX);",
+      "c_decl" => "OUROBOROS_STATIC SV* ouroboros_sv_undef(pTHX);",
       "name" => "ouroboros_sv_undef",
       "params" => [],
       "ptr_name" => "ouroboros_sv_undef_ptr",
@@ -1572,7 +1572,7 @@ our %SPEC = (
       "type" => "SV*"
     },
     {
-      "c_decl" => "SV* ouroboros_sv_no(pTHX);",
+      "c_decl" => "OUROBOROS_STATIC SV* ouroboros_sv_no(pTHX);",
       "name" => "ouroboros_sv_no",
       "params" => [],
       "ptr_name" => "ouroboros_sv_no_ptr",
@@ -1582,7 +1582,7 @@ our %SPEC = (
       "type" => "SV*"
     },
     {
-      "c_decl" => "SV* ouroboros_sv_yes(pTHX);",
+      "c_decl" => "OUROBOROS_STATIC SV* ouroboros_sv_yes(pTHX);",
       "name" => "ouroboros_sv_yes",
       "params" => [],
       "ptr_name" => "ouroboros_sv_yes_ptr",
@@ -1592,7 +1592,7 @@ our %SPEC = (
       "type" => "SV*"
     },
     {
-      "c_decl" => "U32 ouroboros_gimme(pTHX);",
+      "c_decl" => "OUROBOROS_STATIC U32 ouroboros_gimme(pTHX);",
       "name" => "ouroboros_gimme",
       "params" => [],
       "ptr_name" => "ouroboros_gimme_ptr",
@@ -1600,7 +1600,7 @@ our %SPEC = (
       "type" => "U32"
     },
     {
-      "c_decl" => "int ouroboros_xcpt_try(pTHX_ ouroboros_xcpt_callback_t, void*);",
+      "c_decl" => "OUROBOROS_STATIC int ouroboros_xcpt_try(pTHX_ ouroboros_xcpt_callback_t, void*);",
       "name" => "ouroboros_xcpt_try",
       "params" => [
         "ouroboros_xcpt_callback_t",
@@ -1613,7 +1613,7 @@ our %SPEC = (
       "type" => "int"
     },
     {
-      "c_decl" => "void ouroboros_xcpt_rethrow(pTHX_ int);",
+      "c_decl" => "OUROBOROS_STATIC void ouroboros_xcpt_rethrow(pTHX_ int);",
       "name" => "ouroboros_xcpt_rethrow",
       "params" => [
         "int"
