@@ -6,7 +6,7 @@ WriteMakefile(
     VERSION_FROM      => 'lib/Ouroboros.pm',
     ABSTRACT_FROM     => 'lib/Ouroboros.pm',
     AUTHOR            => 'Vickenty Fesunov <cpan-ouroboros@setattr.net>',
-    LICENSE           => 'bsd',
+    LICENSE           => 'freebsd',
     MIN_PERL_VERSION  => "5.18.0", # SvREFCNT_dec_NN
     PREREQ_PM         => {
         "File::ShareDir" => 0,
