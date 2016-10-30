@@ -721,7 +721,7 @@ Perl macro: C<SvTRUE_nomg>
 
 =item ouroboros_sv_type_ptr
 
-    OUROBOROS_STATIC IV ouroboros_sv_type(pTHX_ SV*);
+    OUROBOROS_STATIC svtype ouroboros_sv_type(pTHX_ SV*);
 
 Perl macro: C<SvTYPE>
 

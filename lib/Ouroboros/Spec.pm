@@ -1049,14 +1049,14 @@ our %SPEC = (
       "type" => "bool"
     },
     {
-      "c_decl" => "OUROBOROS_STATIC IV ouroboros_sv_type(pTHX_ SV*);",
+      "c_decl" => "OUROBOROS_STATIC svtype ouroboros_sv_type(pTHX_ SV*);",
       "name" => "ouroboros_sv_type",
       "params" => [
         "SV*"
       ],
       "ptr_name" => "ouroboros_sv_type_ptr",
       "tags" => {},
-      "type" => "IV"
+      "type" => "svtype"
     },
     {
       "c_decl" => "OUROBOROS_STATIC UV ouroboros_sv_flags(pTHX_ SV*);",

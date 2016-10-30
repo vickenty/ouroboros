@@ -201,7 +201,7 @@ fn	bool	ouroboros_sv_true	SV*
 #: SvTRUE_nomg
 fn	bool	ouroboros_sv_true_nomg	SV*
 #: SvTYPE
-fn	IV	ouroboros_sv_type	SV*
+fn	svtype	ouroboros_sv_type	SV*
 #: SvFLAGS
 fn	UV	ouroboros_sv_flags	SV*
 #: SvUTF8

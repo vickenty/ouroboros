@@ -473,7 +473,7 @@ bool ouroboros_sv_true_nomg(pTHX_ SV* sv)
         return SvTRUE_nomg(sv);
 }
 
-IV ouroboros_sv_type(pTHX_ SV* sv)
+svtype ouroboros_sv_type(pTHX_ SV* sv)
 {
         return SvTYPE(sv);
 }

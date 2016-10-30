@@ -125,7 +125,7 @@ OUROBOROS_STATIC SV* ouroboros_sv_rv(pTHX_ SV*);
 OUROBOROS_STATIC void ouroboros_sv_rv_set(pTHX_ SV*, SV*);
 OUROBOROS_STATIC bool ouroboros_sv_true(pTHX_ SV*);
 OUROBOROS_STATIC bool ouroboros_sv_true_nomg(pTHX_ SV*);
-OUROBOROS_STATIC IV ouroboros_sv_type(pTHX_ SV*);
+OUROBOROS_STATIC svtype ouroboros_sv_type(pTHX_ SV*);
 OUROBOROS_STATIC UV ouroboros_sv_flags(pTHX_ SV*);
 OUROBOROS_STATIC bool ouroboros_sv_utf8(pTHX_ SV*);
 OUROBOROS_STATIC void ouroboros_sv_utf8_on(pTHX_ SV*);
