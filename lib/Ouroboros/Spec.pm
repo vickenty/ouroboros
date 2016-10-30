@@ -23,9 +23,6 @@ our %SPEC = (
       "name" => "SV_NOSTEAL"
     },
     {
-      "name" => "SV_CONST_RETURN"
-    },
-    {
       "name" => "SV_MUTABLE_RETURN"
     },
     {
@@ -54,111 +51,6 @@ our %SPEC = (
     },
     {
       "name" => "SV_CATUTF8"
-    },
-    {
-      "name" => "SV_CONST_TIESCALAR"
-    },
-    {
-      "name" => "SV_CONST_TIEARRAY"
-    },
-    {
-      "name" => "SV_CONST_TIEHASH"
-    },
-    {
-      "name" => "SV_CONST_TIEHANDLE"
-    },
-    {
-      "name" => "SV_CONST_FETCH"
-    },
-    {
-      "name" => "SV_CONST_FETCHSIZE"
-    },
-    {
-      "name" => "SV_CONST_STORE"
-    },
-    {
-      "name" => "SV_CONST_STORESIZE"
-    },
-    {
-      "name" => "SV_CONST_EXISTS"
-    },
-    {
-      "name" => "SV_CONST_PUSH"
-    },
-    {
-      "name" => "SV_CONST_POP"
-    },
-    {
-      "name" => "SV_CONST_SHIFT"
-    },
-    {
-      "name" => "SV_CONST_UNSHIFT"
-    },
-    {
-      "name" => "SV_CONST_SPLICE"
-    },
-    {
-      "name" => "SV_CONST_EXTEND"
-    },
-    {
-      "name" => "SV_CONST_FIRSTKEY"
-    },
-    {
-      "name" => "SV_CONST_NEXTKEY"
-    },
-    {
-      "name" => "SV_CONST_SCALAR"
-    },
-    {
-      "name" => "SV_CONST_OPEN"
-    },
-    {
-      "name" => "SV_CONST_WRITE"
-    },
-    {
-      "name" => "SV_CONST_PRINT"
-    },
-    {
-      "name" => "SV_CONST_PRINTF"
-    },
-    {
-      "name" => "SV_CONST_READ"
-    },
-    {
-      "name" => "SV_CONST_READLINE"
-    },
-    {
-      "name" => "SV_CONST_GETC"
-    },
-    {
-      "name" => "SV_CONST_SEEK"
-    },
-    {
-      "name" => "SV_CONST_TELL"
-    },
-    {
-      "name" => "SV_CONST_EOF"
-    },
-    {
-      "name" => "SV_CONST_BINMODE"
-    },
-    {
-      "name" => "SV_CONST_FILENO"
-    },
-    {
-      "name" => "SV_CONST_CLOSE"
-    },
-    {
-      "name" => "SV_CONST_DELETE"
-    },
-    {
-      "name" => "SV_CONST_CLEAR"
-    },
-    {
-      "name" => "SV_CONST_UNTIE"
-    },
-    {
-      "name" => "SV_CONST_DESTROY"
     }
   ],
   "enum" => [

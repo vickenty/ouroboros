@@ -1128,8 +1128,6 @@ C<@Ouroboros::CONSTS> contains names of all constants provided by this package.
 
 =item C<SV_NOSTEAL>
 
-=item C<SV_CONST_RETURN>
-
 =item C<SV_MUTABLE_RETURN>
 
 =item C<SV_SMAGIC>
@@ -1149,76 +1147,6 @@ C<@Ouroboros::CONSTS> contains names of all constants provided by this package.
 =item C<SV_CATBYTES>
 
 =item C<SV_CATUTF8>
-
-=item C<SV_CONST_TIESCALAR>
-
-=item C<SV_CONST_TIEARRAY>
-
-=item C<SV_CONST_TIEHASH>
-
-=item C<SV_CONST_TIEHANDLE>
-
-=item C<SV_CONST_FETCH>
-
-=item C<SV_CONST_FETCHSIZE>
-
-=item C<SV_CONST_STORE>
-
-=item C<SV_CONST_STORESIZE>
-
-=item C<SV_CONST_EXISTS>
-
-=item C<SV_CONST_PUSH>
-
-=item C<SV_CONST_POP>
-
-=item C<SV_CONST_SHIFT>
-
-=item C<SV_CONST_UNSHIFT>
-
-=item C<SV_CONST_SPLICE>
-
-=item C<SV_CONST_EXTEND>
-
-=item C<SV_CONST_FIRSTKEY>
-
-=item C<SV_CONST_NEXTKEY>
-
-=item C<SV_CONST_SCALAR>
-
-=item C<SV_CONST_OPEN>
-
-=item C<SV_CONST_WRITE>
-
-=item C<SV_CONST_PRINT>
-
-=item C<SV_CONST_PRINTF>
-
-=item C<SV_CONST_READ>
-
-=item C<SV_CONST_READLINE>
-
-=item C<SV_CONST_GETC>
-
-=item C<SV_CONST_SEEK>
-
-=item C<SV_CONST_TELL>
-
-=item C<SV_CONST_EOF>
-
-=item C<SV_CONST_BINMODE>
-
-=item C<SV_CONST_FILENO>
-
-=item C<SV_CONST_CLOSE>
-
-=item C<SV_CONST_DELETE>
-
-=item C<SV_CONST_CLEAR>
-
-=item C<SV_CONST_UNTIE>
-
-=item C<SV_CONST_DESTROY>
 
 
 

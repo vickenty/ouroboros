@@ -380,14 +380,12 @@ enum	SVt_PVIO
 enum	SVt_LAST
 
 # Assorted SV related flags and constants. SV_CONST is not a const, but all SV_CONST_* are.
-# r !awk '/\#define SV_/ && \!/SV_CHECK_/ && \!/SV_CONST[^_]/ { print("const\t" $2) }' sv.h
-
+# r !awk '/\#define SV_/ && \!/SV_CHECK_/ && \!/SV_CONST/ { print("const\t" $2) }' sv.h
 const	SV_IMMEDIATE_UNREF
 const	SV_GMAGIC
 const	SV_COW_DROP_PV
 const	SV_UTF8_NO_ENCODING
 const	SV_NOSTEAL
-const	SV_CONST_RETURN
 const	SV_MUTABLE_RETURN
 const	SV_SMAGIC
 const	SV_HAS_TRAILING_NUL
@@ -398,40 +396,5 @@ const	SV_FORCE_UTF8_UPGRADE
 const	SV_SKIP_OVERLOAD
 const	SV_CATBYTES
 const	SV_CATUTF8
-const	SV_CONST_TIESCALAR
-const	SV_CONST_TIEARRAY
-const	SV_CONST_TIEHASH
-const	SV_CONST_TIEHANDLE
-const	SV_CONST_FETCH
-const	SV_CONST_FETCHSIZE
-const	SV_CONST_STORE
-const	SV_CONST_STORESIZE
-const	SV_CONST_EXISTS
-const	SV_CONST_PUSH
-const	SV_CONST_POP
-const	SV_CONST_SHIFT
-const	SV_CONST_UNSHIFT
-const	SV_CONST_SPLICE
-const	SV_CONST_EXTEND
-const	SV_CONST_FIRSTKEY
-const	SV_CONST_NEXTKEY
-const	SV_CONST_SCALAR
-const	SV_CONST_OPEN
-const	SV_CONST_WRITE
-const	SV_CONST_PRINT
-const	SV_CONST_PRINTF
-const	SV_CONST_READ
-const	SV_CONST_READLINE
-const	SV_CONST_GETC
-const	SV_CONST_SEEK
-const	SV_CONST_TELL
-const	SV_CONST_EOF
-const	SV_CONST_BINMODE
-const	SV_CONST_FILENO
-const	SV_CONST_CLOSE
-const	SV_CONST_DELETE
-const	SV_CONST_CLEAR
-const	SV_CONST_UNTIE
-const	SV_CONST_DESTROY
 
 # vim: set ts=12 tw=0 noet
