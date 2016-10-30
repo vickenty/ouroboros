@@ -8,49 +8,49 @@ our $VERSION = "0.10";
 our %SPEC = (
   "const" => [
     {
-      "name" => "SV_IMMEDIATE_UNREF"
+      "name" => "SV_CATBYTES"
     },
     {
-      "name" => "SV_GMAGIC"
+      "name" => "SV_CATUTF8"
     },
     {
       "name" => "SV_COW_DROP_PV"
     },
     {
-      "name" => "SV_UTF8_NO_ENCODING"
-    },
-    {
-      "name" => "SV_NOSTEAL"
-    },
-    {
-      "name" => "SV_MUTABLE_RETURN"
-    },
-    {
-      "name" => "SV_SMAGIC"
-    },
-    {
-      "name" => "SV_HAS_TRAILING_NUL"
+      "name" => "SV_COW_OTHER_PVS"
     },
     {
       "name" => "SV_COW_SHARED_HASH_KEYS"
     },
     {
-      "name" => "SV_COW_OTHER_PVS"
-    },
-    {
-      "name" => "SV_UNDEF_RETURNS_NULL"
-    },
-    {
       "name" => "SV_FORCE_UTF8_UPGRADE"
+    },
+    {
+      "name" => "SV_GMAGIC"
+    },
+    {
+      "name" => "SV_HAS_TRAILING_NUL"
+    },
+    {
+      "name" => "SV_IMMEDIATE_UNREF"
+    },
+    {
+      "name" => "SV_MUTABLE_RETURN"
+    },
+    {
+      "name" => "SV_NOSTEAL"
     },
     {
       "name" => "SV_SKIP_OVERLOAD"
     },
     {
-      "name" => "SV_CATBYTES"
+      "name" => "SV_SMAGIC"
     },
     {
-      "name" => "SV_CATUTF8"
+      "name" => "SV_UNDEF_RETURNS_NULL"
+    },
+    {
+      "name" => "SV_UTF8_NO_ENCODING"
     }
   ],
   "enum" => [

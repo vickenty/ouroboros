@@ -380,21 +380,21 @@ enum	SVt_PVIO
 enum	SVt_LAST
 
 # Assorted SV related flags and constants. SV_CONST is not a const, but all SV_CONST_* are.
-# r !awk '/\#define SV_/ && \!/SV_CHECK_/ && \!/SV_CONST/ { print("const\t" $2) }' sv.h
-const	SV_IMMEDIATE_UNREF
-const	SV_GMAGIC
-const	SV_COW_DROP_PV
-const	SV_UTF8_NO_ENCODING
-const	SV_NOSTEAL
-const	SV_MUTABLE_RETURN
-const	SV_SMAGIC
-const	SV_HAS_TRAILING_NUL
-const	SV_COW_SHARED_HASH_KEYS
-const	SV_COW_OTHER_PVS
-const	SV_UNDEF_RETURNS_NULL
-const	SV_FORCE_UTF8_UPGRADE
-const	SV_SKIP_OVERLOAD
+# r !awk '/\#define SV_/ && \!/SV_CHECK_/ && \!/SV_CONST/ { print("const\t" $2) }' sv.h | sort
 const	SV_CATBYTES
 const	SV_CATUTF8
+const	SV_COW_DROP_PV
+const	SV_COW_OTHER_PVS
+const	SV_COW_SHARED_HASH_KEYS
+const	SV_FORCE_UTF8_UPGRADE
+const	SV_GMAGIC
+const	SV_HAS_TRAILING_NUL
+const	SV_IMMEDIATE_UNREF
+const	SV_MUTABLE_RETURN
+const	SV_NOSTEAL
+const	SV_SKIP_OVERLOAD
+const	SV_SMAGIC
+const	SV_UNDEF_RETURNS_NULL
+const	SV_UTF8_NO_ENCODING
 
 # vim: set ts=12 tw=0 noet
