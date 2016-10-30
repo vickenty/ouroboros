@@ -20,13 +20,21 @@ my %ITEM_CTOR = (
     },
 
     enum => sub {
-        my ($tags, $kind, $name) = @_;
-        return { name => $name };
+        my ($tags, $kind, $ptype, $ctype, $name) = @_;
+        return {
+            perl_type => $ptype,
+            c_type => $ctype,
+            name => $name,
+        };
     },
 
     const => sub {
-        my ($tags, $kind, $name) = @_;
-        return { name => $name };
+        my ($tags, $kind, $ptype, $ctype, $name) = @_;
+        return {
+            perl_type => $ptype,
+            c_type => $ctype,
+            name => $name,
+        };
     },
 );
 

@@ -8,99 +8,161 @@ our $VERSION = "0.10";
 our %SPEC = (
   "const" => [
     {
-      "name" => "SV_CATBYTES"
+      "c_type" => "U32",
+      "name" => "SV_CATBYTES",
+      "perl_type" => "UV"
     },
     {
-      "name" => "SV_CATUTF8"
+      "c_type" => "U32",
+      "name" => "SV_CATUTF8",
+      "perl_type" => "UV"
     },
     {
-      "name" => "SV_COW_DROP_PV"
+      "c_type" => "U32",
+      "name" => "SV_COW_DROP_PV",
+      "perl_type" => "UV"
     },
     {
-      "name" => "SV_COW_OTHER_PVS"
+      "c_type" => "U32",
+      "name" => "SV_COW_OTHER_PVS",
+      "perl_type" => "UV"
     },
     {
-      "name" => "SV_COW_SHARED_HASH_KEYS"
+      "c_type" => "U32",
+      "name" => "SV_COW_SHARED_HASH_KEYS",
+      "perl_type" => "UV"
     },
     {
-      "name" => "SV_FORCE_UTF8_UPGRADE"
+      "c_type" => "U32",
+      "name" => "SV_FORCE_UTF8_UPGRADE",
+      "perl_type" => "UV"
     },
     {
-      "name" => "SV_GMAGIC"
+      "c_type" => "U32",
+      "name" => "SV_GMAGIC",
+      "perl_type" => "UV"
     },
     {
-      "name" => "SV_HAS_TRAILING_NUL"
+      "c_type" => "U32",
+      "name" => "SV_HAS_TRAILING_NUL",
+      "perl_type" => "UV"
     },
     {
-      "name" => "SV_IMMEDIATE_UNREF"
+      "c_type" => "U32",
+      "name" => "SV_IMMEDIATE_UNREF",
+      "perl_type" => "UV"
     },
     {
-      "name" => "SV_MUTABLE_RETURN"
+      "c_type" => "U32",
+      "name" => "SV_MUTABLE_RETURN",
+      "perl_type" => "UV"
     },
     {
-      "name" => "SV_NOSTEAL"
+      "c_type" => "U32",
+      "name" => "SV_NOSTEAL",
+      "perl_type" => "UV"
     },
     {
-      "name" => "SV_SKIP_OVERLOAD"
+      "c_type" => "U32",
+      "name" => "SV_SKIP_OVERLOAD",
+      "perl_type" => "UV"
     },
     {
-      "name" => "SV_SMAGIC"
+      "c_type" => "U32",
+      "name" => "SV_SMAGIC",
+      "perl_type" => "UV"
     },
     {
-      "name" => "SV_UNDEF_RETURNS_NULL"
+      "c_type" => "U32",
+      "name" => "SV_UNDEF_RETURNS_NULL",
+      "perl_type" => "UV"
     },
     {
-      "name" => "SV_UTF8_NO_ENCODING"
+      "c_type" => "U32",
+      "name" => "SV_UTF8_NO_ENCODING",
+      "perl_type" => "UV"
     }
   ],
   "enum" => [
     {
-      "name" => "SVt_NULL"
+      "c_type" => "svtype",
+      "name" => "SVt_NULL",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_IV"
+      "c_type" => "svtype",
+      "name" => "SVt_IV",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_NV"
+      "c_type" => "svtype",
+      "name" => "SVt_NV",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_PV"
+      "c_type" => "svtype",
+      "name" => "SVt_PV",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_PVIV"
+      "c_type" => "svtype",
+      "name" => "SVt_PVIV",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_PVNV"
+      "c_type" => "svtype",
+      "name" => "SVt_PVNV",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_PVMG"
+      "c_type" => "svtype",
+      "name" => "SVt_PVMG",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_REGEXP"
+      "c_type" => "svtype",
+      "name" => "SVt_REGEXP",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_PVGV"
+      "c_type" => "svtype",
+      "name" => "SVt_PVGV",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_PVLV"
+      "c_type" => "svtype",
+      "name" => "SVt_PVLV",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_PVAV"
+      "c_type" => "svtype",
+      "name" => "SVt_PVAV",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_PVHV"
+      "c_type" => "svtype",
+      "name" => "SVt_PVHV",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_PVCV"
+      "c_type" => "svtype",
+      "name" => "SVt_PVCV",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_PVFM"
+      "c_type" => "svtype",
+      "name" => "SVt_PVFM",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_PVIO"
+      "c_type" => "svtype",
+      "name" => "SVt_PVIO",
+      "perl_type" => "IV"
     },
     {
-      "name" => "SVt_LAST"
+      "c_type" => "svtype",
+      "name" => "SVt_LAST",
+      "perl_type" => "IV"
     }
   ],
   "fn" => [
@@ -1567,6 +1629,14 @@ A list of supported numeric constants.
 
 Constant name.
 
+=item c_type
+
+Actual C type.
+
+=item perl_type
+
+Perl scalar variant used to export the constant value to Perl. One of: "IV" or "UV".
+
 =back
 
 =head2 Enum values
@@ -1583,6 +1653,14 @@ C<ExtUtils::Constant> implementation.
 =item name
 
 Enum value name.
+
+=item c_type
+
+Actual C name of the enum.
+
+=item perl_type
+
+Perl scalar variant used to export the constant value to Perl. One of: "IV" or "UV".
 
 =back
 

@@ -142,13 +142,14 @@ sub mk_impl {
 }
 
 {
-    my $enums = join "", map "    $_->{name}\n", @{$spec->{enum}};
-    my $consts = join "", map "    $_->{name}\n", @{$spec->{const}};
+    my $consts = join "",
+        map("    $_,\n",
+            map("{ name => '$_->{name}', type => '$_->{perl_type}', macro => 1 }", @{$spec->{enum}}),
+            map("{ name => '$_->{name}', type => '$_->{perl_type}' }", @{$spec->{const}}));
 
     my $makefile = "Makefile.PL";
     my $mf = read_file($makefile);
-    $mf =~ s/(my\s+\@enums\s*=\s*qw\()[^\)]*(\);)/$1\n$enums$2/m or die;
-    $mf =~ s/(my\s+\@consts\s*=\s*qw\()[^\)]*(\);)/$1\n$consts$2/m or die;
+    $mf =~ s/(my\s+\@consts\s*=\s*\()[^\)]*(\);)/$1\n$consts$2/m or die;
     write_file($makefile, $mf);
 }
 

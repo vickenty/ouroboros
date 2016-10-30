@@ -362,39 +362,41 @@ sizeof	Optype
 sizeof	ouroboros_stack_t
 
 # Elements of svtype
-enum	SVt_NULL
-enum	SVt_IV
-enum	SVt_NV
-enum	SVt_PV
-enum	SVt_PVIV
-enum	SVt_PVNV
-enum	SVt_PVMG
-enum	SVt_REGEXP
-enum	SVt_PVGV
-enum	SVt_PVLV
-enum	SVt_PVAV
-enum	SVt_PVHV
-enum	SVt_PVCV
-enum	SVt_PVFM
-enum	SVt_PVIO
-enum	SVt_LAST
+# 	perl type	C type	name
+enum	IV	svtype	SVt_NULL
+enum	IV	svtype	SVt_IV
+enum	IV	svtype	SVt_NV
+enum	IV	svtype	SVt_PV
+enum	IV	svtype	SVt_PVIV
+enum	IV	svtype	SVt_PVNV
+enum	IV	svtype	SVt_PVMG
+enum	IV	svtype	SVt_REGEXP
+enum	IV	svtype	SVt_PVGV
+enum	IV	svtype	SVt_PVLV
+enum	IV	svtype	SVt_PVAV
+enum	IV	svtype	SVt_PVHV
+enum	IV	svtype	SVt_PVCV
+enum	IV	svtype	SVt_PVFM
+enum	IV	svtype	SVt_PVIO
+enum	IV	svtype	SVt_LAST
 
 # Assorted SV related flags and constants. SV_CONST is not a const, but all SV_CONST_* are.
 # r !awk '/\#define SV_/ && \!/SV_CHECK_/ && \!/SV_CONST/ { print("const\t" $2) }' sv.h | sort
-const	SV_CATBYTES
-const	SV_CATUTF8
-const	SV_COW_DROP_PV
-const	SV_COW_OTHER_PVS
-const	SV_COW_SHARED_HASH_KEYS
-const	SV_FORCE_UTF8_UPGRADE
-const	SV_GMAGIC
-const	SV_HAS_TRAILING_NUL
-const	SV_IMMEDIATE_UNREF
-const	SV_MUTABLE_RETURN
-const	SV_NOSTEAL
-const	SV_SKIP_OVERLOAD
-const	SV_SMAGIC
-const	SV_UNDEF_RETURNS_NULL
-const	SV_UTF8_NO_ENCODING
+# 	perl type	C type	name
+const	UV	U32	SV_CATBYTES
+const	UV	U32	SV_CATUTF8
+const	UV	U32	SV_COW_DROP_PV
+const	UV	U32	SV_COW_OTHER_PVS
+const	UV	U32	SV_COW_SHARED_HASH_KEYS
+const	UV	U32	SV_FORCE_UTF8_UPGRADE
+const	UV	U32	SV_GMAGIC
+const	UV	U32	SV_HAS_TRAILING_NUL
+const	UV	U32	SV_IMMEDIATE_UNREF
+const	UV	U32	SV_MUTABLE_RETURN
+const	UV	U32	SV_NOSTEAL
+const	UV	U32	SV_SKIP_OVERLOAD
+const	UV	U32	SV_SMAGIC
+const	UV	U32	SV_UNDEF_RETURNS_NULL
+const	UV	U32	SV_UTF8_NO_ENCODING
 
 # vim: set ts=12 tw=0 noet
