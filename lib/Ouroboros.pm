@@ -12,7 +12,6 @@ our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(
     ouroboros_stack_init_ptr
     ouroboros_stack_items_ptr
-    ouroboros_stack_prepush_ptr
     ouroboros_stack_putback_ptr
     ouroboros_stack_fetch_ptr
     ouroboros_stack_store_ptr
@@ -242,12 +241,6 @@ Initialize ouroboros_stack_t object. Must be first thing called by a XS-sub. Equ
     OUROBOROS_STATIC int ouroboros_stack_items(pTHX_ ouroboros_stack_t*);
 
 Returns number of arguments on Perl stack. Equivalent to C<items> local variable in XS.
-
-=item ouroboros_stack_prepush_ptr
-
-    OUROBOROS_STATIC void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t*);
-
-Perl macro: C<XSprePUSH>
 
 =item ouroboros_stack_putback_ptr
 

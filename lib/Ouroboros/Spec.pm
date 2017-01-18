@@ -191,16 +191,6 @@ our %SPEC = (
       "type" => "int"
     },
     {
-      "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t*);",
-      "name" => "ouroboros_stack_prepush",
-      "params" => [
-        "ouroboros_stack_t*"
-      ],
-      "ptr_name" => "ouroboros_stack_prepush_ptr",
-      "tags" => {},
-      "type" => "void"
-    },
-    {
       "c_decl" => "OUROBOROS_STATIC void ouroboros_stack_putback(pTHX_ ouroboros_stack_t*);",
       "name" => "ouroboros_stack_putback",
       "params" => [

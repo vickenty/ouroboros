@@ -93,11 +93,6 @@ SV* ouroboros_sv_yes(pTHX)
 }
 
 /* functions { */
-void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t* stack)
-{
-        XSprePUSH;
-}
-
 void ouroboros_stack_putback(pTHX_ ouroboros_stack_t* stack)
 {
         PUTBACK;

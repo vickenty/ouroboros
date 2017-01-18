@@ -47,7 +47,6 @@ typedef void (*ouroboros_xcpt_callback_t)(void *);
 /* functions { */
 OUROBOROS_STATIC void ouroboros_stack_init(pTHX_ ouroboros_stack_t*);
 OUROBOROS_STATIC int ouroboros_stack_items(pTHX_ ouroboros_stack_t*);
-OUROBOROS_STATIC void ouroboros_stack_prepush(pTHX_ ouroboros_stack_t*);
 OUROBOROS_STATIC void ouroboros_stack_putback(pTHX_ ouroboros_stack_t*);
 OUROBOROS_STATIC SV* ouroboros_stack_fetch(pTHX_ ouroboros_stack_t*, SSize_t);
 OUROBOROS_STATIC void ouroboros_stack_store(pTHX_ ouroboros_stack_t*, SSize_t, SV*);

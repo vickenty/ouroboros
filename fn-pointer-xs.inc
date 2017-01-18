@@ -13,13 +13,6 @@ OUTPUT:
 	RETVAL
 
 void*
-ouroboros_stack_prepush_ptr()
-CODE:
-	RETVAL = ouroboros_stack_prepush;
-OUTPUT:
-	RETVAL
-
-void*
 ouroboros_stack_putback_ptr()
 CODE:
 	RETVAL = ouroboros_stack_putback;
