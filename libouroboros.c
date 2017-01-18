@@ -27,6 +27,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 void ouroboros_stack_init(pTHX_ ouroboros_stack_t* stack)
 {
         dXSARGS;
+        SP -= items;
         stack->sp = sp;
         stack->mark = mark;
         stack->ax = ax;
