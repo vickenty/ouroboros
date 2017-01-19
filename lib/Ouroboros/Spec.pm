@@ -2,7 +2,7 @@ package Ouroboros::Spec;
 use strict;
 use warnings;
 
-our $VERSION = "0.11";
+our $VERSION = "0.12";
 
 # spec {
 our %SPEC = (
