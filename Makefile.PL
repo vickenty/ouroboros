@@ -58,19 +58,14 @@ my @consts = (
     { name => 'SVt_LAST', type => 'IV', macro => 1 },
     { name => 'SV_CATBYTES', type => 'UV' },
     { name => 'SV_CATUTF8', type => 'UV' },
+    { name => 'SV_CONST_RETURN', type => 'UV' },
     { name => 'SV_COW_DROP_PV', type => 'UV' },
-    { name => 'SV_COW_OTHER_PVS', type => 'UV' },
-    { name => 'SV_COW_SHARED_HASH_KEYS', type => 'UV' },
     { name => 'SV_FORCE_UTF8_UPGRADE', type => 'UV' },
     { name => 'SV_GMAGIC', type => 'UV' },
     { name => 'SV_HAS_TRAILING_NUL', type => 'UV' },
     { name => 'SV_IMMEDIATE_UNREF', type => 'UV' },
-    { name => 'SV_MUTABLE_RETURN', type => 'UV' },
     { name => 'SV_NOSTEAL', type => 'UV' },
-    { name => 'SV_SKIP_OVERLOAD', type => 'UV' },
     { name => 'SV_SMAGIC', type => 'UV' },
-    { name => 'SV_UNDEF_RETURNS_NULL', type => 'UV' },
-    { name => 'SV_UTF8_NO_ENCODING', type => 'UV' },
 );
 
 WriteConstants(

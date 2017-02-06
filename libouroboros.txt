@@ -377,23 +377,18 @@ enum	IV	svtype	SVt_PVFM
 enum	IV	svtype	SVt_PVIO
 enum	IV	svtype	SVt_LAST
 
-# Assorted SV related flags and constants. SV_CONST is not a const, but all SV_CONST_* are.
-# r !awk '/\#define SV_/ && \!/SV_CHECK_/ && \!/SV_CONST/ { print("const\t" $2) }' sv.h | sort
+# SV related flags and constants.
+# r !perldoc perlapi | grep -o '\bSV_\w\+' | sort | uniq | sed 's/^/const\tUV\tU32\t/'
 # 	perl type	C type	name
 const	UV	U32	SV_CATBYTES
 const	UV	U32	SV_CATUTF8
+const	UV	U32	SV_CONST_RETURN
 const	UV	U32	SV_COW_DROP_PV
-const	UV	U32	SV_COW_OTHER_PVS
-const	UV	U32	SV_COW_SHARED_HASH_KEYS
 const	UV	U32	SV_FORCE_UTF8_UPGRADE
 const	UV	U32	SV_GMAGIC
 const	UV	U32	SV_HAS_TRAILING_NUL
 const	UV	U32	SV_IMMEDIATE_UNREF
-const	UV	U32	SV_MUTABLE_RETURN
 const	UV	U32	SV_NOSTEAL
-const	UV	U32	SV_SKIP_OVERLOAD
 const	UV	U32	SV_SMAGIC
-const	UV	U32	SV_UNDEF_RETURNS_NULL
-const	UV	U32	SV_UTF8_NO_ENCODING
 
 # vim: set ts=12 tw=0 noet

@@ -19,17 +19,12 @@ our %SPEC = (
     },
     {
       "c_type" => "U32",
+      "name" => "SV_CONST_RETURN",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
       "name" => "SV_COW_DROP_PV",
-      "perl_type" => "UV"
-    },
-    {
-      "c_type" => "U32",
-      "name" => "SV_COW_OTHER_PVS",
-      "perl_type" => "UV"
-    },
-    {
-      "c_type" => "U32",
-      "name" => "SV_COW_SHARED_HASH_KEYS",
       "perl_type" => "UV"
     },
     {
@@ -54,32 +49,12 @@ our %SPEC = (
     },
     {
       "c_type" => "U32",
-      "name" => "SV_MUTABLE_RETURN",
-      "perl_type" => "UV"
-    },
-    {
-      "c_type" => "U32",
       "name" => "SV_NOSTEAL",
       "perl_type" => "UV"
     },
     {
       "c_type" => "U32",
-      "name" => "SV_SKIP_OVERLOAD",
-      "perl_type" => "UV"
-    },
-    {
-      "c_type" => "U32",
       "name" => "SV_SMAGIC",
-      "perl_type" => "UV"
-    },
-    {
-      "c_type" => "U32",
-      "name" => "SV_UNDEF_RETURNS_NULL",
-      "perl_type" => "UV"
-    },
-    {
-      "c_type" => "U32",
-      "name" => "SV_UTF8_NO_ENCODING",
       "perl_type" => "UV"
     }
   ],

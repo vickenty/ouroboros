@@ -1115,11 +1115,9 @@ C<@Ouroboros::CONSTS> contains names of all constants provided by this package.
 
 =item C<SV_CATUTF8>
 
+=item C<SV_CONST_RETURN>
+
 =item C<SV_COW_DROP_PV>
-
-=item C<SV_COW_OTHER_PVS>
-
-=item C<SV_COW_SHARED_HASH_KEYS>
 
 =item C<SV_FORCE_UTF8_UPGRADE>
 
@@ -1129,17 +1127,9 @@ C<@Ouroboros::CONSTS> contains names of all constants provided by this package.
 
 =item C<SV_IMMEDIATE_UNREF>
 
-=item C<SV_MUTABLE_RETURN>
-
 =item C<SV_NOSTEAL>
 
-=item C<SV_SKIP_OVERLOAD>
-
 =item C<SV_SMAGIC>
-
-=item C<SV_UNDEF_RETURNS_NULL>
-
-=item C<SV_UTF8_NO_ENCODING>
 
 
 
