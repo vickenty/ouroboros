@@ -1131,6 +1131,20 @@ C<@Ouroboros::CONSTS> contains names of all constants provided by this package.
 
 =item C<SV_SMAGIC>
 
+=item C<GV_ADD>
+
+=item C<GV_ADDMG>
+
+=item C<GV_ADDMULTI>
+
+=item C<GV_NOADD_NOINIT>
+
+=item C<GV_NOEXPAND>
+
+=item C<GV_NOINIT>
+
+=item C<GV_SUPER>
+
 
 
 =back

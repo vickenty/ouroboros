@@ -56,6 +56,41 @@ our %SPEC = (
       "c_type" => "U32",
       "name" => "SV_SMAGIC",
       "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "GV_ADD",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "GV_ADDMG",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "GV_ADDMULTI",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "GV_NOADD_NOINIT",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "GV_NOEXPAND",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "GV_NOINIT",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "GV_SUPER",
+      "perl_type" => "UV"
     }
   ],
   "enum" => [

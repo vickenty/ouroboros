@@ -391,4 +391,15 @@ const	UV	U32	SV_IMMEDIATE_UNREF
 const	UV	U32	SV_NOSTEAL
 const	UV	U32	SV_SMAGIC
 
+# GV related flags and constants.
+# r !perldoc perlapi | grep -o '\bGV_\w\+' | sort | uniq | sed 's/^/const\tUV\tU32\t/'
+# 	perl type	C type	name
+const	UV	U32	GV_ADD
+const	UV	U32	GV_ADDMG
+const	UV	U32	GV_ADDMULTI
+const	UV	U32	GV_NOADD_NOINIT
+const	UV	U32	GV_NOEXPAND
+const	UV	U32	GV_NOINIT
+const	UV	U32	GV_SUPER
+
 # vim: set ts=12 tw=0 noet

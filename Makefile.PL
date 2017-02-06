@@ -66,6 +66,13 @@ my @consts = (
     { name => 'SV_IMMEDIATE_UNREF', type => 'UV' },
     { name => 'SV_NOSTEAL', type => 'UV' },
     { name => 'SV_SMAGIC', type => 'UV' },
+    { name => 'GV_ADD', type => 'UV' },
+    { name => 'GV_ADDMG', type => 'UV' },
+    { name => 'GV_ADDMULTI', type => 'UV' },
+    { name => 'GV_NOADD_NOINIT', type => 'UV' },
+    { name => 'GV_NOEXPAND', type => 'UV' },
+    { name => 'GV_NOINIT', type => 'UV' },
+    { name => 'GV_SUPER', type => 'UV' },
 );
 
 WriteConstants(
