@@ -91,6 +91,226 @@ our %SPEC = (
       "c_type" => "U32",
       "name" => "GV_SUPER",
       "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_arylen",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_arylen_p",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_backref",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_bm",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_checkcall",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_collxfrm",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_dbfile",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_dbline",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_debugvar",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_defelem",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_env",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_envelem",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_ext",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_fm",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_foo",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_hints",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_hintselem",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_isa",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_isaelem",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_lvref",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_nkeys",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_overload_table",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_pos",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_qr",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_regdata",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_regdatum",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_regex_global",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_rhash",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_shared",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_shared_scalar",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_sig",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_sigelem",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_substr",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_sv",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_symtab",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_taint",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_tied",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_tiedelem",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_tiedscalar",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_utf8",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_uvar",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_uvar_elem",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_vec",
+      "perl_type" => "UV"
+    },
+    {
+      "c_type" => "U32",
+      "name" => "PERL_MAGIC_vstring",
+      "perl_type" => "UV"
     }
   ],
   "enum" => [

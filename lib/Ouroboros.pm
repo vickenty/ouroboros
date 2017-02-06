@@ -1145,6 +1145,94 @@ C<@Ouroboros::CONSTS> contains names of all constants provided by this package.
 
 =item C<GV_SUPER>
 
+=item C<PERL_MAGIC_arylen>
+
+=item C<PERL_MAGIC_arylen_p>
+
+=item C<PERL_MAGIC_backref>
+
+=item C<PERL_MAGIC_bm>
+
+=item C<PERL_MAGIC_checkcall>
+
+=item C<PERL_MAGIC_collxfrm>
+
+=item C<PERL_MAGIC_dbfile>
+
+=item C<PERL_MAGIC_dbline>
+
+=item C<PERL_MAGIC_debugvar>
+
+=item C<PERL_MAGIC_defelem>
+
+=item C<PERL_MAGIC_env>
+
+=item C<PERL_MAGIC_envelem>
+
+=item C<PERL_MAGIC_ext>
+
+=item C<PERL_MAGIC_fm>
+
+=item C<PERL_MAGIC_foo>
+
+=item C<PERL_MAGIC_hints>
+
+=item C<PERL_MAGIC_hintselem>
+
+=item C<PERL_MAGIC_isa>
+
+=item C<PERL_MAGIC_isaelem>
+
+=item C<PERL_MAGIC_lvref>
+
+=item C<PERL_MAGIC_nkeys>
+
+=item C<PERL_MAGIC_overload_table>
+
+=item C<PERL_MAGIC_pos>
+
+=item C<PERL_MAGIC_qr>
+
+=item C<PERL_MAGIC_regdata>
+
+=item C<PERL_MAGIC_regdatum>
+
+=item C<PERL_MAGIC_regex_global>
+
+=item C<PERL_MAGIC_rhash>
+
+=item C<PERL_MAGIC_shared>
+
+=item C<PERL_MAGIC_shared_scalar>
+
+=item C<PERL_MAGIC_sig>
+
+=item C<PERL_MAGIC_sigelem>
+
+=item C<PERL_MAGIC_substr>
+
+=item C<PERL_MAGIC_sv>
+
+=item C<PERL_MAGIC_symtab>
+
+=item C<PERL_MAGIC_taint>
+
+=item C<PERL_MAGIC_tied>
+
+=item C<PERL_MAGIC_tiedelem>
+
+=item C<PERL_MAGIC_tiedscalar>
+
+=item C<PERL_MAGIC_utf8>
+
+=item C<PERL_MAGIC_uvar>
+
+=item C<PERL_MAGIC_uvar_elem>
+
+=item C<PERL_MAGIC_vec>
+
+=item C<PERL_MAGIC_vstring>
+
 
 
 =back
