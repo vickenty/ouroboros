@@ -357,6 +357,8 @@ sizeof	svtype
 sizeof	PADOFFSET
 sizeof	Optype
 sizeof	ouroboros_stack_t
+sizeof	MAGIC
+sizeof	MGVTBL
 
 # Elements of svtype
 # 	perl type	C type	name

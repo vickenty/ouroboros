@@ -1814,6 +1814,12 @@ our %SPEC = (
     },
     {
       "type" => "ouroboros_stack_t"
+    },
+    {
+      "type" => "MAGIC"
+    },
+    {
+      "type" => "MGVTBL"
     }
   ]
 );
