@@ -31,7 +31,6 @@ impl Stack {
 #[cfg(perl_multiplicity)]
 extern {
 	fn ouroboros_stack_init(perl: *mut Interp, stack: *mut Stack);
-	fn ouroboros_stack_prepush(perl: *mut Interp, stack: &mut Stack);
 	fn ouroboros_stack_putback(perl: *mut Interp, stack: *mut Stack);
 	fn ouroboros_stack_xpush_iv(perl: *mut Interp, stack: *mut Stack, iv: c_long);
 	fn ouroboros_stack_xpush_pv(perl: *mut Interp, stack: *mut Stack, str: *const c_char, len: c_long);
@@ -41,7 +40,6 @@ extern {
 #[cfg(not(perl_multiplicity))]
 extern {
 	fn ouroboros_stack_init(stack: *mut Stack);
-	fn ouroboros_stack_prepush(stack: &mut Stack);
 	fn ouroboros_stack_putback(stack: *mut Stack);
 	fn ouroboros_stack_xpush_iv(stack: *mut Stack, iv: c_long);
 	fn ouroboros_stack_xpush_pv(stack: *mut Stack, str: *const c_char, len: c_long);
@@ -102,12 +100,6 @@ impl<'a> XS<'a> {
 			call!(ouroboros_stack_init, xs, &mut xs.stack);
 		}
 		return xs;
-	}
-
-	pub fn prepush(&mut self) {
-		unsafe {
-			call!(ouroboros_stack_prepush, self, &mut self.stack);
-		}
 	}
 
 	pub fn push_long(&mut self, val: c_long) {

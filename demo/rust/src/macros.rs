@@ -35,7 +35,6 @@ macro_rules! XS {
 				xs.new_xs(&name, $name, b"Rust code\0");
 			})*
 
-			xs.prepush();
 			xs.push_long(1);
 			xs.putback();
 		});
