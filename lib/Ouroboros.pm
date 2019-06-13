@@ -858,7 +858,7 @@ Perl macro: C<SvSTASH_set>
 
 =item ouroboros_cv_stash_ptr
 
-    OUROBOROS_STATIC void ouroboros_cv_stash(pTHX_ CV*);
+    OUROBOROS_STATIC HV* ouroboros_cv_stash(pTHX_ CV*);
 
 Perl macro: C<CvSTASH>
 
