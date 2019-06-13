@@ -157,7 +157,7 @@ our %EXPORT_TAGS = (
 
 our @EXPORT = qw();
 
-our $VERSION = "0.13";
+our $VERSION = "0.14";
 
 require XSLoader;
 XSLoader::load('Ouroboros', $VERSION);
